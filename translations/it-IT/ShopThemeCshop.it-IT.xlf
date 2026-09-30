@@ -342,9 +342,9 @@
         <source>Your price list</source>
         <target>Il tuo listino</target>
       </trans-unit>
-      <trans-unit id="214b51962dd0da6c23ad42091587bfd8">
-        <source>Name, code, OEM or brand…</source>
-        <target>Nome, codice, OEM o marca…</target>
+      <trans-unit id="15c5cf1f18fb1ebf0a26cb7abc8c41af">
+        <source>Name, code or OEM…</source>
+        <target>Nome, codice o OEM…</target>
       </trans-unit>
     </body>
   </file>

@@ -340,7 +340,12 @@
     padding-inline: 0;
     margin-block-end: 0;
     overflow-x: auto;
-    scrollbar-width: thin;
+    scrollbar-width: none; // swipeable row; the cut-off chip on the right signals more content
+    mask-image: linear-gradient(to right, #000 85%, transparent);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   .cs-category-header .subcategory {
@@ -372,5 +377,17 @@
     > .search-filters-modules {
       display: none;
     }
+  }
+}
+
+// Narrow product cards (2 columns on phones): icon-only add-to-cart button,
+// the upstream text label wrapped on two lines. The button keeps its aria-label.
+@container product-miniature (width < 13.5rem) {
+  .product-miniature__add-text {
+    display: none;
+  }
+
+  .product-miniature__add {
+    min-height: 2.5rem;
   }
 }
