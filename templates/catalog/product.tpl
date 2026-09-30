@@ -65,7 +65,8 @@
       {/block}
 
       {block name='product_description_short'}
-        <div class="product__description-short rich-text">{$product.description_short nofilter}</div>
+        {* C-Shop: Classic-compatible id, used by modules that swap descriptions per combination (e.g. C-Teck Desktoo EDI) *}
+        <div class="product__description-short rich-text" id="product-description-short-{$product.id}">{$product.description_short nofilter}</div>
       {/block}
 
       {block name='product_customization'}
@@ -139,8 +140,9 @@
                 </h2>
 
                 <div id="product_description_collapse" class="accordion-collapse collapse show" aria-labelledby="product_description_heading">
-                  <div class="accordion-body">
-                    <div class="product__description rich-text">
+                  {* C-Shop: `#description .product-description` = Classic selector used by modules *}
+                  <div class="accordion-body" id="description">
+                    <div class="product__description product-description rich-text">
                       {$product.description nofilter}
                     </div>
                   </div>

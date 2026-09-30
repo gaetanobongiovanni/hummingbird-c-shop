@@ -113,6 +113,19 @@ A module creates these hooks with `registerHook()`. Without a module they
 render nothing. Other B2B components (`reorder-list`, `product-lists`,
 `price-list`) are included by the modules in their own front controllers.
 
+## Compatibility hooks for existing modules
+
+Some modules written for the Classic theme target Classic ids. The product
+page keeps them so they work without changes:
+
+| Selector | Element |
+|---|---|
+| `#product-description-short-{id_product}` | short description (`.product__description-short`) |
+| `#description .product-description` | long description body |
+
+Used, for example, by the C-Teck Desktoo EDI module (`variant-descriptions.js`)
+to swap short/long description when the combination changes.
+
 ## Back Office configuration checklist
 
 1. **Main menu** (`ps_mainmenu`): the 8 main categories (Cancelleria e
