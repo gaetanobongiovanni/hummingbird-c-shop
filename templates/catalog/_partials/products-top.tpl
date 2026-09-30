@@ -13,6 +13,20 @@
     </div>
 
     <div class="products__sort">
+      {* C-Shop: grid / list view switch (state kept in the browser, see src/js/cshop/listing-view.ts) *}
+      {block name='cshop_listing_view'}
+        <div class="cs-view-switch" role="group" aria-label="{l s='Product list view' d='Shop.Theme.Cshop'}" data-ps-ref="cs-view-switch" hidden>
+          <button type="button" class="btn btn-sm cs-view-switch__button" data-ps-action="cs-listing-view" data-ps-view="grid" aria-pressed="true">
+            <i class="material-icons" aria-hidden="true">&#xE8F0;</i>
+            <span class="visually-hidden">{l s='Grid view' d='Shop.Theme.Cshop'}</span>
+          </button>
+          <button type="button" class="btn btn-sm cs-view-switch__button" data-ps-action="cs-listing-view" data-ps-view="list" aria-pressed="false">
+            <i class="material-icons" aria-hidden="true">&#xE8EF;</i>
+            <span class="visually-hidden">{l s='List view' d='Shop.Theme.Cshop'}</span>
+          </button>
+        </div>
+      {/block}
+
       {block name='sort_by'}
         {include file='catalog/_partials/sort-orders.tpl' sort_orders=$listing.sort_orders}
       {/block}

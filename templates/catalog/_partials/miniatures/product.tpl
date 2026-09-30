@@ -3,6 +3,8 @@
  * LICENSE.md file that was distributed with this source code.
  *}
 {$componentName = 'product-miniature'}
+{* C-Shop: normalised codes, pack, minimum and multiples ($cs) *}
+{include file='catalog/_partials/cshop/product-data.tpl' product=$product}
 
 {block name='product_miniature_item'}
   <article
@@ -24,8 +26,24 @@
       {block name='product_miniature_bottom'}
         <div class="{$componentName}__bottom">
           <div class="{$componentName}__infos">
+            {block name='cshop_product_brand'}
+              {if $cs.brand}
+                <span class="{$componentName}__brand">{$cs.brand}</span>
+              {/if}
+            {/block}
+
             {block name='product_name'}
               <a class="{$componentName}__title" href="{$product.url}" aria-label="{l s='View product %product_name%' sprintf=['%product_name%' => $product.name] d='Shop.Theme.Catalog'}">{$product.name}</a>
+            {/block}
+
+            {block name='cshop_product_codes'}
+              {include file='catalog/_partials/cshop/product-codes.tpl' cs=$cs cs_codes_class="{$componentName}__codes"}
+            {/block}
+
+            {block name='cshop_product_stock'}
+              <div class="{$componentName}__stock">
+                {include file='catalog/_partials/cshop/stock.tpl' product=$product}
+              </div>
             {/block}
 
             {block name='product_variants'}
@@ -52,6 +70,10 @@
 
                   {hook h='displayProductPriceBlock' product=$product type='unit_price'}
 
+                  {if !empty($product.unit_price_full)}
+                    <span class="{$componentName}__unit-price">{$product.unit_price_full}</span>
+                  {/if}
+
                   {hook h='displayProductPriceBlock' product=$product type='weight'}
                 {/block}
 
@@ -72,6 +94,10 @@
             {block name='product_reviews'}
               {hook h='displayProductListReviews' product=$product}
             {/block}
+
+            {block name='cshop_product_rules'}
+              {include file='catalog/_partials/cshop/order-rules.tpl' cs=$cs cs_rules_id="cs-rules-{$product.id_product}-{$product.id_product_attribute}"}
+            {/block}
           </div>
 
           {block name='product_actions'}
@@ -84,19 +110,25 @@
                   {/if}
                   <input type="hidden" name="token" value="{$static_token}">
   
+                  {$csQtyValue = $product.quantity_wanted|default:1}
+                  {if $csQtyValue < $cs.min}{$csQtyValue = $cs.min}{/if}
+                  {$csQtyAttrs = [
+                    "id" => "quantity_wanted_{$product.id_product}",
+                    "value" => "{$csQtyValue}",
+                    "min" => "{$cs.min}",
+                    "step" => "{$cs.step}",
+                    "data-ps-component" => "cs-qty"
+                  ]}
+                  {if $cs.pack_quantity > 1 || $cs.min > 1 || $cs.step > 1}
+                    {$csQtyAttrs['aria-describedby'] = "cs-rules-{$product.id_product}-{$product.id_product_attribute}"}
+                  {/if}
                   <div class="quantity-button js-quantity-button">
-                    {include file='components/qty-input.tpl'
-                      attributes=[
-                        "id" => "quantity_wanted_{$product.id_product}",
-                        "value" => "{$product.quantity_wanted}",
-                        "min" => "{$product.quantity_required}"
-                      ]
-                    }
+                    {include file='components/qty-input.tpl' attributes=$csQtyAttrs}
                   </div>
   
                   <button 
                     data-button-action="add-to-cart" 
-                    class="product-miniature__add btn btn-primary btn-square-icon"
+                    class="product-miniature__add btn btn-accent btn-square-icon"
                     aria-label="{l s='Add to cart %product_name%' sprintf=['%product_name%' => $product.name] d='Shop.Theme.Actions'}"
                     title="{l s='Add to cart %product_name%' sprintf=['%product_name%' => $product.name] d='Shop.Theme.Actions'}"
                     data-ps-ref="add-to-cart"

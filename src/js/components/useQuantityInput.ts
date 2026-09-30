@@ -126,7 +126,9 @@ const changeQuantity = (qtyInput: HTMLInputElement, change: number, keyboard = f
     const baseValue = Number(qtyInput.getAttribute('value'));
     const currentValue = Number(qtyInput.value);
     const min = (qtyInput.dataset.updateUrl === undefined) ? Number(qtyInput.getAttribute('min')) : 0;
-    const newValue = Math.max(currentValue + change, min);
+    // C-Shop: spin buttons move by the order multiple (`step` attribute)
+    const step = Number(qtyInput.getAttribute('step')) || 1;
+    const newValue = Math.max(currentValue + (change * step), min);
     qtyInput.value = String(isValidInputNum(newValue) ? newValue : baseValue);
   }
 };

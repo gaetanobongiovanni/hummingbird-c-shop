@@ -7,7 +7,7 @@ const cshopSelectors = {
   listingView: {
     container: '[data-ps-component="cs-listing"]',
     toggle: '[data-ps-action="cs-listing-view"]',
-    products: '[data-ps-target="cs-listing-products"]',
+    switcher: '[data-ps-ref="cs-view-switch"]',
   },
   qtyRules: {
     input: 'input[data-ps-component="cs-qty"]',

@@ -17,7 +17,7 @@
 
   {hook h='displayHeaderCategory'}
 
-  <section id="products">
+  <section id="products" class="cs-listing" data-ps-component="cs-listing" data-ps-state="grid">
     {if $listing.products|count}
       {block name='product_list_top'}
         {include file='catalog/_partials/products-top.tpl' listing=$listing}
@@ -44,7 +44,7 @@
         {/capture}
 
         {include file='errors/not-found.tpl' errorContent=$errorContent}
-      <div>
+      </div>
 
       <div id="js-product-list-bottom"></div>
     {/if}
