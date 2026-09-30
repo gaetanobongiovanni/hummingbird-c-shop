@@ -9,9 +9,9 @@
       <p class="cs-hero__lead">{l s='Search the catalogue by product name, product code, supplier code, OEM code or brand.' d='Shop.Theme.Cshop'}</p>
 
       <ul class="cs-hero__links">
-        <li><a class="cs-hero__link" href="{$urls.pages.new_products}">{l s='New products' d='Shop.Theme.Catalog'}</a></li>
+        <li><a class="cs-hero__link" href="{$urls.pages.new_products}">{l s='New products' d='Shop.Theme.Cshop'}</a></li>
         <li><a class="cs-hero__link" href="{$link->getPageLink('best-sales')}">{l s='Best sellers' d='Shop.Theme.Catalog'}</a></li>
-        <li><a class="cs-hero__link" href="{$urls.pages.prices_drop}">{l s='Price drops' d='Shop.Theme.Catalog'}</a></li>
+        <li><a class="cs-hero__link" href="{$urls.pages.prices_drop}">{l s='Price drops' d='Shop.Theme.Cshop'}</a></li>
         <li><a class="cs-hero__link" href="{$urls.pages.manufacturer}">{l s='Brands' d='Shop.Theme.Catalog'}</a></li>
       </ul>
     </div>

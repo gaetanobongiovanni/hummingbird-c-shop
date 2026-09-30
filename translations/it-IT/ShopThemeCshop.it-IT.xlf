@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="themes/cshop" source-language="en-US" target-language="it-IT" datatype="plaintext">
+    <body>
+      <trans-unit id="78de86a20eb025cb0250bb9ae048678b">
+        <source>%count% products</source>
+        <target>%count% prodotti</target>
+      </trans-unit>
+      <trans-unit id="a34ed99401baef01864678d5a7021cb2">
+        <source>%label% of %qty% pcs</source>
+        <target>%label% da %qty% pz</target>
+      </trans-unit>
+      <trans-unit id="06df33001c1d7187fdd81ea1f5b277aa">
+        <source>Actions</source>
+        <target>Azioni</target>
+      </trans-unit>
+      <trans-unit id="91abf529ca5249b8ee89e681c725d14d">
+        <source>Add all to cart</source>
+        <target>Aggiungi tutto al carrello</target>
+      </trans-unit>
+      <trans-unit id="19f6e26702652b72fdc06294ed1594ef">
+        <source>Add row</source>
+        <target>Aggiungi riga</target>
+      </trans-unit>
+      <trans-unit id="e18a22d145b38e4fff582663b5b4ec1e">
+        <source>All brands</source>
+        <target>Tutte le marche</target>
+      </trans-unit>
+      <trans-unit id="4fa02c865aedd399135dccfcba2a04e4">
+        <source>All promotions</source>
+        <target>Tutte le promozioni</target>
+      </trans-unit>
+      <trans-unit id="1741ec6ed69cf571adac9eeb641c4f87">
+        <source>Assistance</source>
+        <target>Assistenza</target>
+      </trans-unit>
+      <trans-unit id="8c751c4aab0db0b811cdfbddf0b4ea56">
+        <source>Availability:</source>
+        <target>Disponibilità:</target>
+      </trans-unit>
+      <trans-unit id="1e5d64cc729fdd6de6fa254e4242e110">
+        <source>Available on order</source>
+        <target>Disponibile su ordinazione</target>
+      </trans-unit>
+      <trans-unit id="9a78d5ec82f0062063ebc3679ee1439f">
+        <source>Available products</source>
+        <target>Prodotti disponibili</target>
+      </trans-unit>
+      <trans-unit id="b3649fb0bc0eb3cce4f5b77e8285d286">
+        <source>Browse all: %category%</source>
+        <target>Vedi tutto: %category%</target>
+      </trans-unit>
+      <trans-unit id="ca0dbad92a874b2f69b549293387925e">
+        <source>Code</source>
+        <target>Codice</target>
+      </trans-unit>
+      <trans-unit id="dab090dbb20e51199c128e3f792e89fd">
+        <source>Company account</source>
+        <target>Account aziendale</target>
+      </trans-unit>
+      <trans-unit id="de6686e270d53bad22e11eb2b26be0e4">
+        <source>Compatible products and accessories</source>
+        <target>Prodotti compatibili e accessori</target>
+      </trans-unit>
+      <trans-unit id="f467fa2af7e58aeff58394620f36e70b">
+        <source>Delivery time: %lead_time%</source>
+        <target>Tempi di consegna: %lead_time%</target>
+      </trans-unit>
+      <trans-unit id="6d56a3416f6c570eba791f58cc9c127e">
+        <source>Discontinued</source>
+        <target>Fuori produzione</target>
+      </trans-unit>
+      <trans-unit id="0945359809dad1fbf3dea1c95a0da951">
+        <source>Document</source>
+        <target>Documento</target>
+      </trans-unit>
+      <trans-unit id="2b0b4973b6bce721e435b35317554cce">
+        <source>Documents and data sheets</source>
+        <target>Documenti e schede tecniche</target>
+      </trans-unit>
+      <trans-unit id="1a5cfa5d07a7c36cc9d95215a81fcc59">
+        <source>EAN</source>
+        <target>EAN</target>
+      </trans-unit>
+      <trans-unit id="fea085b6ea6bb142f8a2f8ad8db4e3de">
+        <source>Enter a product code, supplier code or OEM code and the quantity.</source>
+        <target>Inserisci codice articolo, codice fornitore o codice OEM e la quantità.</target>
+      </trans-unit>
+      <trans-unit id="dd6efd33a322bb4c3c5c1e3927e09175">
+        <source>Enter your printer model or the original cartridge code (OEM) to find compatible products.</source>
+        <target>Inserisci il modello della stampante o il codice originale della cartuccia (OEM) per trovare i prodotti compatibili.</target>
+      </trans-unit>
+      <trans-unit id="20bb56ceac48c569a5d350b8e87cfa22">
+        <source>Fill the rows</source>
+        <target>Compila le righe</target>
+      </trans-unit>
+      <trans-unit id="36ffc968637ffd5e9ee958420b063186">
+        <source>Find cartridges</source>
+        <target>Trova cartucce</target>
+      </trans-unit>
+      <trans-unit id="b224120e53f63352db5aea1937a6e4d4">
+        <source>For businesses and public bodies</source>
+        <target>Per aziende ed enti pubblici</target>
+      </trans-unit>
+      <trans-unit id="b3d7c37eb8d31a2ca32fdc5850306f60">
+        <source>Grid view</source>
+        <target>Vista a griglia</target>
+      </trans-unit>
+      <trans-unit id="fcebe56087b9373f15514831184fa572">
+        <source>In stock</source>
+        <target>Disponibile</target>
+      </trans-unit>
+      <trans-unit id="348325afced7f3da215310efbe21f1c1">
+        <source>Last items in stock</source>
+        <target>Ultimi pezzi disponibili</target>
+      </trans-unit>
+      <trans-unit id="de0ebf77c131c857e337e6fb53c3c8e9">
+        <source>List price</source>
+        <target>Prezzo di listino</target>
+      </trans-unit>
+      <trans-unit id="f13001876be336c48ead8577c8d809fe">
+        <source>List view</source>
+        <target>Vista a elenco</target>
+      </trans-unit>
+      <trans-unit id="395d1ee1bc190e32ccb32832ea2e335b">
+        <source>Main brands</source>
+        <target>Marche principali</target>
+      </trans-unit>
+      <trans-unit id="3121868e77ae846e3de614b60ae7a4e2">
+        <source>Min.</source>
+        <target>Min.</target>
+      </trans-unit>
+      <trans-unit id="63b806c2533d51832ae0b6e309af2abc">
+        <source>Min. order: %qty%</source>
+        <target>Ordine minimo: %qty%</target>
+      </trans-unit>
+      <trans-unit id="eafcd4a3163fc74e5d1146f4ca73f1f7">
+        <source>Multiples of %qty%</source>
+        <target>Multipli di %qty%</target>
+      </trans-unit>
+      <trans-unit id="74ecd9234b2a42ca13e775193f391833">
+        <source>My orders</source>
+        <target>I miei ordini</target>
+      </trans-unit>
+      <trans-unit id="55439b0e8766b949e2a34c46e070828e">
+        <source>My product lists</source>
+        <target>Le mie liste prodotti</target>
+      </trans-unit>
+      <trans-unit id="7ec9cceb94985909c6994e95c31c1aa8">
+        <source>My wishlists</source>
+        <target>Le mie liste dei desideri</target>
+      </trans-unit>
+      <trans-unit id="0dfa571878873577ef425b48520618c6">
+        <source>New list</source>
+        <target>Nuova lista</target>
+      </trans-unit>
+      <trans-unit id="9ff0635f5737513b1a6f559ac2bff745">
+        <source>New products</source>
+        <target>Nuovi prodotti</target>
+      </trans-unit>
+      <trans-unit id="f4c6f851b00d5518bf888815de279aba">
+        <source>Notes</source>
+        <target>Note</target>
+      </trans-unit>
+      <trans-unit id="8adff474dce0f2a357fe79a522a7fdf5">
+        <source>OEM code</source>
+        <target>Codice OEM</target>
+      </trans-unit>
+      <trans-unit id="280a82540510f5478e61b1ccf625e09c">
+        <source>Office, school and business supplies</source>
+        <target>Forniture per ufficio, scuola e azienda</target>
+      </trans-unit>
+      <trans-unit id="1e6b8e1e38837d2cf7dfb1aa6381ebbe">
+        <source>One product per line: code and quantity separated by space, tab or semicolon.</source>
+        <target>Un prodotto per riga: codice e quantità separati da spazio, tabulazione o punto e virgola.</target>
+      </trans-unit>
+      <trans-unit id="00df394e4d3282566c9ce2598c5d7867">
+        <source>Open PDF</source>
+        <target>Apri PDF</target>
+      </trans-unit>
+      <trans-unit id="5256aa323424acca01b4d214b3595669">
+        <source>Open a previous order and add all its products to the cart again.</source>
+        <target>Apri un ordine precedente e aggiungi di nuovo tutti i prodotti al carrello.</target>
+      </trans-unit>
+      <trans-unit id="b5c6dc32d096a565623b6de9e923f648">
+        <source>Order history and reorder</source>
+        <target>Storico ordini e riordino</target>
+      </trans-unit>
+      <trans-unit id="b55197a49e8c4cd8c314bc2aa39d6feb">
+        <source>Out of stock</source>
+        <target>Non disponibile</target>
+      </trans-unit>
+      <trans-unit id="4492081ca02b059f9e8af4ddaf0f7292">
+        <source>Pack</source>
+        <target>Confezione</target>
+      </trans-unit>
+      <trans-unit id="664f0460abf3a7791d62ccbd4d01c58f">
+        <source>Pack of %qty% pcs</source>
+        <target>Confezione da %qty% pz</target>
+      </trans-unit>
+      <trans-unit id="61c4ee96f9987a5f4c36c4d4dbaf2454">
+        <source>Pack quantity, minimum order and unit price on every product.</source>
+        <target>Quantità per confezione, ordine minimo e prezzo unitario su ogni prodotto.</target>
+      </trans-unit>
+      <trans-unit id="d7f6605cd6a052df0510fd51bec04a2a">
+        <source>Packs and minimums always visible</source>
+        <target>Confezioni e minimi sempre visibili</target>
+      </trans-unit>
+      <trans-unit id="65f8a582082d3856bdc50a40a0029c5b">
+        <source>Paste a list of codes</source>
+        <target>Incolla un elenco di codici</target>
+      </trans-unit>
+      <trans-unit id="195f0670f4e451e61e85cf228210465d">
+        <source>Price drops</source>
+        <target>Prezzi ribassati</target>
+      </trans-unit>
+      <trans-unit id="bf5305f3a89a27edf60450b9034d307f">
+        <source>Printer model or cartridge code</source>
+        <target>Modello stampante o codice cartuccia</target>
+      </trans-unit>
+      <trans-unit id="0692e48febd7df5e682cda5edbe1d4be">
+        <source>Private customers and businesses</source>
+        <target>Privati e aziende</target>
+      </trans-unit>
+      <trans-unit id="ba18a23e463283cff65865724e1e9600">
+        <source>Product code</source>
+        <target>Codice articolo</target>
+      </trans-unit>
+      <trans-unit id="d315d493a2625f05cd1841ab4058dadc">
+        <source>Product code, row %row%</source>
+        <target>Codice articolo, riga %row%</target>
+      </trans-unit>
+      <trans-unit id="d800f422548a5c07836a2924d214264a">
+        <source>Product code, supplier code, OEM code and brand.</source>
+        <target>Codice articolo, codice fornitore, codice OEM e marca.</target>
+      </trans-unit>
+      <trans-unit id="30acac339883f6ac55123fff79ff6852">
+        <source>Product list view</source>
+        <target>Visualizzazione elenco prodotti</target>
+      </trans-unit>
+      <trans-unit id="bebfbee8fe0f2739450467bba1de6ada">
+        <source>Product, code, OEM code or brand…</source>
+        <target>Prodotto, codice, codice OEM o marca…</target>
+      </trans-unit>
+      <trans-unit id="70719754b29b359a20c297898ee618f8">
+        <source>Promotions</source>
+        <target>Promozioni</target>
+      </trans-unit>
+      <trans-unit id="5b12e9cfcdd414324a3cc4e38fda94db">
+        <source>Quantity, row %row%</source>
+        <target>Quantità, riga %row%</target>
+      </trans-unit>
+      <trans-unit id="bd2a278220ba82a9a1033bea8452b667">
+        <source>Quick order by product code</source>
+        <target>Ordine rapido per codice</target>
+      </trans-unit>
+      <trans-unit id="8ce4699b132b9d3698007d875d8d0faa">
+        <source>Quick reorder</source>
+        <target>Riordino rapido</target>
+      </trans-unit>
+      <trans-unit id="dfd9f6de2416861b58a0ae0a6f9757be">
+        <source>Register with your company details and manage your addresses.</source>
+        <target>Registrati con i dati aziendali e gestisci i tuoi indirizzi.</target>
+      </trans-unit>
+      <trans-unit id="5eb1e04ad0410475918b994b33611563">
+        <source>Remove row %row%</source>
+        <target>Rimuovi riga %row%</target>
+      </trans-unit>
+      <trans-unit id="b0220f8056fc115e0b84d727622d1592">
+        <source>Reorder from previous orders</source>
+        <target>Riordina dagli ordini precedenti</target>
+      </trans-unit>
+      <trans-unit id="119c4c2a8d23c33cff51938f557a60d2">
+        <source>Reorder from your order history in one click.</source>
+        <target>Riordina dallo storico ordini con un clic.</target>
+      </trans-unit>
+      <trans-unit id="3e31ab008ddc717a7971d8c86c858ad4">
+        <source>Reorder in a few clicks from your previous orders.</source>
+        <target>Riordina in pochi clic dai tuoi ordini precedenti.</target>
+      </trans-unit>
+      <trans-unit id="319ed0dba4882bdc4a26a2ab4ba495b4">
+        <source>Request a quote</source>
+        <target>Richiedi un preventivo</target>
+      </trans-unit>
+      <trans-unit id="aa2328d696959f8421f11818b0fa0e12">
+        <source>Search by code</source>
+        <target>Ricerca per codice</target>
+      </trans-unit>
+      <trans-unit id="e559e403c8d05c28f19d6ef0446112d6">
+        <source>Search by product name, product code, supplier code, OEM code or brand</source>
+        <target>Cerca per nome prodotto, codice articolo, codice fornitore, codice OEM o marca</target>
+      </trans-unit>
+      <trans-unit id="1d821c6a58c8188e313c0108275c6a17">
+        <source>Search the catalog</source>
+        <target>Cerca nel catalogo</target>
+      </trans-unit>
+      <trans-unit id="f444db17c5057f68bfff33cdd515ad36">
+        <source>Search the catalogue by product name, product code, supplier code, OEM code or brand.</source>
+        <target>Cerca nel catalogo per nome prodotto, codice articolo, codice fornitore, codice OEM o marca.</target>
+      </trans-unit>
+      <trans-unit id="c7c7146cbe62021c0fa93b38f0124f20">
+        <source>Send request</source>
+        <target>Invia richiesta</target>
+      </trans-unit>
+      <trans-unit id="492510e993cfd1af9a00e623360d64f9">
+        <source>Shop by category</source>
+        <target>Acquista per categoria</target>
+      </trans-unit>
+      <trans-unit id="9e7ac4ff9f3985eb28bf4da8c9f24850">
+        <source>Sign in to reorder from your previous orders.</source>
+        <target>Accedi per riordinare dai tuoi ordini precedenti.</target>
+      </trans-unit>
+      <trans-unit id="1909968861080cf879cf5553755f4717">
+        <source>Sign in to see your prices and reorder from your order history.</source>
+        <target>Accedi per vedere i tuoi prezzi e riordinare dallo storico ordini.</target>
+      </trans-unit>
+      <trans-unit id="75470516296873f1c00ceee1377bd10f">
+        <source>Supplier code</source>
+        <target>Codice fornitore</target>
+      </trans-unit>
+      <trans-unit id="5d25ef0fe80918309a18b85c097eb22c">
+        <source>Technical specifications</source>
+        <target>Caratteristiche tecniche</target>
+      </trans-unit>
+      <trans-unit id="5d550e9be20f65048b8aa9a8d4e6ae46">
+        <source>Technical specifications of %product_name%</source>
+        <target>Caratteristiche tecniche di %product_name%</target>
+      </trans-unit>
+      <trans-unit id="da8c3397b9a5601888618ea414d23bad">
+        <source>Toner and cartridges</source>
+        <target>Toner e cartucce</target>
+      </trans-unit>
+      <trans-unit id="ddb1475d1cc11a88be509ec5b95e951c">
+        <source>Welcome back, %name%</source>
+        <target>Bentornato, %name%</target>
+      </trans-unit>
+      <trans-unit id="641254d77e7a473aa5910574f3f9453c">
+        <source>Wishlist</source>
+        <target>Preferiti</target>
+      </trans-unit>
+      <trans-unit id="00607ca323fa806a2a9fe51ef59aa11e">
+        <source>Your price</source>
+        <target>Il tuo prezzo</target>
+      </trans-unit>
+      <trans-unit id="013dbbcd220223c9b5b195aa2679bd84">
+        <source>Your price list</source>
+        <target>Il tuo listino</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

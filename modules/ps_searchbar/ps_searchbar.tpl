@@ -7,16 +7,16 @@
    PrestaShop search indexes name, reference, supplier reference, EAN/UPC/MPN
    and brand: tune weights in Back Office > Shop Parameters > Search. *}
 <div id="ps_searchbar" class="ps-searchbar cs-search js-search-widget" data-search-controller-url="{$search_controller_url}">
-  <form class="ps-searchbar__form cs-search__form" method="get" action="{$search_controller_url}" role="search" aria-label="{l s='Search the catalog' d='Shop.Theme.Catalog'}">
+  <form class="ps-searchbar__form cs-search__form" method="get" action="{$search_controller_url}" role="search" aria-label="{l s='Search the catalog' d='Shop.Theme.Cshop'}">
     <input type="hidden" name="controller" value="search">
     <i class="material-icons ps-searchbar__magnifier cs-search__icon js-search-icon" aria-hidden="true">&#xE8B6;</i>
-    <label for="ps_searchbar_input" class="visually-hidden">{l s='Search by product name, product code, supplier code, OEM code or brand' d='Shop.Theme.Catalog'}</label>
+    <label for="ps_searchbar_input" class="visually-hidden">{l s='Search by product name, product code, supplier code, OEM code or brand' d='Shop.Theme.Cshop'}</label>
     <input
       class="js-search-input form-control ps-searchbar__input cs-search__input"
       type="search"
       name="s"
       value="{$search_string}"
-      placeholder="{l s='Product, code, OEM code or brand…' d='Shop.Theme.Catalog'}"
+      placeholder="{l s='Product, code, OEM code or brand…' d='Shop.Theme.Cshop'}"
       id="ps_searchbar_input"
       autocomplete="off"
       enterkeyhint="search"
@@ -35,7 +35,7 @@
       <span class="cs-search__submit-label">{l s='Search' d='Shop.Theme.Catalog'}</span>
     </button>
   </form>
-  <p id="ps_searchbar_hint" class="visually-hidden">{l s='Search by product name, product code, supplier code, OEM code or brand' d='Shop.Theme.Catalog'}</p>
+  <p id="ps_searchbar_hint" class="visually-hidden">{l s='Search by product name, product code, supplier code, OEM code or brand' d='Shop.Theme.Cshop'}</p>
 
   <div
     class="ps-searchbar__dropdown cs-search__dropdown js-search-dropdown d-none"

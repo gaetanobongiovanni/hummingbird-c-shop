@@ -1,3 +1,8 @@
+> **C-Shop theme** — this branch (`c-shop-9.2`) turns Hummingbird 2.1.2 into
+> the `cshop` theme for PrestaShop 9.2. See **[docs/CSHOP.md](docs/CSHOP.md)**
+> for build, packaging (`npm run build:zip`), data contract and configuration.
+> The upstream Hummingbird README follows.
+
 # Hummingbird Theme for PrestaShop
 
 ![CI](https://github.com/PrestaShop/hummingbird/actions/workflows/lint.yml/badge.svg)

@@ -23,7 +23,7 @@ rm -rf "$STAGE" "$ZIP"
 mkdir -p "$STAGE"
 
 # Runtime files only: no sources, node_modules, tooling or source maps.
-for item in assets config modules plugins templates preview.png LICENSE.md; do
+for item in assets config modules plugins templates translations preview.png LICENSE.md; do
   cp -R "$ROOT/$item" "$STAGE/"
 done
 cp "$ROOT/docs/CSHOP.md" "$STAGE/README.md"

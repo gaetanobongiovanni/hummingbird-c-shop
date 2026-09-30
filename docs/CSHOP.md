@@ -26,7 +26,9 @@ npm run zip        # dist/cshop-<version>.zip, installable from Back Office
 ```
 
 The ZIP contains only runtime files (`assets`, `config`, `modules`, `plugins`,
-`templates`, `preview.png`), without sources or source maps. Install it from
+`templates`, `translations`, `preview.png`), without sources or source maps.
+PrestaShop refuses a theme without `assets/css/theme.css` and
+`assets/js/theme.js`, so always build before packaging. Install it from
 **Design › Theme & Logo › Add new theme**, then **Use this theme**. On an
 already configured shop, choose to keep the current module positions only if
 you know them; otherwise let the theme apply its hooks (see `config/theme.yml`).
@@ -130,8 +132,28 @@ render nothing. Other B2B components (`reorder-list`, `product-lists`,
 6. **Featured products**: products in the configured category; the homepage
    "Available products" section lists only those in stock.
 7. **Products per page**: 36 (set by the theme; adjust in Product settings).
-8. Translations: strings use the `Shop.Theme.Cshop` domain (plus standard
-   domains) and can be translated in International › Translations.
+8. Translations: every string added by C-Shop uses the `Shop.Theme.Cshop`
+   domain; the Italian catalogue ships in
+   `translations/it-IT/ShopThemeCshop.it-IT.xlf` and can be overridden in
+   International › Translations. Core strings come from the PrestaShop
+   Italian language pack.
+
+## How it was verified
+
+On a local PrestaShop **9.2.0** (source tag, demo data, PHP 8.4, MariaDB,
+Smarty cache and CCC enabled, `_PS_MODE_DEV_` on):
+
+- ZIP installed through PrestaShop's `ThemeManager::install()` (the code path
+  of the Back Office upload) and enabled.
+- Home, category, search, brand, product (simple, combinations), cart,
+  checkout, account and history pages: no PHP warning / Smarty error.
+- Headless Chromium at 1440 / 820 / 390 px: no console errors; grid/list
+  switch (persists after reload and faceted refresh), autocomplete with codes,
+  combination change keeps codes, add to cart, mobile menu and filter drawer,
+  keyboard skip link.
+- Data contract checked with a throw-away module feeding `cshop` data:
+  supplier/OEM codes, pack, minimum, multiples (spin 5 → 10 → 15, 7 → 10 on
+  blur, cart +5), lead time, PDF documents, quote request.
 
 ## Updating from upstream Hummingbird
 

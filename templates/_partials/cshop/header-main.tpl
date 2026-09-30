@@ -27,9 +27,9 @@
 
         {* Revealed by JS only when the blockwishlist module is active (see src/js/cshop/header.ts) *}
         <div class="header-block cs-header__wishlist" data-ps-component="cs-wishlist-link" hidden>
-          <a class="header-block__action-btn" href="{$link->getModuleLink('blockwishlist', 'lists', [], true)}" rel="nofollow" aria-label="{l s='My wishlists' d='Shop.Theme.Customeraccount'}">
+          <a class="header-block__action-btn" href="{$link->getModuleLink('blockwishlist', 'lists', [], true)}" rel="nofollow" aria-label="{l s='My wishlists' d='Shop.Theme.Cshop'}">
             <i class="material-icons header-block__icon" aria-hidden="true">&#xE87E;</i>
-            <span class="header-block__title d-none d-lg-inline">{l s='Wishlist' d='Shop.Theme.Customeraccount'}</span>
+            <span class="header-block__title d-none d-lg-inline">{l s='Wishlist' d='Shop.Theme.Cshop'}</span>
           </a>
         </div>
 
