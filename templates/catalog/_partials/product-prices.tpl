@@ -4,6 +4,12 @@
  *}
 {if $product.show_price}
   <div class="product__prices js-product-prices">
+    {* C-Shop: codes live inside the refreshed block so they follow the selected combination *}
+    {if $page.page_name == 'product'}
+      {include file='catalog/_partials/cshop/product-data.tpl' product=$product}
+      {include file='catalog/_partials/cshop/product-codes.tpl' cs=$cs cs_codes_full=true cs_codes_class='cs-codes--product'}
+    {/if}
+
     {block name='product_price'}
       <div class="product__prices-block">
         {if $product.has_discount}
@@ -45,6 +51,17 @@
               </span>
             {/if}
           {/block}
+
+          {* C-Shop: pack size next to the price (from the module data contract) *}
+          {if isset($cs) && $cs.pack_quantity > 1}
+            <span class="product__pack-size cs-tag cs-tag--neutral">
+              {if $cs.pack_label}
+                {l s='%label% of %qty% pcs' sprintf=['%label%' => $cs.pack_label, '%qty%' => $cs.pack_quantity] d='Shop.Theme.Cshop'}
+              {else}
+                {l s='Pack of %qty% pcs' sprintf=['%qty%' => $cs.pack_quantity] d='Shop.Theme.Cshop'}
+              {/if}
+            </span>
+          {/if}
         </div>
 
         {block name='product_pack_price'}

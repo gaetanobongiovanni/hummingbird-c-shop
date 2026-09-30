@@ -38,12 +38,7 @@
     </div>
 
     <div class="product__right" data-ps-ref="product-right" tabindex="-1">
-      {block name='product_header'}
-        <h1 class="product__name h2 {if isset($product_manufacturer->id) && $product_manufacturer->active}mb-1{/if}">
-          {block name='page_title'}{$product.name}{/block}
-        </h1>
-      {/block}
-
+      {* C-Shop: brand above the title (catalogue convention) *}
       {block name='product_header_manufacturer'}
         {if isset($product_manufacturer->id) && $product_manufacturer->active}
           <div class="product__manufacturer">
@@ -53,6 +48,17 @@
           </div>
         {/if}
       {/block}
+
+      {block name='product_header'}
+        <h1 class="product__name h2">
+          {block name='page_title'}{$product.name}{/block}
+        </h1>
+      {/block}
+
+      {if !$product.show_price}
+        {include file='catalog/_partials/cshop/product-data.tpl' product=$product}
+        {include file='catalog/_partials/cshop/product-codes.tpl' cs=$cs cs_codes_full=true cs_codes_class='cs-codes--product'}
+      {/if}
 
       {block name='product_prices'}
         {include file='catalog/_partials/product-prices.tpl'}
@@ -68,7 +74,7 @@
         {/if}
       {/block}
 
-      <div class="product__actions js-product-actions">
+      <div class="product__actions cs-buy-box js-product-actions">
         {block name='product_buy'}
           <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
             <input type="hidden" name="token" value="{$static_token}">
@@ -138,15 +144,16 @@
           {/block}
 
           {block name='product_attachments'}
-            {if $product.attachments}
+            {include file='catalog/_partials/cshop/product-data.tpl' product=$product}
+            {if $product.attachments || $cs.documents}
               <div class="info accordion-item" id="product_attachments">
                 <h2 class="accordion-header" id="product_attachments_heading">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#product_attachments_collapse" aria-expanded="false" aria-controls="product_attachments_collapse">
-                    {l s='Download' d='Shop.Theme.Actions'}
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#product_attachments_collapse" aria-expanded="true" aria-controls="product_attachments_collapse">
+                    {l s='Documents and data sheets' d='Shop.Theme.Cshop'}
                   </button>
                 </h2>
 
-                <div id="product_attachments_collapse" class="accordion-collapse collapse" aria-labelledby="product_attachments_heading">
+                <div id="product_attachments_collapse" class="accordion-collapse collapse show" aria-labelledby="product_attachments_heading">
                   <div class="accordion-body">
                     <div class="product__attachments">
                       {foreach from=$product.attachments item=attachment}
@@ -168,6 +175,19 @@
                             <i class="material-icons" aria-hidden="true">&#xE2C4;</i> {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
                           </a>
                         </div>
+                      {/foreach}
+
+                      {* C-Shop: documents provided by a module (e.g. EDI technical sheets) *}
+                      {foreach from=$cs.documents item=csDocument}
+                        {if !empty($csDocument.url)}
+                          <div class="attachment">
+                            <p class="attachment__name">{$csDocument.name|default:{l s='Document' d='Shop.Theme.Cshop'}}</p>
+                            <a class="attachment__link stretched-link" href="{$csDocument.url}" target="_blank" rel="noopener"
+                              aria-label="{l s='Download %attachment_name%' sprintf=['%attachment_name%' => $csDocument.name|default:''] d='Shop.Theme.Actions'}">
+                              <i class="material-icons" aria-hidden="true">&#xE415;</i> {l s='Open PDF' d='Shop.Theme.Cshop'}{if !empty($csDocument.size)} ({$csDocument.size}){/if}
+                            </a>
+                          </div>
+                        {/if}
                       {/foreach}
                     </div>
                   </div>

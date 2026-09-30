@@ -119,7 +119,7 @@
                     "step" => "{$cs.step}",
                     "data-ps-component" => "cs-qty"
                   ]}
-                  {if $cs.pack_quantity > 1 || $cs.min > 1 || $cs.step > 1}
+                  {if $cs.pack_quantity > 1 || $cs.min_order > 1 || $cs.step > 1}
                     {$csQtyAttrs['aria-describedby'] = "cs-rules-{$product.id_product}-{$product.id_product_attribute}"}
                   {/if}
                   <div class="quantity-button js-quantity-button">

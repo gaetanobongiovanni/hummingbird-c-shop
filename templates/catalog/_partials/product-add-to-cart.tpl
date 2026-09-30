@@ -3,6 +3,8 @@
  * LICENSE.md file that was distributed with this source code.
  *}
 {if !$configuration.is_catalog}
+  {* C-Shop: codes, pack, minimum and multiples ($cs) — this block is re-rendered on combination change *}
+  {include file='catalog/_partials/cshop/product-data.tpl' product=$product}
   <div class="product__add-to-cart-container product-add-to-cart js-product-add-to-cart">
     {block name='product_availability'}
       <div
@@ -45,29 +47,49 @@
 
         {block name='product_delivery_times'}
           {if !empty($product.delivery_information)}
-            <div class="product__delivery-infos">{$product.delivery_information}</div>
+            <div class="product__delivery-infos">
+              <i class="material-icons" aria-hidden="true">&#xE558;</i>
+              {$product.delivery_information}
+            </div>
+          {/if}
+          {if $cs.lead_time}
+            <div class="product__delivery-infos cs-lead-time">
+              <i class="material-icons" aria-hidden="true">&#xE192;</i>
+              {l s='Delivery time: %lead_time%' sprintf=['%lead_time%' => $cs.lead_time] d='Shop.Theme.Cshop'}
+            </div>
           {/if}
         {/block}
       </div>
     {/block}
 
+    {block name='cshop_order_rules'}
+      {include file='catalog/_partials/cshop/order-rules.tpl' cs=$cs cs_rules_id='cs-product-rules' cs_hide_min=true}
+    {/block}
+
     {block name='product_quantity'}
       {* .product-quantity needed for JS *}
+      {$csQtyValue = $product.quantity_wanted|default:1}
+      {if $csQtyValue < $cs.min}{$csQtyValue = $cs.min}{/if}
+      {$csQtyAttrs = [
+        "id" => "quantity_wanted",
+        "class" => "form-control js-quantity-wanted",
+        "value" => "{$csQtyValue}",
+        "min" => "{$cs.min}",
+        "step" => "{$cs.step}",
+        "data-ps-component" => "cs-qty"
+      ]}
+      {if $cs.pack_quantity > 1 || $cs.step > 1}
+        {$csQtyAttrs['aria-describedby'] = 'cs-product-rules'}
+      {/if}
       <div class="product__actions-qty-add product-quantity">
+        <label class="cs-buy-box__qty-label" for="quantity_wanted">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
         <div class="product-actions__quantity product__quantity quantity-button js-quantity-button">
-          {include file='components/qty-input.tpl'
-            attributes=[
-              "id" => "quantity_wanted",
-              "class" => "form-control js-quantity-wanted",
-              "value" => "{$product.quantity_wanted}",
-              "min" => "{$product.quantity_required}"
-            ]
-          }
+          {include file='components/qty-input.tpl' attributes=$csQtyAttrs}
         </div>
 
         <div class="product__add-to-cart add">
           <button
-            class="product__add-to-cart-button btn btn-primary"
+            class="product__add-to-cart-button btn btn-accent btn-lg"
             data-button-action="add-to-cart"
             type="submit"
             {if !$product.add_to_cart_url}

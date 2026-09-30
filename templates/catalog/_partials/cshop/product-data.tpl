@@ -21,7 +21,14 @@
 {$csExtra = []}
 {if !empty($product.cshop)}{$csExtra = $product.cshop}{/if}
 
-{$csMin = $product.minimal_quantity|default:1}
+{* Displayed minimum: product/combination minimal quantity (or the module's, if greater) *}
+{$csMinOrder = $product.minimal_quantity|default:1}
+{$csMinOrder = $csMinOrder + 0}
+{if !empty($csExtra.min_quantity) && $csExtra.min_quantity > $csMinOrder}{$csMinOrder = $csExtra.min_quantity + 0}{/if}
+{if $csMinOrder < 1}{$csMinOrder = 1}{/if}
+
+{* Input minimum: core `quantity_required` already subtracts what is in the cart *}
+{$csMin = $product.quantity_required|default:$csMinOrder}
 {$csMin = $csMin + 0}
 {if !empty($csExtra.min_quantity) && $csExtra.min_quantity > $csMin}{$csMin = $csExtra.min_quantity + 0}{/if}
 {if $csMin < 1}{$csMin = 1}{/if}
@@ -39,6 +46,7 @@
   'ean' => $product.ean13|default:'',
   'brand' => $product.manufacturer_name|default:'',
   'min' => $csMin,
+  'min_order' => $csMinOrder,
   'step' => $csStep,
   'pack_quantity' => $csPack,
   'pack_label' => $csExtra.pack_label|default:'',

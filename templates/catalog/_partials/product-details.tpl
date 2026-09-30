@@ -121,30 +121,31 @@
     </div>
   </div>
 
+  {* C-Shop: technical features as an accessible data table, open by default *}
   {block name='product_features'}
     {if $product.grouped_features}
       <div class="accordion-item" id="product_features">
         <h2 class="accordion-header" id="product_features_heading">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#product_features_collapse" aria-expanded="false" aria-controls="product_features_collapse">
-            {l s='Data sheet' d='Shop.Theme.Catalog'}
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#product_features_collapse" aria-expanded="true" aria-controls="product_features_collapse">
+            {l s='Technical specifications' d='Shop.Theme.Cshop'}
           </button>
         </h2>
 
-        <div id="product_features_collapse" class="accordion-collapse collapse" aria-labelledby="product_features_heading">
+        <div id="product_features_collapse" class="accordion-collapse collapse show" aria-labelledby="product_features_heading">
           <div class="accordion-body">
-            <ul class="details__list">
-              {foreach from=$product.grouped_features item=feature}
-                <li class="details__item details__item--feature">
-                  <div class="details__left">
-                    <span class="details__title">{$feature.name}</span>
-                  </div>
-
-                  <div class="details__right">
-                    <span>{$feature.value|escape:'htmlall'|nl2br nofilter}</span>
-                  </div>
-                </li>
-              {/foreach}
-            </ul>
+            <div class="cs-table-wrapper">
+              <table class="cs-table cs-table--striped">
+                <caption class="visually-hidden">{l s='Technical specifications of %product_name%' sprintf=['%product_name%' => $product.name] d='Shop.Theme.Cshop'}</caption>
+                <tbody>
+                  {foreach from=$product.grouped_features item=feature}
+                    <tr>
+                      <th scope="row">{$feature.name}</th>
+                      <td>{$feature.value|escape:'htmlall'|nl2br nofilter}</td>
+                    </tr>
+                  {/foreach}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

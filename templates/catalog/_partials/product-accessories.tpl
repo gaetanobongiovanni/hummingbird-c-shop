@@ -12,5 +12,6 @@
 {block name='module_products_name'}product__accessories{/block}
 
 {block name='module_products_title'}
-  {include file='components/section-title.tpl' title={l s='You might also like' d='Shop.Theme.Catalog'}}
+  {* C-Shop: accessories are used for compatible products (toner ↔ printer, refills…) *}
+  {include file='components/section-title.tpl' title={l s='Compatible products and accessories' d='Shop.Theme.Cshop'}}
 {/block}
