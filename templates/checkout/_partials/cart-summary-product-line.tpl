@@ -105,7 +105,7 @@
           {/if}
         </div>
 
-        {if $product.unit_price_full}
+        {if !empty($product.unit_price_tax_excluded) && $product.unit_price_full}
           <div class="{$componentName}__unit-price">
             <span class="value">{$product.unit_price_full}</span>
           </div>

@@ -70,7 +70,8 @@
 
                   {hook h='displayProductPriceBlock' product=$product type='unit_price'}
 
-                  {if !empty($product.unit_price_full)}
+                  {* same rule as core ProductController::displayUnitPrice: EDI sets `unity` even when there is no unit price *}
+                  {if !empty($product.unit_price_tax_excluded) && !empty($product.unit_price_full)}
                     <span class="{$componentName}__unit-price">{$product.unit_price_full}</span>
                   {/if}
 

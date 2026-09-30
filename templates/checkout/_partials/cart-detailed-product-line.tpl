@@ -130,7 +130,7 @@
 
       <div class="product-line__item product-line__item--prices">
         <span class="product-line__item-price">{$product.price}</span>
-        {if $product.unit_price_full}
+        {if !empty($product.unit_price_tax_excluded) && $product.unit_price_full}
           <span class="product-line__item-unit-price">{$product.unit_price_full}</span>
         {/if}
 
