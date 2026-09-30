@@ -7,10 +7,14 @@
     {assign var="need_container" value="true"}
   {/block}
 
-  <section class="{block name='module_products_name'}{/block}">
+  {* C-Shop: sections share the cs-section header (title + "see all" link) *}
+  <section class="{block name='module_products_name'}{/block} cs-module-products">
     <div class="module-products {if isset($need_container) && $need_container}container{/if}">
-      {block name='module_products_title'}{/block}
-      
+      <div class="cs-section__header">
+        {block name='module_products_title'}{/block}
+        {block name='module_products_header_link'}{/block}
+      </div>
+
       {block name='module_products_list'}
         {if $products}
           <div class="module-products__list">

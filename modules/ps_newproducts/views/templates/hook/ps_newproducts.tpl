@@ -11,9 +11,6 @@
   {include file='components/section-title.tpl' title={l s='Latest arrivals' d='Shop.Theme.Catalog'}}
 {/block}
 
-{block name='module_products_footer'}
-  <a class="btn btn-outline-primary" href="{$allNewProductsLink}">
-    {l s='All new products' d='Shop.Theme.Catalog'}
-    <i class="material-icons" aria-hidden="true">&#xE315;</i>
-  </a>
+{block name='module_products_header_link'}
+  <a class="cs-section__link" href="{$allNewProductsLink}">{l s='All new products' d='Shop.Theme.Catalog'}</a>
 {/block}

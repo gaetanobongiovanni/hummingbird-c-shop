@@ -8,12 +8,27 @@
 {block name='module_products_name'}ps-featuredproducts{/block}
 
 {block name='module_products_title'}
-  {include file='components/section-title.tpl' title={l s='Featured products' d='Shop.Theme.Catalog'}}
+  {if $page.page_name == 'index'}
+    {include file='components/section-title.tpl' title={l s='Available products' d='Shop.Theme.Cshop'}}
+  {else}
+    {include file='components/section-title.tpl' title={l s='Featured products' d='Shop.Theme.Catalog'}}
+  {/if}
 {/block}
 
-{block name='module_products_footer'}
-  <a class="btn btn-outline-primary" href="{$allProductsLink}">
-    {l s='All featured products' d='Shop.Theme.Catalog'}
-    <i class="material-icons" aria-hidden="true">&#xE315;</i>
-  </a>
+{block name='module_products_header_link'}
+  <a class="cs-section__link" href="{$allProductsLink}">{l s='All featured products' d='Shop.Theme.Catalog'}</a>
+{/block}
+
+{* C-Shop: on the homepage only products orderable now are listed (max 10) *}
+{block name='module_products_list'}
+  {if $page.page_name == 'index'}
+    {include file='_partials/cshop/home/filter-available.tpl' cshop_source=$products cshop_limit=10}
+    {if $cshopFiltered|count}
+      <div class="module-products__list">
+        {include file='catalog/_partials/productlist.tpl' products=$cshopFiltered}
+      </div>
+    {/if}
+  {else}
+    {$smarty.block.parent}
+  {/if}
 {/block}
