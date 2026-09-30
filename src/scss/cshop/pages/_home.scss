@@ -343,3 +343,64 @@
 .cs-home-hook:empty {
   display: none;
 }
+
+// ---------------------------------------------------------------------------
+// Phones: compact hero and tighter sections so the catalogue shows sooner
+@include media-breakpoint-down(md) {
+  .cs-hero {
+    padding-block: var(--cs-space-4);
+
+    &__title {
+      font-size: $cs-font-size-lg;
+    }
+
+    &__lead,
+    &__account {
+      display: none;
+    }
+
+    &__links {
+      flex-wrap: nowrap;
+      padding-inline: var(--cs-space-4);
+      margin-inline: calc(var(--cs-space-4) * -1);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    &__link {
+      flex: 0 0 auto;
+      white-space: nowrap;
+    }
+  }
+
+  .cs-section {
+    padding-block: var(--cs-space-4);
+  }
+
+  .cs-module-products {
+    padding-block: var(--cs-space-4);
+  }
+
+  .cs-section__title,
+  .cs-module-products .section-title {
+    font-size: $cs-font-size-lg;
+  }
+
+  // Category tiles: two columns, titles only
+  .cs-category-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--cs-space-2);
+  }
+
+  .cs-category-tile {
+    padding: var(--cs-space-3);
+
+    &__title {
+      font-size: $cs-font-size-sm;
+    }
+
+    &__children {
+      display: none;
+    }
+  }
+}

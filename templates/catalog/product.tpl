@@ -234,6 +234,22 @@
   </div>
   {* END OF SECOND PART *}
 
+  {* C-Shop: mobile sticky buy bar, shown while the buy box is out of view (src/js/cshop/sticky-buy.ts) *}
+  {block name='cshop_sticky_buy'}
+    {if !$configuration.is_catalog && $product.add_to_cart_url}
+      <div class="cs-sticky-buy" data-ps-component="cs-sticky-buy" hidden>
+        <div class="cs-sticky-buy__info">
+          <span class="cs-sticky-buy__name">{$product.name}</span>
+          <span class="cs-sticky-buy__price" data-ps-ref="cs-sticky-buy-price">{if $product.show_price}{$product.price}{/if}</span>
+        </div>
+        <button type="button" class="btn btn-accent cs-sticky-buy__button" data-ps-action="cs-sticky-buy">
+          <i class="material-icons" aria-hidden="true">&#xE547;</i>
+          {l s='Add to cart' d='Shop.Theme.Actions'}
+        </button>
+      </div>
+    {/if}
+  {/block}
+
   {block name='product_accessories'}
     {if $accessories}
       {include file='catalog/_partials/product-accessories.tpl'}

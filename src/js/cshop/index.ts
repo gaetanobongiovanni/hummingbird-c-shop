@@ -7,6 +7,7 @@ import initListingView from './listing-view';
 import initQtyRules from './qty-rules';
 import initQuickOrder from './quick-order';
 import initQuoteRequest from './quote-request';
+import initStickyBuy from './sticky-buy';
 
 const initCshop = (): void => {
   initWishlistLink();
@@ -14,6 +15,7 @@ const initCshop = (): void => {
   initQtyRules();
   initQuickOrder();
   initQuoteRequest();
+  initStickyBuy();
 };
 
 export default initCshop;

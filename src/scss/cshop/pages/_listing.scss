@@ -278,3 +278,99 @@
 .subcategories {
   margin-bottom: var(--cs-space-4);
 }
+
+// ---------------------------------------------------------------------------
+// Category header: text left, small cover right; products stay above the fold
+.cs-category-header {
+  display: grid;
+  grid-template-areas:
+    "text"
+    "subs";
+  gap: var(--cs-space-3);
+  margin-bottom: var(--cs-space-3);
+
+  @include media-breakpoint-up(md) {
+    grid-template-areas:
+      "text cover"
+      "subs subs";
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  &__text {
+    grid-area: text;
+    min-width: 0;
+
+    .page-title-section {
+      margin-bottom: var(--cs-space-2);
+    }
+  }
+
+  .category__cover {
+    grid-area: cover;
+    width: 10rem; // auto grid column would otherwise shrink the image to nothing
+    margin: 0;
+    text-align: end;
+
+    // decorative on phones: hidden to show products sooner
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  .category__cover-image {
+    width: auto;
+    max-width: 10rem;
+    max-height: 7.5rem;
+    object-fit: contain;
+  }
+
+  &__subcategories {
+    grid-area: subs;
+    min-width: 0;
+  }
+}
+
+// Subcategories: one scrollable row of chips on phones (also when they have images)
+@include media-breakpoint-down(md) {
+  .cs-category-header .subcategory__list,
+  .cs-category-header .subcategory__list--with-images {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--cs-space-2);
+    padding-inline: 0;
+    margin-block-end: 0;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .cs-category-header .subcategory {
+    margin-inline: 0;
+  }
+
+  .cs-category-header .subcategory__link,
+  .cs-category-header .subcategory__link--with-image {
+    flex: 0 0 auto;
+    padding: var(--cs-space-2) var(--cs-space-3);
+    font-size: $cs-font-size-sm;
+    white-space: nowrap;
+    border-radius: var(--cs-radius-pill);
+  }
+
+  .cs-category-header .subcategory__thumbnail,
+  .cs-category-header .subcategory picture {
+    display: none;
+  }
+}
+
+// Left column on phones: category tree and brand list pushed products ~2
+// screens down. Navigation is in the menu and subcategory chips, filters in
+// the drawer (the off-canvas lives in the same column and stays available).
+@include media-breakpoint-down(md) {
+  #left-column {
+    > .ps-categorytree,
+    > #search_filters_brands,
+    > .search-filters-modules {
+      display: none;
+    }
+  }
+}

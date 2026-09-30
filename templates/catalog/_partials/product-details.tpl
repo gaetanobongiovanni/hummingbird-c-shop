@@ -25,20 +25,8 @@
                 </div>
 
                 <div class="details__right">
-                  {if isset($product_manufacturer.image.bySize.manufacturer_product_page.url)}
-                    <a href="{$product_manufacturer->url}">
-                      <img src="{$product_manufacturer.image.bySize.manufacturer_product_page.url}"
-                        class="img-fluid details__manufacturer-logo"
-                        alt="{$product_manufacturer->name}"
-                        loading="lazy"
-                        width="{$product_manufacturer.image.bySize.manufacturer_product_page.width}"
-                        height="{$product_manufacturer.image.bySize.manufacturer_product_page.height}"
-                        aria-label="{l s='Brand: %brand_name%' sprintf=['%brand_name%' => $product_manufacturer->name] d='Shop.Theme.Catalog'}"
-                      >
-                    </a>
-                  {else}
-                    <a href="{$product_manufacturer->url}">{$product_manufacturer->name}</a>
-                  {/if}
+                  {* C-Shop: brand as text link (small brand logos are unreadable) *}
+                  <a href="{$product_manufacturer->url}">{$product_manufacturer->name}</a>
                 </div>
               </li>
             {/if}

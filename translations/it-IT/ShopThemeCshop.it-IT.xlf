@@ -238,10 +238,6 @@
         <source>Product list view</source>
         <target>Visualizzazione elenco prodotti</target>
       </trans-unit>
-      <trans-unit id="bebfbee8fe0f2739450467bba1de6ada">
-        <source>Product, code, OEM code or brand…</source>
-        <target>Prodotto, codice, codice OEM o marca…</target>
-      </trans-unit>
       <trans-unit id="70719754b29b359a20c297898ee618f8">
         <source>Promotions</source>
         <target>Promozioni</target>
@@ -345,6 +341,10 @@
       <trans-unit id="013dbbcd220223c9b5b195aa2679bd84">
         <source>Your price list</source>
         <target>Il tuo listino</target>
+      </trans-unit>
+      <trans-unit id="214b51962dd0da6c23ad42091587bfd8">
+        <source>Name, code, OEM or brand…</source>
+        <target>Nome, codice, OEM o marca…</target>
       </trans-unit>
     </body>
   </file>

@@ -50,8 +50,9 @@
 {if !empty($categories.children)}
   <div class="ps-categorytree {$componentName} left-block">
     <p class="left-block__title h3">
+      {* C-Shop: fixed label instead of the root category name (often "home") *}
       <a class="left-block__title-link" href="{$categories.link nofilter}">
-        {$categories.name|escape:'htmlall':'UTF-8'}
+        {l s='Categories' d='Shop.Theme.Catalog'}
       </a>
     </p>
 

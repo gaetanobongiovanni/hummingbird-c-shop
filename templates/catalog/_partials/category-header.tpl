@@ -4,12 +4,14 @@
  *}
 <div id="js-product-list-header">
   {if $listing.pagination.items_shown_from == 1}
-    <div class="category__header">
-      {include file='components/page-title-section.tpl' title=$category.name}
+    <div class="category__header cs-category-header">
+      <div class="cs-category-header__text">
+        {include file='components/page-title-section.tpl' title=$category.name}
 
-      {if $category.description}
-        <div class="category__description rich-text">{$category.description nofilter}</div>
-      {/if}
+        {if $category.description}
+          <div class="category__description rich-text">{$category.description nofilter}</div>
+        {/if}
+      </div>
 
       {if !empty($category.cover.bySize.category_cover.url)}
         <div class="category__cover">
@@ -34,7 +36,9 @@
         </div>
       {/if}
 
-      {include file='catalog/_partials/subcategories.tpl' subcategories=$subcategories|default:[]}
+      <div class="cs-category-header__subcategories">
+        {include file='catalog/_partials/subcategories.tpl' subcategories=$subcategories|default:[]}
+      </div>
     </div>
   {/if}
 </div>

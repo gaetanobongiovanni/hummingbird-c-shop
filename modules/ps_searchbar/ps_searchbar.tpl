@@ -16,7 +16,7 @@
       type="search"
       name="s"
       value="{$search_string}"
-      placeholder="{l s='Product, code, OEM code or brand…' d='Shop.Theme.Cshop'}"
+      placeholder="{l s='Name, code, OEM or brand…' d='Shop.Theme.Cshop'}"
       id="ps_searchbar_input"
       autocomplete="off"
       enterkeyhint="search"
