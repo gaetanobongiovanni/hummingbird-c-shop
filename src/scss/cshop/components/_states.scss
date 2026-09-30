@@ -1,0 +1,45 @@
+// Loading skeleton, empty and error states
+.cs-skeleton {
+  display: block;
+  min-height: 1em;
+  background: linear-gradient(90deg, var(--cs-surface-sunken) 25%, var(--cs-surface-alt) 37%, var(--cs-surface-sunken) 63%);
+  background-size: 400% 100%;
+  border-radius: var(--cs-radius-sm);
+  animation: cs-shimmer 1.4s ease infinite;
+}
+
+@keyframes cs-shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-skeleton {
+    animation: none;
+  }
+}
+
+.cs-empty,
+.cs-error {
+  padding: var(--cs-space-5);
+  text-align: center;
+  border: 1px dashed var(--cs-border-strong);
+  border-radius: var(--cs-radius-lg);
+}
+
+.cs-error {
+  color: var(--cs-danger);
+  background: var(--cs-danger-subtle);
+  border-color: var(--cs-danger);
+  border-style: solid;
+}
+
+[aria-busy="true"]:not(.btn) {
+  cursor: progress;
+  opacity: 0.6;
+}

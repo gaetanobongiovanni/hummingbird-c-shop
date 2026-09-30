@@ -1,0 +1,52 @@
+// Technical data table (product features, B2B price lists, quick order)
+.cs-table {
+  width: 100%;
+  margin: 0;
+  font-size: $cs-font-size-sm;
+  border-collapse: collapse;
+
+  caption {
+    padding: 0 0 var(--cs-space-2);
+    font-weight: $cs-font-weight-semibold;
+    color: var(--cs-text);
+    caption-side: top;
+  }
+
+  th,
+  td {
+    padding: var(--cs-space-2) var(--cs-space-3);
+    text-align: start;
+    vertical-align: top;
+    border-bottom: $cs-border-width solid var(--cs-border);
+  }
+
+  thead th {
+    font-size: $cs-font-size-xs;
+    font-weight: $cs-font-weight-semibold;
+    color: var(--cs-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    background: var(--cs-surface-alt);
+  }
+
+  tbody th {
+    width: 40%;
+    font-weight: $cs-font-weight-semibold;
+    color: var(--cs-text-muted);
+  }
+
+  &--striped tbody tr:nth-child(even) {
+    background: var(--cs-surface-alt);
+  }
+
+  &__num {
+    text-align: end;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.cs-table-wrapper {
+  overflow-x: auto;
+  border: $cs-border-width solid var(--cs-border);
+  border-radius: var(--cs-radius);
+}

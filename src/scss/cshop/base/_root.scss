@@ -1,0 +1,46 @@
+// Runtime design tokens (mirrors abstract/variables/_cshop.scss)
+:root {
+  --cs-primary: #{$cs-petrol-700};
+  --cs-primary-dark: #{$cs-petrol-900};
+  --cs-primary-hover: #{$cs-petrol-800};
+  --cs-primary-subtle: #{$cs-petrol-100};
+  --cs-primary-softer: #{$cs-petrol-50};
+  --cs-accent: #{$cs-accent};
+  --cs-accent-hover: #{$cs-accent-hover};
+  --cs-accent-subtle: #{$cs-accent-subtle};
+  --cs-success: #{$cs-success};
+  --cs-success-subtle: #{$cs-success-subtle};
+  --cs-warning: #{$cs-warning};
+  --cs-warning-subtle: #{$cs-warning-subtle};
+  --cs-danger: #{$cs-danger};
+  --cs-danger-subtle: #{$cs-danger-subtle};
+  --cs-text: #{$cs-gray-900};
+  --cs-text-muted: #{$cs-gray-500};
+  --cs-surface: #{$cs-gray-0};
+  --cs-surface-alt: #{$cs-gray-50};
+  --cs-surface-sunken: #{$cs-gray-100};
+  --cs-border: #{$cs-border-color};
+  --cs-border-strong: #{$cs-border-color-strong};
+  --cs-radius-sm: #{$cs-radius-sm};
+  --cs-radius: #{$cs-radius};
+  --cs-radius-lg: #{$cs-radius-lg};
+  --cs-shadow-sm: #{$cs-shadow-sm};
+  --cs-shadow: #{$cs-shadow};
+  --cs-shadow-lg: #{$cs-shadow-lg};
+  --cs-focus-ring: #{$cs-focus-ring};
+  --cs-space-1: #{$cs-space-1};
+  --cs-space-2: #{$cs-space-2};
+  --cs-space-3: #{$cs-space-3};
+  --cs-space-4: #{$cs-space-4};
+  --cs-space-5: #{$cs-space-5};
+  --cs-space-6: #{$cs-space-6};
+  --cs-space-7: #{$cs-space-7};
+  --cs-transition: #{$cs-transition};
+  --cs-container-max: #{$cs-container-max};
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --cs-transition: 0ms;
+  }
+}

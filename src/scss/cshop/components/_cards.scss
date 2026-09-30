@@ -1,0 +1,39 @@
+// Card — neutral surface with thin border (catalogue look, no heavy shadows).
+.cs-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--cs-space-4);
+  background: var(--cs-surface);
+  border: $cs-border-width solid var(--cs-border);
+  border-radius: var(--cs-radius-lg);
+
+  &--interactive {
+    transition: border-color var(--cs-transition), box-shadow var(--cs-transition);
+
+    &:hover,
+    &:focus-within {
+      border-color: var(--cs-border-strong);
+      box-shadow: var(--cs-shadow);
+    }
+  }
+
+  &--muted {
+    background: var(--cs-surface-alt);
+  }
+
+  &__title {
+    margin: 0 0 var(--cs-space-2);
+    font-size: $cs-font-size-md;
+    font-weight: $cs-font-weight-semibold;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: $cs-font-size-sm;
+    color: var(--cs-text-muted);
+  }
+}
+
+.card {
+  --bs-card-border-color: var(--cs-border);
+}

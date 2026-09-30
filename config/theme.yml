@@ -1,10 +1,11 @@
-name: hummingbird
-display_name: Hummingbird
-version: 2.1.2
+name: cshop
+display_name: C-Shop
+# Based on Hummingbird 2.1.2 (PrestaShop/hummingbird, tag v2.1.2)
+version: 1.0.0
 author:
-  name: "PrestaShop Team and Contributors"
+  name: "C-Teck (C-Commerce S.r.l.) — based on Hummingbird by PrestaShop Team and Contributors"
   email: "pub@prestashop.com"
-  url: "https://www.prestashop-project.org/"
+  url: "https://testfe.c-teck.it/"
 
 meta:
   compatibility:
@@ -29,18 +30,17 @@ meta:
 global_settings:
   configuration:
     PS_IMAGE_QUALITY: png
-    HOME_FEATURED_NBR: 4
-    NEW_PRODUCTS_NBR: 4
-    BLOCKSPECIALS_SPECIALS_NBR: 4
-    PS_BLOCK_BESTSELLERS_TO_DISPLAY: 4
-    PRODUCTS_VIEWED_NBR: 4
-    CATEGORYPRODUCTS_DISPLAY_PRODUCTS: 4
-    PSR_ICON_COLOR: "#0b69f6"
-    PSR_TEXT_COLOR: "#212529"
+    HOME_FEATURED_NBR: 10
+    NEW_PRODUCTS_NBR: 10
+    BLOCKSPECIALS_SPECIALS_NBR: 10
+    PS_BLOCK_BESTSELLERS_TO_DISPLAY: 10
+    PRODUCTS_VIEWED_NBR: 5
+    CATEGORYPRODUCTS_DISPLAY_PRODUCTS: 10
+    PS_PRODUCTS_PER_PAGE: 36
+    PSR_ICON_COLOR: "#0b4f6c"
+    PSR_TEXT_COLOR: "#17202a"
   modules:
     to_disable:
-      - blockwishlist
-      - ps_brandlist
       - ps_supplierlist
   hooks:
     modules_to_unhook:
@@ -48,6 +48,20 @@ global_settings:
         - ps_socialfollow
       displaySearch:
         - ps_searchbar
+      # C-Shop: search bar, main menu, sign-in and cart are rendered as
+      # widgets in templates/_partials/header.tpl (fixed catalogue layout).
+      displayTop:
+        - ps_mainmenu
+        - ps_searchbar
+      displayNav2:
+        - ps_customersignin
+        - ps_shoppingcart
+      # C-Shop: homepage product sections are rendered as widgets in index.tpl
+      displayHome:
+        - ps_imageslider
+        - ps_featuredproducts
+        - ps_newproducts
+        - ps_bestsellers
     modules_to_hook:
       displayAfterBodyOpeningTag:
         - blockreassurance
@@ -60,26 +74,15 @@ global_settings:
       displayNav2:
         - ps_languageselector
         - ps_currencyselector
-        - ps_customersignin
-        - ps_shoppingcart
         # Keep existing hooks and append them after
         - ~
       displayNavFullWidth:
         - blockreassurance
         # Keep existing hooks and append them after
         - ~
-      displayTop:
-        - ps_mainmenu
-        - ps_searchbar
-        # Keep existing hooks and append them after
-        - ~
       displayHome:
-        - ps_imageslider
         - ps_customtext
-        - ps_featuredproducts
         - ps_banner
-        - ps_newproducts
-        - ps_bestsellers
         # Keep existing hooks and append them after
         - ~
       displayFooterBefore:

@@ -3,7 +3,7 @@
  * LICENSE.md file that was distributed with this source code.
  */
 // Define CSS layers orders to allow easy customization
-@layer vendors, bs-base, bs-components, bs-custom-components, ps-base, ps-components, ps-pages, ps-modules, utilities;
+@layer vendors, bs-base, bs-components, bs-custom-components, ps-base, ps-components, ps-pages, ps-modules, cshop, utilities;
 
 /* stylelint-disable */
 @import "abstract";
@@ -13,4 +13,9 @@
 
 // Prestashop
 @import "prestashop";
+
+// C-Shop customisation layer (kept separate from upstream Hummingbird code)
+@layer cshop {
+  @import "cshop";
+}
 /* stylelint-enable */

@@ -1,0 +1,81 @@
+// Buttons — primary (petrol), accent (CTA / buy), outline, ghost.
+// States: hover, focus-visible, active, disabled, loading.
+.btn {
+  --bs-btn-font-weight: #{$cs-font-weight-semibold};
+  --bs-btn-border-radius: var(--cs-radius);
+  gap: var(--cs-space-2);
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--cs-transition), border-color var(--cs-transition), color var(--cs-transition);
+
+  &:disabled,
+  &.disabled {
+    cursor: not-allowed;
+  }
+}
+
+.btn:not(.btn-link, .btn-close) {
+  display: inline-flex;
+}
+
+.btn-accent {
+  @include button-variant(
+    $cs-accent,
+    $cs-accent,
+    $white,
+    $cs-accent-hover,
+    $cs-accent-hover,
+    $white,
+    $cs-accent-hover,
+    $cs-accent-hover,
+    $white,
+    $cs-gray-300,
+    $cs-gray-300,
+    $cs-gray-700
+  );
+}
+
+.btn-ghost {
+  --bs-btn-color: var(--cs-primary);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-color: var(--cs-primary-hover);
+  --bs-btn-hover-bg: var(--cs-primary-softer);
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-bg: var(--cs-primary-subtle);
+  --bs-btn-disabled-color: var(--cs-text-muted);
+}
+
+// Loading state: <button class="btn" data-ps-state="loading" aria-busy="true">
+.btn[data-ps-state="loading"],
+.btn.is-loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+    margin: auto;
+    content: "";
+    border: 2px solid currentcolor;
+    border-color: var(--bs-btn-color) transparent var(--bs-btn-color) var(--bs-btn-color);
+    border-radius: 50%;
+    animation: cs-spin 700ms linear infinite;
+  }
+}
+
+@keyframes cs-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn[data-ps-state="loading"]::after,
+  .btn.is-loading::after {
+    animation-duration: 2s;
+  }
+}

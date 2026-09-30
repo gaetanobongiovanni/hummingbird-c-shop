@@ -1,0 +1,36 @@
+// Product codes list (reference, supplier, OEM/MPN, EAN)
+.cs-codes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cs-space-1) var(--cs-space-3);
+  margin: 0;
+  font-size: $cs-font-size-xs;
+  color: var(--cs-text-muted);
+
+  &__item {
+    display: inline-flex;
+    gap: 0.25em;
+    margin: 0;
+  }
+
+  dt {
+    font-weight: $cs-font-weight-normal;
+  }
+
+  dd {
+    margin: 0;
+    font-weight: $cs-font-weight-semibold;
+    color: var(--cs-text);
+    word-break: break-all;
+  }
+
+  &--stacked {
+    flex-direction: column;
+    font-size: $cs-font-size-sm;
+  }
+}
+
+.cs-code {
+  font-family: $cs-font-mono;
+  font-size: 0.95em;
+}

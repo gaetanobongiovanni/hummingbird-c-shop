@@ -1,0 +1,95 @@
+// =============================================================================
+// C-Shop design tokens
+// -----------------------------------------------------------------------------
+// Single source of truth for the C-Shop palette, spacing, radii, shadows and
+// typography. Loaded before Bootstrap so that Bootstrap variable overrides
+// (bootstrap/overrides/variables/_variables.scss) can consume these tokens.
+// Every value is also exposed as a `--cs-*` CSS custom property
+// (see src/scss/cshop/_root.scss) for runtime use in components.
+// =============================================================================
+
+// Brand — petrol blue (primary). #0b4f6c on white = 8.4:1 contrast.
+$cs-petrol-950: #041f2a;
+$cs-petrol-900: #062c3b;
+$cs-petrol-800: #0a3a4d;
+$cs-petrol-700: #0b4f6c;
+$cs-petrol-600: #0f6385;
+$cs-petrol-500: #16799f;
+$cs-petrol-200: #b9d5e1;
+$cs-petrol-100: #e3eef3;
+$cs-petrol-50: #f1f7fa;
+
+// Accent — call to action and promotions. #c2410c on white = 5.2:1.
+$cs-accent: #c2410c;
+$cs-accent-hover: #9a3412;
+$cs-accent-subtle: #fff1e6;
+
+// Status — availability, warnings, errors (all >= 4.5:1 on white).
+$cs-success: #15803d;
+$cs-success-subtle: #e7f6ec;
+$cs-warning: #a15c07;
+$cs-warning-subtle: #fdf3dc;
+$cs-danger: #b91c1c;
+$cs-danger-subtle: #fdecec;
+$cs-info: $cs-petrol-600;
+$cs-info-subtle: $cs-petrol-100;
+
+// Neutrals — cool grey, tuned for dense catalogue layouts.
+$cs-gray-0: #fff;
+$cs-gray-50: #f6f8fa;
+$cs-gray-100: #eef1f4;
+$cs-gray-200: #e1e6eb;
+$cs-gray-300: #cbd3db;
+$cs-gray-400: #9aa6b2;
+$cs-gray-500: #5f6b78; // 5.4:1 on white — safe for secondary text
+$cs-gray-700: #3a4450;
+$cs-gray-900: #17202a;
+
+// Spacing — 4px base scale.
+$cs-space-1: 0.25rem; // 4
+$cs-space-2: 0.5rem; // 8
+$cs-space-3: 0.75rem; // 12
+$cs-space-4: 1rem; // 16
+$cs-space-5: 1.5rem; // 24
+$cs-space-6: 2rem; // 32
+$cs-space-7: 3rem; // 48
+$cs-space-8: 4rem; // 64
+
+// Radii
+$cs-radius-sm: 0.1875rem; // 3
+$cs-radius: 0.375rem; // 6
+$cs-radius-lg: 0.625rem; // 10
+$cs-radius-pill: 50rem;
+
+// Borders
+$cs-border-width: 1px;
+$cs-border-color: $cs-gray-200;
+$cs-border-color-strong: $cs-gray-300;
+
+// Shadows
+$cs-shadow-sm: 0 1px 2px rgba($cs-gray-900, 0.06);
+$cs-shadow: 0 4px 12px rgba($cs-gray-900, 0.08);
+$cs-shadow-lg: 0 12px 32px rgba($cs-gray-900, 0.12);
+$cs-focus-ring: 0 0 0 0.2rem rgba($cs-petrol-500, 0.45);
+
+// Typography
+$cs-font-family: "Inter", system-ui, -apple-system, "Segoe UI", roboto, sans-serif;
+$cs-font-mono: ui-monospace, sfmono-regular, menlo, consolas, monospace;
+$cs-font-size-xs: 0.75rem; // 12
+$cs-font-size-sm: 0.8125rem; // 13
+$cs-font-size-base: 0.9375rem; // 15
+$cs-font-size-md: 1rem; // 16
+$cs-font-size-lg: 1.125rem; // 18
+$cs-font-size-xl: 1.375rem; // 22
+$cs-font-size-2xl: 1.75rem; // 28
+$cs-font-weight-normal: 400;
+$cs-font-weight-semibold: 600;
+$cs-font-weight-bold: 700;
+$cs-line-height-tight: 1.25;
+$cs-line-height-base: 1.5;
+
+// Layout
+$cs-container-max: 1440px;
+$cs-header-search-height: 3rem;
+$cs-sidebar-width: 17.5rem;
+$cs-transition: 150ms ease-in-out;

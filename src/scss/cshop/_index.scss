@@ -1,0 +1,35 @@
+/**
+ * C-Shop customisation layer.
+ * Imported inside `@layer cshop` from theme.scss, after all Hummingbird layers,
+ * so it can restyle upstream components without !important or high specificity.
+ * Keep upstream files untouched where possible: add C-Shop rules here.
+ */
+@import "base/root";
+@import "base/typography";
+
+// Design-system components
+@import "components/buttons";
+@import "components/badges";
+@import "components/cards";
+@import "components/forms";
+@import "components/tables";
+@import "components/states";
+@import "components/section";
+@import "components/codes";
+
+// Layout
+@import "layout/info-bar";
+@import "layout/header";
+@import "layout/search";
+@import "layout/mega-menu";
+@import "layout/footer";
+
+// Pages
+@import "pages/home";
+@import "pages/listing";
+@import "pages/product";
+@import "pages/cart";
+@import "pages/checkout";
+
+// B2B components (UI only — logic lives in dedicated modules)
+@import "b2b/b2b";

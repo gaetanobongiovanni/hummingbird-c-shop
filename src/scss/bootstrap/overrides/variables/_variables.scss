@@ -11,27 +11,44 @@ $grid-breakpoints: (
   "xxl": 1400px,
 );
 
-// Colors
-$blue: #0b69f6;
-$green: #188251;
-$red: #ff4657;
-$primary: $blue;
+// Colors — C-Shop palette (tokens in abstract/variables/_cshop.scss)
+$blue: $cs-petrol-700;
+$green: $cs-success;
+$red: $cs-danger;
+$orange: $cs-accent;
+$yellow: $cs-warning;
+$primary: $cs-petrol-700;
 $primary-text-emphasis: $primary;
-$danger: $red;
-$body-tertiary-color: rgba(#212529, 0.65);
+$success: $cs-success;
+$warning: $cs-warning;
+$danger: $cs-danger;
+$info: $cs-info;
+$body-color: $cs-gray-900;
+$body-secondary-color: $cs-gray-500;
+$body-tertiary-color: $cs-gray-500;
+$body-secondary-bg: $cs-gray-50;
+$body-tertiary-bg: $cs-gray-100;
+$border-color: $cs-border-color;
+$link-color: $cs-petrol-600;
+$link-hover-color: $cs-petrol-800;
 
 // Caret
 $caret-width: 1.375em;
 $caret-vertical-align: initial;
 
 // Border radius
-$border-radius: 0.5rem;
+$border-radius: $cs-radius;
+$border-radius-sm: $cs-radius-sm;
+$border-radius-lg: $cs-radius-lg;
 
 // Links
 $link-decoration: none;
 
 // Typography
-$font-family-base: "Inter", sans-serif;
+$font-family-base: $cs-font-family;
+$font-family-monospace: $cs-font-mono;
+$font-size-base: $cs-font-size-base;
+$font-size-sm: $cs-font-size-sm;
 
 $h1-font-size: calc(var(--bs-body-font-size) * 2);
 $h2-font-size: calc(var(--bs-body-font-size) * 1.5);
@@ -44,7 +61,13 @@ $headings-font-weight: 600;
 $headings-margin-bottom: 1rem;
 
 // Box shadow
-$box-shadow-md: 0 0.625rem 1.25rem rgba(var(--bs-black-rgb), 0.1);
+$box-shadow-sm: $cs-shadow-sm;
+$box-shadow: $cs-shadow;
+$box-shadow-lg: $cs-shadow-lg;
+$box-shadow-md: $cs-shadow;
+
+// Focus
+$focus-ring-color: rgba($cs-petrol-500, 0.45);
 
 // Options
 $enable-cssgrid: true;

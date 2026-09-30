@@ -1,0 +1,32 @@
+body {
+  color: var(--cs-text);
+  text-rendering: optimizelegibility;
+}
+
+// Wider container for dense catalogue pages
+.container,
+.container-md {
+  max-width: var(--cs-container-max);
+}
+
+// Tabular figures keep prices, quantities and codes aligned in lists
+.price,
+.product-miniature__price,
+.product__current-price,
+.cart-summary-line,
+.qty-input,
+.cs-code,
+.cs-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+// Visible, consistent keyboard focus on every interactive element
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--cs-primary);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+.cs-muted {
+  color: var(--cs-text-muted);
+}

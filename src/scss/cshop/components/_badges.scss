@@ -1,0 +1,76 @@
+// Stock / availability badge — always colour + icon + text (never colour alone).
+.cs-stock {
+  display: inline-flex;
+  gap: var(--cs-space-1);
+  align-items: center;
+  font-size: $cs-font-size-sm;
+  font-weight: $cs-font-weight-semibold;
+  line-height: $cs-line-height-tight;
+
+  &::before {
+    flex: 0 0 auto;
+    width: 0.5rem;
+    height: 0.5rem;
+    content: "";
+    background: currentcolor;
+    border-radius: 50%;
+  }
+
+  &--available {
+    color: var(--cs-success);
+  }
+
+  &--last_remaining_items,
+  &--limited {
+    color: var(--cs-warning);
+  }
+
+  &--unavailable {
+    color: var(--cs-danger);
+  }
+
+  &--on-order {
+    color: var(--cs-text-muted);
+  }
+}
+
+// Generic tags (brand, pack, promo)
+.cs-tag {
+  display: inline-flex;
+  gap: var(--cs-space-1);
+  align-items: center;
+  padding: 0.125rem var(--cs-space-2);
+  font-size: $cs-font-size-xs;
+  font-weight: $cs-font-weight-semibold;
+  line-height: 1.4;
+  color: var(--cs-primary);
+  background: var(--cs-primary-subtle);
+  border-radius: var(--cs-radius-sm);
+
+  &--accent {
+    color: var(--cs-accent-hover);
+    background: var(--cs-accent-subtle);
+  }
+
+  &--neutral {
+    color: var(--cs-text);
+    background: var(--cs-surface-sunken);
+  }
+
+  &--success {
+    color: var(--cs-success);
+    background: var(--cs-success-subtle);
+  }
+}
+
+// Product flags from core ($product.flags)
+.product-flags {
+  .badge {
+    border-radius: var(--cs-radius-sm);
+  }
+
+  .badge.discount,
+  .badge.on-sale {
+    background-color: var(--cs-accent) !important; // stylelint-disable-line declaration-no-important -- upstream uses bg utility
+  }
+}

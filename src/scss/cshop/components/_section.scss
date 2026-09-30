@@ -1,0 +1,43 @@
+// Homepage / page section wrapper
+.cs-section {
+  padding-block: var(--cs-space-6);
+
+  &--alt {
+    background: var(--cs-surface-alt);
+  }
+
+  &--tight {
+    padding-block: var(--cs-space-5);
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--cs-space-2) var(--cs-space-4);
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: var(--cs-space-4);
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $cs-font-size-xl;
+    font-weight: $cs-font-weight-bold;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: $cs-font-size-sm;
+    color: var(--cs-text-muted);
+  }
+
+  &__link {
+    font-size: $cs-font-size-sm;
+    font-weight: $cs-font-weight-semibold;
+  }
+}
+
+// Module product lists rendered through Hummingbird's module-products component
+.module-products .section-title {
+  font-size: $cs-font-size-xl;
+}

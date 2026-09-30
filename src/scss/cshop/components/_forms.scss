@@ -1,0 +1,48 @@
+.form-control,
+.form-select {
+  border-color: var(--cs-border-strong);
+
+  &:hover:not(:disabled, [readonly]) {
+    border-color: $cs-gray-400;
+  }
+
+  &:focus {
+    border-color: var(--cs-primary);
+    box-shadow: var(--cs-focus-ring);
+  }
+
+  &:disabled {
+    background-color: var(--cs-surface-sunken);
+  }
+}
+
+.form-check-input:checked {
+  background-color: var(--cs-primary);
+  border-color: var(--cs-primary);
+}
+
+.invalid-feedback,
+.form-control.is-invalid ~ .form-text {
+  color: var(--cs-danger);
+}
+
+// Quantity input with min / multiple hints
+.cs-qty {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cs-space-1);
+
+  &__rules {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--cs-space-1) var(--cs-space-3);
+    margin: 0;
+    font-size: $cs-font-size-xs;
+    color: var(--cs-text-muted);
+  }
+
+  &__error {
+    font-size: $cs-font-size-xs;
+    color: var(--cs-danger);
+  }
+}
