@@ -125,6 +125,15 @@ const initSearchbar = () => {
             productLink.setAttribute('aria-label', product.name);
             productTitle.innerHTML = product.name;
 
+            // C-Shop: show product code and brand under the name
+            const productMeta = productEl.querySelector<HTMLElement>(SearchBarMap.searchResultMeta);
+
+            if (productMeta) {
+              productMeta.textContent = [product.reference, product.manufacturer_name]
+                .filter((value): value is string => Boolean(value))
+                .join(' · ');
+            }
+
             if (product.cover) {
               productImage.src = product.cover.small.url;
               productImage.alt = product.cover.legend;

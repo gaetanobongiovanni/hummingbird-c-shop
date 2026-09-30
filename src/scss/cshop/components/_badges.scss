@@ -71,6 +71,8 @@
 
   .badge.discount,
   .badge.on-sale {
-    background-color: var(--cs-accent) !important; // stylelint-disable-line declaration-no-important -- upstream uses bg utility
+    background-color: var(
+      --cs-accent
+    ) !important; // stylelint-disable-line declaration-no-important -- upstream uses bg utility
   }
 }

@@ -6,7 +6,10 @@
   gap: var(--cs-space-2);
   align-items: center;
   justify-content: center;
-  transition: background-color var(--cs-transition), border-color var(--cs-transition), color var(--cs-transition);
+  transition:
+    background-color var(--cs-transition),
+    border-color var(--cs-transition),
+    color var(--cs-transition);
 
   &:disabled,
   &.disabled {

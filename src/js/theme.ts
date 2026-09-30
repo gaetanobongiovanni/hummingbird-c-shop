@@ -35,6 +35,7 @@ import initProductAccessibility from '@js/accessibility/product';
 import initCartAccessibility from '@js/accessibility/cart';
 import initProductComments from '@js/modules/productcomments';
 import parseData from '@helpers/parseData';
+import initCshop from '@js/cshop';
 
 initEmitter();
 
@@ -67,6 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Accessibility
   initProductAccessibility();
   initCartAccessibility();
+  // C-Shop
+  initCshop();
 
   prestashop.on(events.responsiveUpdate, () => {
     initSearchbar();

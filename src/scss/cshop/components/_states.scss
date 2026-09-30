@@ -2,7 +2,12 @@
 .cs-skeleton {
   display: block;
   min-height: 1em;
-  background: linear-gradient(90deg, var(--cs-surface-sunken) 25%, var(--cs-surface-alt) 37%, var(--cs-surface-sunken) 63%);
+  background: linear-gradient(
+    90deg,
+    var(--cs-surface-sunken) 25%,
+    var(--cs-surface-alt) 37%,
+    var(--cs-surface-sunken) 63%
+  );
   background-size: 400% 100%;
   border-radius: var(--cs-radius-sm);
   animation: cs-shimmer 1.4s ease infinite;

@@ -1,1 +1,98 @@
-// C-Shop — info-bar
+// Caret for selects on the dark bar
+$cs-select-caret-light: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$cs-petrol-100}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>");
+
+// Information bar (displayNav1 / displayNav2 + blockreassurance messages)
+.cs-info-bar {
+  padding: 0;
+  font-size: $cs-font-size-xs;
+  color: $cs-petrol-100;
+  background: var(--cs-primary-dark);
+  border-bottom: 0;
+
+  --header-top-color: #{$cs-petrol-100};
+  --header-top-color-hover: #{$white};
+
+  &__inner {
+    display: flex;
+    gap: var(--cs-space-4);
+    align-items: center;
+    justify-content: space-between;
+    min-height: 2.25rem;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--cs-space-2) var(--cs-space-5);
+    align-items: center;
+  }
+
+  &__icon {
+    font-size: 1rem;
+  }
+
+  a:not(.dropdown-item) {
+    color: var(--header-top-color);
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--header-top-color-hover);
+      text-decoration: underline;
+    }
+  }
+
+  :where(a, button, select):focus-visible {
+    outline-color: $white;
+  }
+
+  // Language / currency selectors on dark background
+  .form-select {
+    padding-block: 0.125rem;
+    font-size: $cs-font-size-xs;
+    color: $cs-petrol-100;
+    background-color: transparent;
+    --bs-form-select-bg-img: #{escape-svg($cs-select-caret-light)};
+
+    option {
+      color: var(--cs-text);
+    }
+  }
+
+  // blockreassurance rendered inline in the bar
+  .blockreassurance {
+    padding: 0;
+    background: transparent;
+  }
+
+  .blockreassurance--horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--cs-space-1) var(--cs-space-5);
+    width: auto;
+    max-width: none;
+    padding: 0;
+  }
+
+  .reassurance {
+    display: inline-flex;
+    gap: var(--cs-space-2);
+    align-items: center;
+    padding: 0;
+    color: var(--header-top-color);
+
+    &__image {
+      display: none; // icons are coloured for light backgrounds; text is enough here
+    }
+
+    &__title {
+      font-weight: $cs-font-weight-semibold;
+    }
+
+    &__desc,
+    br {
+      display: none;
+    }
+  }
+}

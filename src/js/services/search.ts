@@ -8,6 +8,10 @@ export interface Result {
   canonical_url: string;
   id_product: number;
   name: string;
+  // C-Shop: extra identifiers shown in the autocomplete (present in PS listing JSON)
+  reference?: string;
+  // eslint-disable-next-line camelcase
+  manufacturer_name?: string | null;
   cover: {
     small: {
       url: string;

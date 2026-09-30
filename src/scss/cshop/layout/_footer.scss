@@ -1,1 +1,15 @@
-// C-Shop — footer
+// Footer — calm, informative
+.footer {
+  font-size: $cs-font-size-sm;
+  background: var(--cs-surface-alt);
+  border-top: $cs-border-width solid var(--cs-border);
+}
+
+.footer__before {
+  background: var(--cs-surface);
+}
+
+.copyright {
+  font-size: $cs-font-size-xs;
+  color: var(--cs-text-muted);
+}

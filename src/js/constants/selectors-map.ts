@@ -78,6 +78,7 @@ export const searchBar = {
   searchIcon: '.js-search-icon',
   searchClear: '.js-search-clear',
   searchResultLink: '[data-ps-ref="searchbar-result-link"]',
+  searchResultMeta: '[data-ps-ref="searchbar-result-meta"]',
 };
 
 export const checkout = {

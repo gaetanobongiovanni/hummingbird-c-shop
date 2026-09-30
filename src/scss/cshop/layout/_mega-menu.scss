@@ -1,1 +1,83 @@
-// C-Shop — mega-menu
+// Category mega-menu (ps_mainmenu) — horizontal bar on desktop.
+// The band colour is painted by .cs-header (see _header.scss) with a gradient
+// of height --cs-nav-height, so no overflow tricks are needed.
+.cs-header .ps-mainmenu__desktop {
+  @include media-breakpoint-up(xl) {
+    min-height: var(--cs-nav-height);
+  }
+}
+
+.cs-header .ps-mainmenu__tree {
+  gap: 0;
+
+  > li .ps-mainmenu__tree-link {
+    display: flex;
+    align-items: center;
+    height: var(--cs-nav-height);
+    padding: 0 var(--cs-space-3);
+    font-size: $cs-font-size-sm;
+    font-weight: $cs-font-weight-semibold;
+    color: $cs-petrol-100;
+
+    &:hover,
+    &:focus-visible,
+    &[aria-current="page"] {
+      color: $white;
+    }
+  }
+
+  > li.current .ps-mainmenu__tree-link {
+    color: $white;
+    box-shadow: inset 0 -3px 0 var(--cs-accent);
+  }
+
+  > li .ps-mainmenu__tree-dropdown-toggle {
+    color: $cs-petrol-100;
+
+    &:focus-visible {
+      outline-color: $white;
+    }
+  }
+
+  > li .ps-mainmenu__tree-link:focus {
+    outline-color: $white;
+  }
+}
+
+.cs-header .submenu {
+  padding-block: var(--cs-space-5);
+  background: var(--cs-surface);
+  border-top: 0;
+  box-shadow: var(--cs-shadow-lg);
+
+  &__left-item {
+    font-weight: $cs-font-weight-semibold;
+    border-radius: var(--cs-radius);
+
+    &.active,
+    &:hover {
+      color: var(--cs-primary);
+      background: var(--cs-primary-softer);
+    }
+  }
+
+  .menu-item__group-main-item {
+    font-weight: $cs-font-weight-semibold;
+    color: var(--cs-text);
+  }
+
+  .menu-item {
+    font-size: $cs-font-size-sm;
+    color: var(--cs-text-muted);
+
+    &:hover {
+      color: var(--cs-primary);
+    }
+  }
+}
+
+// Mobile menu toggle within the grid
+.cs-header .ps-mainmenu__mobile-toggle .menu-toggle {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+}

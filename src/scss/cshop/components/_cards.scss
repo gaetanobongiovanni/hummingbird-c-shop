@@ -8,7 +8,9 @@
   border-radius: var(--cs-radius-lg);
 
   &--interactive {
-    transition: border-color var(--cs-transition), box-shadow var(--cs-transition);
+    transition:
+      border-color var(--cs-transition),
+      box-shadow var(--cs-transition);
 
     &:hover,
     &:focus-within {

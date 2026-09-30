@@ -1,1 +1,91 @@
-// C-Shop — search
+// Prominent catalogue search
+.cs-search {
+  min-width: 0;
+  margin-block: 0;
+
+  &__form {
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__input.ps-searchbar__input {
+    height: $cs-header-search-height;
+    padding-inline: 2.75rem 2.5rem;
+    font-size: $cs-font-size-md; // >= 16px avoids iOS zoom
+    background: var(--cs-surface-alt);
+    border: 2px solid var(--cs-primary);
+    border-inline-end: 0;
+    border-start-start-radius: var(--cs-radius);
+    border-start-end-radius: 0;
+    border-end-start-radius: var(--cs-radius);
+    border-end-end-radius: 0;
+
+    &:focus {
+      background: var(--cs-surface);
+      box-shadow: none;
+    }
+
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+
+  &__icon {
+    color: var(--cs-text-muted);
+  }
+
+  .ps-searchbar__clear {
+    right: auto;
+    inset-inline-end: calc(var(--cs-space-2) + 6.5rem);
+
+    @include media-breakpoint-down(md) {
+      inset-inline-end: calc(var(--cs-space-2) + 3rem);
+    }
+  }
+
+  &__submit {
+    flex: 0 0 auto;
+    min-width: 3rem;
+    padding-inline: var(--cs-space-4);
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+  }
+
+  &__submit-label {
+    @include media-breakpoint-down(md) {
+      @include visually-hidden;
+    }
+  }
+
+  &__dropdown.ps-searchbar__dropdown {
+    left: 0;
+    width: 100%;
+    max-width: none;
+    box-shadow: var(--cs-shadow-lg);
+  }
+
+  &__result {
+    display: flex;
+    gap: var(--cs-space-3);
+    align-items: center;
+  }
+
+  &__result-body {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+
+    .ps-searchbar__result-name {
+      padding: 0;
+    }
+  }
+
+  &__result-meta {
+    font-size: $cs-font-size-xs;
+    color: var(--cs-text-muted);
+
+    &:empty {
+      display: none;
+    }
+  }
+}

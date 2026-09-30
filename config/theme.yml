@@ -62,22 +62,22 @@ global_settings:
         - ps_featuredproducts
         - ps_newproducts
         - ps_bestsellers
-    modules_to_hook:
+      # C-Shop: reassurance messages live in the header information bar
       displayAfterBodyOpeningTag:
         - blockreassurance
-        # Keep existing hooks and append them after
-        - ~
+      displayNavFullWidth:
+        - blockreassurance
+      displayFooterAfter:
+        - blockreassurance
+    modules_to_hook:
       displayNav1:
         - ps_contactinfo
+        - blockreassurance
         # Keep existing hooks and append them after
         - ~
       displayNav2:
         - ps_languageselector
         - ps_currencyselector
-        # Keep existing hooks and append them after
-        - ~
-      displayNavFullWidth:
-        - blockreassurance
         # Keep existing hooks and append them after
         - ~
       displayHome:
@@ -95,10 +95,6 @@ global_settings:
         - ps_linklist
         - ps_customeraccountlinks
         - ps_contactinfo
-        # Keep existing hooks and append them after
-        - ~
-      displayFooterAfter:
-        - blockreassurance
         # Keep existing hooks and append them after
         - ~
       displayLeftColumn:
