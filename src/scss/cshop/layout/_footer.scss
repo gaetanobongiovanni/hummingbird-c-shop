@@ -1,15 +1,17 @@
-// Footer — calm, informative
+// Footer — petrol dark band (keeps upstream light-on-dark text contrast)
 .footer {
   font-size: $cs-font-size-sm;
-  background: var(--cs-surface-alt);
-  border-top: $cs-border-width solid var(--cs-border);
+}
+
+.footer__main {
+  --bs-dark: #{$cs-petrol-950};
 }
 
 .footer__before {
-  background: var(--cs-surface);
+  background: var(--cs-primary-softer);
+  border-top: $cs-border-width solid var(--cs-border);
 }
 
 .copyright {
   font-size: $cs-font-size-xs;
-  color: var(--cs-text-muted);
 }

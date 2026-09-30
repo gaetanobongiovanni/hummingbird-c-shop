@@ -10,10 +10,14 @@
       <div
         id="product-availability"
         class="product__availability js-product-availability"
-        {if empty($product.availability_message) && empty($product.delivery_information)}
+        {if empty($product.availability_message) && empty($product.delivery_information) && empty($cs.lead_time) && !$product.show_availability}
           hidden
         {/if}
       >
+        {* C-Shop: state badge when no Back Office label is configured *}
+        {if empty($product.availability_message)}
+          {include file='catalog/_partials/cshop/stock.tpl' product=$product}
+        {/if}
         {if !empty($product.availability_message)}
           {** First, we prepare the icons and colors we want to use *}
           {if $product.availability == 'in_stock'}
@@ -63,7 +67,8 @@
     {/block}
 
     {block name='cshop_order_rules'}
-      {include file='catalog/_partials/cshop/order-rules.tpl' cs=$cs cs_rules_id='cs-product-rules' cs_hide_min=true}
+      {* the core already prints its own minimum below: repeat it only if a module sets a higher one *}
+      {include file='catalog/_partials/cshop/order-rules.tpl' cs=$cs cs_rules_id='cs-product-rules' cs_hide_min=($cs.min_order <= $product.minimal_quantity)}
     {/block}
 
     {block name='product_quantity'}
@@ -78,7 +83,7 @@
         "step" => "{$cs.step}",
         "data-ps-component" => "cs-qty"
       ]}
-      {if $cs.pack_quantity > 1 || $cs.step > 1}
+      {if $cs.pack_quantity > 1 || $cs.step > 1 || $cs.min_order > $product.minimal_quantity}
         {$csQtyAttrs['aria-describedby'] = 'cs-product-rules'}
       {/if}
       <div class="product__actions-qty-add product-quantity">
@@ -104,12 +109,6 @@
             {l s='Add to cart' d='Shop.Theme.Actions'}
           </button>
         </div>
-
-        {* C-Shop: optional quote-request module (renders components/cshop/b2b/quote-request.tpl) *}
-        {capture name='cshop_quote'}{hook h='displayCshopQuoteRequest' product=$product}{/capture}
-        {if $smarty.capture.cshop_quote}
-          <div class="cs-buy-box__quote">{$smarty.capture.cshop_quote nofilter}</div>
-        {/if}
 
         {capture name='product_actions'}{hook h='displayProductActions' product=$product}{/capture}
         {if $smarty.capture.product_actions}

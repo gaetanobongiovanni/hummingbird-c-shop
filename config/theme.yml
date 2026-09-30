@@ -62,6 +62,7 @@ global_settings:
         - ps_featuredproducts
         - ps_newproducts
         - ps_bestsellers
+        - ps_specials
       # C-Shop: reassurance messages live in the header information bar
       displayAfterBodyOpeningTag:
         - blockreassurance

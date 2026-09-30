@@ -109,6 +109,16 @@
             {block name='product_refresh'}{/block}
           </form>
         {/block}
+
+        {* C-Shop: optional quote-request module. Rendered OUTSIDE the add-to-cart
+           form (nested forms are invalid HTML); the selected combination is
+           copied on submit by src/js/cshop/quote-request.ts *}
+        {block name='cshop_quote_request'}
+          {capture name='cshop_quote'}{hook h='displayCshopQuoteRequest' product=$product}{/capture}
+          {if $smarty.capture.cshop_quote}
+            <div class="cs-buy-box__quote">{$smarty.capture.cshop_quote nofilter}</div>
+          {/if}
+        {/block}
       </div>
     </div>
   </div>

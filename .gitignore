@@ -94,3 +94,6 @@ scratchpad.md
 
 # Hummingbird QA seed: per-shop record of what --undo must restore
 docs/qa/.seed-state.json
+
+# C-Shop theme package
+dist/

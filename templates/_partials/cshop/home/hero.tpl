@@ -10,7 +10,7 @@
 
       <ul class="cs-hero__links">
         <li><a class="cs-hero__link" href="{$urls.pages.new_products}">{l s='New products' d='Shop.Theme.Catalog'}</a></li>
-        <li><a class="cs-hero__link" href="{$urls.pages.best_sales}">{l s='Best sellers' d='Shop.Theme.Catalog'}</a></li>
+        <li><a class="cs-hero__link" href="{$link->getPageLink('best-sales')}">{l s='Best sellers' d='Shop.Theme.Catalog'}</a></li>
         <li><a class="cs-hero__link" href="{$urls.pages.prices_drop}">{l s='Price drops' d='Shop.Theme.Catalog'}</a></li>
         <li><a class="cs-hero__link" href="{$urls.pages.manufacturer}">{l s='Brands' d='Shop.Theme.Catalog'}</a></li>
       </ul>

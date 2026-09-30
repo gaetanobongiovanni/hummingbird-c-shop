@@ -41,3 +41,65 @@
 .module-products .section-title {
   font-size: $cs-font-size-xl;
 }
+
+// Reassurance list (theme override of blockreassurance.tpl)
+.cs-reassurance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cs-space-2) var(--cs-space-5);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &__link {
+    display: inline-flex;
+    gap: var(--cs-space-2);
+    align-items: center;
+    color: inherit;
+  }
+
+  &__icon {
+    flex: 0 0 auto;
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: $cs-font-weight-semibold;
+  }
+
+  &__desc {
+    font-size: $cs-font-size-xs;
+    color: var(--cs-text-muted);
+  }
+}
+
+// Information bar: text only, one line
+.cs-info-bar .cs-reassurance {
+  gap: var(--cs-space-1) var(--cs-space-5);
+
+  &__icon,
+  &__desc {
+    display: none;
+  }
+}
+
+// Homepage support: cards
+.cs-support__delivery .cs-reassurance {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: var(--cs-space-3);
+
+  &__item {
+    padding: var(--cs-space-3);
+    background: var(--cs-surface);
+    border: $cs-border-width solid var(--cs-border);
+    border-radius: var(--cs-radius);
+  }
+}

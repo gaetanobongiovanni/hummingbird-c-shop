@@ -74,16 +74,14 @@
   }
 }
 
-// Product flags from core ($product.flags)
-.product-flags {
-  .badge {
-    border-radius: var(--cs-radius-sm);
-  }
+// Product flags from core ($product.flags): promotions use the accent colour
+.product-flags .badge {
+  border-radius: var(--cs-radius-sm);
 
-  .badge.discount,
-  .badge.on-sale {
-    background-color: var(
-      --cs-accent
-    ) !important; // stylelint-disable-line declaration-no-important -- upstream uses bg utility
+  &.discount,
+  &.on-sale {
+    color: $white;
+    background-color: var(--cs-accent);
+    border-color: var(--cs-accent);
   }
 }
