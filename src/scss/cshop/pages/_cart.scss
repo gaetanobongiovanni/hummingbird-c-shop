@@ -1,1 +1,96 @@
-// C-Shop — cart
+// Cart — clear quantities, pack / multiples and availability per line.
+.cart__list {
+  display: grid;
+  gap: var(--cs-space-2);
+}
+
+.cart__item .product-line {
+  padding: var(--cs-space-3);
+  background: var(--cs-surface);
+  border: $cs-border-width solid var(--cs-border);
+  border-radius: var(--cs-radius);
+}
+
+.product-line {
+  &__title {
+    font-weight: $cs-font-weight-semibold;
+    color: var(--cs-text);
+
+    &:hover {
+      color: var(--cs-primary);
+    }
+  }
+
+  &__codes {
+    margin-block: var(--cs-space-1);
+  }
+
+  .cs-qty__rules {
+    margin-block: var(--cs-space-1);
+
+    li {
+      padding: 0 var(--cs-space-2);
+      color: var(--cs-text);
+      background: var(--cs-warning-subtle);
+      border-radius: var(--cs-radius-sm);
+    }
+  }
+
+  &__item--availability {
+    font-size: $cs-font-size-sm;
+    font-weight: $cs-font-weight-semibold;
+  }
+
+  &__item--small-info {
+    font-size: $cs-font-size-xs;
+    color: var(--cs-text-muted);
+  }
+
+  &__item-price {
+    font-weight: $cs-font-weight-semibold;
+  }
+
+  &__item-unit-price {
+    font-size: $cs-font-size-xs;
+    color: var(--cs-text-muted);
+  }
+
+  &__price {
+    font-size: $cs-font-size-lg;
+    font-weight: $cs-font-weight-bold;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__quantity-button input {
+    font-weight: $cs-font-weight-semibold;
+    text-align: center;
+  }
+
+  &__actions a {
+    font-size: $cs-font-size-sm;
+    color: var(--cs-danger);
+  }
+}
+
+// Totals box
+.cart-summary,
+.cart-detailed-totals {
+  font-variant-numeric: tabular-nums;
+}
+
+.cart-summary {
+  padding: var(--cs-space-4);
+  background: var(--cs-surface);
+  border: $cs-border-width solid var(--cs-border);
+  border-radius: var(--cs-radius-lg);
+
+  .btn-primary {
+    width: 100%;
+    min-height: 3rem;
+  }
+}
+
+.cart-summary-product__reference {
+  display: block;
+  margin: 0;
+}

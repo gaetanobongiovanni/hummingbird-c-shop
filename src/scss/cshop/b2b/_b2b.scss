@@ -1,1 +1,101 @@
-// C-Shop — b2b
+// B2B components (UI only) — see templates/components/cshop/b2b/
+
+// Quick order by code
+.cs-quick-order {
+  gap: var(--cs-space-3);
+
+  &__table {
+    th:first-child,
+    td:first-child {
+      width: 60%;
+    }
+  }
+
+  &__qty {
+    max-width: 6rem;
+    margin-inline-start: auto;
+    text-align: end;
+  }
+
+  &__paste {
+    font-size: $cs-font-size-sm;
+
+    summary {
+      font-weight: $cs-font-weight-semibold;
+      color: var(--cs-primary);
+      cursor: pointer;
+    }
+
+    textarea {
+      margin-bottom: var(--cs-space-2);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--cs-space-2);
+    justify-content: space-between;
+  }
+}
+
+// Previous orders / price list tables
+.cs-reorder-list,
+.cs-price-list,
+.cs-product-lists {
+  margin-block: var(--cs-space-5);
+}
+
+// Product lists
+.cs-product-lists__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: var(--cs-space-3);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  .cs-card {
+    position: relative;
+  }
+}
+
+.cs-product-lists__cta {
+  position: relative;
+  z-index: 2;
+  align-self: flex-start;
+  margin-top: var(--cs-space-2);
+}
+
+// Quote request
+.cs-quote {
+  margin-top: var(--cs-space-2);
+
+  &__toggle {
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &__form {
+    padding: var(--cs-space-3);
+    margin-top: var(--cs-space-2);
+    background: var(--cs-surface-alt);
+    border-radius: var(--cs-radius);
+  }
+}
+
+.cs-buy-box__quote {
+  flex-basis: 100%;
+}
+
+// Native order history: make the reorder action visible
+.page-customer-account #history,
+body#history {
+  .order-actions a[href*="submitReorder"],
+  a[href*="submitReorder"] {
+    font-weight: $cs-font-weight-semibold;
+  }
+}

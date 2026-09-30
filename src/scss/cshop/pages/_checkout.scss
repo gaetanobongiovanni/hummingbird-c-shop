@@ -1,1 +1,41 @@
-// C-Shop — checkout
+// Checkout — simple, focused, no decoration.
+body#checkout {
+  .header .cs-header__search,
+  .header .cs-header__menu {
+    // keep focus on the order: search and menu are not needed during checkout
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+}
+
+.checkout-steps,
+.checkout__steps {
+  font-size: $cs-font-size-sm;
+}
+
+.checkout-step,
+.step {
+  .step__title,
+  .step-title {
+    font-weight: $cs-font-weight-bold;
+  }
+}
+
+.delivery-option,
+.payment-option {
+  border-radius: var(--cs-radius);
+
+  &:has(input:checked) {
+    border-color: var(--cs-primary);
+    box-shadow: inset 0 0 0 1px var(--cs-primary);
+  }
+}
+
+.cart-summary-product {
+  font-size: $cs-font-size-sm;
+
+  &__quantity .value {
+    font-weight: $cs-font-weight-bold;
+  }
+}

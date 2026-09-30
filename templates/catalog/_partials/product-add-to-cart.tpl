@@ -105,6 +105,12 @@
           </button>
         </div>
 
+        {* C-Shop: optional quote-request module (renders components/cshop/b2b/quote-request.tpl) *}
+        {capture name='cshop_quote'}{hook h='displayCshopQuoteRequest' product=$product}{/capture}
+        {if $smarty.capture.cshop_quote}
+          <div class="cs-buy-box__quote">{$smarty.capture.cshop_quote nofilter}</div>
+        {/if}
+
         {capture name='product_actions'}{hook h='displayProductActions' product=$product}{/capture}
         {if $smarty.capture.product_actions}
           {$smarty.capture.product_actions nofilter}

@@ -2,6 +2,8 @@
  * For the full copyright and license information, please view the
  * LICENSE.md file that was distributed with this source code.
  *}
+{* C-Shop: codes, pack and multiples for this line ($cs) *}
+{include file='catalog/_partials/cshop/product-data.tpl' product=$product}
 
 <div class="product-line">
   <div class="product-line__image">
@@ -84,6 +86,8 @@
         {include file='catalog/_partials/product-customization-modal.tpl' product=$product}
       {/if}
 
+      {include file='catalog/_partials/cshop/product-codes.tpl' cs=$cs cs_codes_class='product-line__codes'}
+
       {foreach from=$product.attributes key="attribute" item="value"}
         <div class="product-line__item product-line__item--info {$attribute|lower}">
           <span class="product-line__item-label">{$attribute}:</span>
@@ -119,6 +123,8 @@
           {$product.delivery_information}
         </div>
       {/if}
+
+      {include file='catalog/_partials/cshop/order-rules.tpl' cs=$cs cs_rules_id="cs-cart-rules-{$product.id_product}-{$product.id_product_attribute}-{$product.id_customization|intval}"}
 
       {hook h='displayCartExtraProductInfo' product=$product}
 
@@ -165,7 +171,9 @@
               "data-update-url"=>"{$product.update_quantity_url}",
               "data-product-id"=>"{$product.id_product}",
               "value"=>"{$product.quantity}",
-              "min"=>"{$product.minimal_quantity}"
+              "min"=>"{$product.minimal_quantity}",
+              "step"=>"{$cs.step}",
+              "data-ps-component"=>"cs-qty"
             ]
           }
         {/if}

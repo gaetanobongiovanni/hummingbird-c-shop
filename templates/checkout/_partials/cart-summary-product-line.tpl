@@ -79,6 +79,13 @@
         <a class="{$componentName}__link" href="{$product.url}" target="_blank" rel="noopener noreferrer nofollow">
           {$product.name}
         </a>
+
+        {* C-Shop: product code in the order summary *}
+        {if !empty($product.reference)}
+          <span class="{$componentName}__reference cs-codes">
+            <span>{l s='Code' d='Shop.Theme.Cshop'}:</span> <span class="cs-code">{$product.reference}</span>
+          </span>
+        {/if}
         
         {if !empty($product.attributes)}
           <div class="{$componentName}__attributes">

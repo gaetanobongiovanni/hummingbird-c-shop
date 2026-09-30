@@ -16,16 +16,27 @@
     border-radius: 50%;
   }
 
-  &--available {
+  // PrestaShop 9 availability states (ProductLazyArray::availability)
+  &--in_stock {
     color: var(--cs-success);
   }
 
-  &--last_remaining_items,
-  &--limited {
+  &--available {
+    // not in stock but orderable (back-order)
+    color: var(--cs-warning);
+
+    &::before {
+      background: transparent;
+      border: 2px solid currentcolor;
+    }
+  }
+
+  &--last_remaining_items {
     color: var(--cs-warning);
   }
 
-  &--unavailable {
+  &--unavailable,
+  &--discontinued {
     color: var(--cs-danger);
   }
 
