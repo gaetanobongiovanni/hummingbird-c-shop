@@ -4,6 +4,9 @@
  */
 const cshopSelectors = {
   wishlistLink: '[data-ps-component="cs-wishlist-link"]',
+  menuProducts: {
+    panel: '[data-ps-component="cs-menu-products"]',
+  },
   b2b: {
     container: '[data-ps-component="cs-b2b-registration"]',
     business: '[data-ps-ref="cs-b2b-business"]',

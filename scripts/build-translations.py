@@ -9,6 +9,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 IT = {
+    "See all %count% products": "Vedi tutti i %count% prodotti",
+    "No products available at the moment.": "Nessun prodotto disponibile al momento.",
+    "Products could not be loaded.": "Non è stato possibile caricare i prodotti.",
     "Business details": "Dati aziendali",
     "Electronic invoice for businesses and public bodies": "Fattura elettronica per aziende ed enti",
     "Secure payments": "Pagamenti sicuri",

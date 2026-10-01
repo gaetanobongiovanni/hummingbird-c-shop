@@ -82,6 +82,14 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.5.3
+
+Mega menu: a category without sub-categories gets its own tab that shows 8
+of its products (`src/js/cshop/menu-products.ts`: the category URL asked as
+JSON with `resultsPerPage=8`, loaded once when the tab opens) and a "See all
+N products" link. Bigger thumbnails: menu left 48px, sub-category tiles
+112px, mobile 48px, homepage tiles 120px.
+
 ## 1.5.2
 
 Product price block: "Tax included" right under the price, then the "+ VAT"

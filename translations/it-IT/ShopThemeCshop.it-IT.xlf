@@ -198,6 +198,10 @@
         <source>New products</source>
         <target>Nuovi prodotti</target>
       </trans-unit>
+      <trans-unit id="697e6385556dc4f1e041a69929c73f20">
+        <source>No products available at the moment.</source>
+        <target>Nessun prodotto disponibile al momento.</target>
+      </trans-unit>
       <trans-unit id="f4c6f851b00d5518bf888815de279aba">
         <source>Notes</source>
         <target>Note</target>
@@ -270,6 +274,10 @@
         <source>Product list view</source>
         <target>Visualizzazione elenco prodotti</target>
       </trans-unit>
+      <trans-unit id="585da2738095bb2a2620a554491c5c64">
+        <source>Products could not be loaded.</source>
+        <target>Non è stato possibile caricare i prodotti.</target>
+      </trans-unit>
       <trans-unit id="70719754b29b359a20c297898ee618f8">
         <source>Promotions</source>
         <target>Promozioni</target>
@@ -333,6 +341,10 @@
       <trans-unit id="90882b25ee7a8a13908647d038ea9420">
         <source>Secure payments</source>
         <target>Pagamenti sicuri</target>
+      </trans-unit>
+      <trans-unit id="8523fbb1f27c141e5c810ac8f28af7c7">
+        <source>See all %count% products</source>
+        <target>Vedi tutti i %count% prodotti</target>
       </trans-unit>
       <trans-unit id="a4f2a4df5079d2d24a31b43f459ee1f9">
         <source>See the offers</source>

@@ -25,7 +25,7 @@
           data-depth="{$link.depth}"
           {if $link.open_in_new_window}target="_blank"{/if}
         >
-          {if $link.depth === 3}{csCategoryThumb node=$link size=56}{/if}
+          {if $link.depth === 3}{csCategoryThumb node=$link size=112}{/if}
           <span class="menu-item__label">{$link.label}</span>
         </a>
       </li>
@@ -64,10 +64,16 @@
             id="tab_{$node.label|lower|classname}_{$node.depth}_{$node.page_identifier}"
             data-open-tab="submenu_{$node.label|lower|classname}_{$node.depth}_{$node.page_identifier}"
             aria-controls="submenu_{$node.label|lower|classname}_{$node.depth}_{$node.page_identifier}"
+            {elseif $node.type == 'category'}
+            {* C-Shop: category without sub-categories: its tab shows a preview of its products *}
+            role="tab"
+            id="tab_products_{$node.page_identifier}"
+            data-open-tab="submenu_products_{$node.page_identifier}"
+            aria-controls="submenu_products_{$node.page_identifier}"
             {/if}
             {if $node.open_in_new_window}target="_blank" rel="noopener noreferrer"{/if}
           >
-            {csCategoryThumb node=$node size=32}
+            {csCategoryThumb node=$node size=48}
             <span class="submenu__left-label">{$node.label}</span>
           </a>
         {/foreach}
@@ -77,6 +83,23 @@
     {if $depth === 1 }
       <div class="submenu__right col-sm-9" data-ps-ref="desktop-submenu-right">
         {foreach from=$nodes item=node}
+          {if !$node.children|count && $node.type == 'category'}
+            {* products loaded on demand by src/js/cshop/menu-products.ts (category JSON listing) *}
+            <div
+              class="submenu__right-items submenu__right-items--products"
+              role="tabpanel"
+              data-ps-ref="desktop-submenu-right-items"
+              data-ps-component="cs-menu-products"
+              data-ps-url="{$node.url}"
+              data-ps-label="{$node.label}"
+              data-ps-text-all="{l s='See all %count% products' d='Shop.Theme.Cshop'}"
+              data-ps-text-empty="{l s='No products available at the moment.' d='Shop.Theme.Cshop'}"
+              data-ps-text-error="{l s='Products could not be loaded.' d='Shop.Theme.Cshop'}"
+              id="submenu_products_{$node.page_identifier}"
+              aria-labelledby="tab_products_{$node.page_identifier}"
+              aria-busy="false"
+            ></div>
+          {else}
           <div
             class="submenu__right-items"
             role="tabpanel"
@@ -88,6 +111,7 @@
           >
             {generateLinks links=$node.children parent=$parent}
           </div>
+          {/if}
         {/foreach}
       </div>
     {/if}
@@ -195,7 +219,7 @@
               data-depth="{$depth}"
               {if $node.open_in_new_window}target="_blank"{/if}
             >
-              {csCategoryThumb node=$node size=36}
+              {csCategoryThumb node=$node size=48}
               <span class="menu__label">{$node.label}</span>
             </a>
             {if $node.children|count}
