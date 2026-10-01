@@ -159,17 +159,6 @@ $cs-market-cta-hover: $cs-accent-hover;
   background-color: $white;
 }
 
-// Department bar links
-.cs-header .ps-mainmenu__tree > li .ps-mainmenu__tree-link {
-  color: $cs-petrol-100;
-
-  &:hover,
-  &:focus-visible {
-    color: $white;
-    background: rgba($white, 0.08);
-  }
-}
-
 // -----------------------------------------------------------------------------
 // Homepage canvas: light grey page, content on white panels
 // -----------------------------------------------------------------------------

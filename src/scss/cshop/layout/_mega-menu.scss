@@ -3,45 +3,101 @@
 // of height --cs-nav-height, so no overflow tricks are needed.
 .cs-header .ps-mainmenu__desktop {
   @include media-breakpoint-up(xl) {
+    flex: 1 1 auto; // full bar width, so the items can be centred
     min-height: var(--cs-nav-height);
   }
 }
 
+// Department bar: items centred, each item (label + chevron) is ONE target
+// with one hover background and one "current" underline.
 .cs-header .ps-mainmenu__tree {
-  gap: 0;
+  gap: var(--cs-space-1);
+  justify-content: center;
+
+  > li {
+    position: static; // submenu spans the whole bar
+  }
+
+  > li .ps-mainmenu__tree-item-wrapper {
+    height: var(--cs-nav-height);
+    border-radius: var(--cs-radius) var(--cs-radius) 0 0;
+    transition: background-color 0.15s ease;
+  }
+
+  > li:hover .ps-mainmenu__tree-item-wrapper,
+  > li:focus-within .ps-mainmenu__tree-item-wrapper {
+    background: rgba($white, 0.1);
+  }
 
   > li .ps-mainmenu__tree-link {
-    display: flex;
+    display: inline-flex;
+    gap: var(--cs-space-2);
     align-items: center;
-    height: var(--cs-nav-height);
-    padding: 0 var(--cs-space-3);
+    height: 100%;
+    padding: 0 var(--cs-space-4);
     font-size: $cs-font-size-sm;
     font-weight: $cs-font-weight-semibold;
     color: $cs-petrol-100;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    background: none;
 
     &:hover,
     &:focus-visible,
     &[aria-current="page"] {
       color: $white;
+      background: none;
     }
   }
 
-  > li.current .ps-mainmenu__tree-link {
-    color: $white;
-    box-shadow: inset 0 -3px 0 var(--cs-accent);
+  // label and chevron read as one item: the chevron sits right after the text
+  > li:has(.ps-mainmenu__tree-dropdown-toggle) .ps-mainmenu__tree-link {
+    padding-inline-end: var(--cs-space-1);
   }
 
   > li .ps-mainmenu__tree-dropdown-toggle {
+    height: 100%;
+    padding: 0 var(--cs-space-3) 0 var(--cs-space-1);
     color: $cs-petrol-100;
+
+    &::after {
+      margin: 0;
+    }
 
     &:focus-visible {
       outline-color: $white;
     }
   }
 
+  > li:hover .ps-mainmenu__tree-dropdown-toggle,
+  > li:hover .ps-mainmenu__tree-link {
+    color: $white;
+  }
+
+  > li.current .ps-mainmenu__tree-item-wrapper {
+    box-shadow: inset 0 -3px 0 var(--cs-accent);
+  }
+
+  > li.current .ps-mainmenu__tree-link,
+  > li.current .ps-mainmenu__tree-dropdown-toggle {
+    color: $white;
+  }
+
   > li .ps-mainmenu__tree-link:focus {
     outline-color: $white;
   }
+
+  .ps-mainmenu__home-icon {
+    font-size: 1.25rem;
+  }
+}
+
+// Mobile drawer: Home first, with its icon
+.ps-mainmenu--mobile .menu__home .menu__link {
+  display: flex;
+  gap: var(--cs-space-2);
+  align-items: center;
+  font-weight: $cs-font-weight-semibold;
 }
 
 .cs-header .submenu {

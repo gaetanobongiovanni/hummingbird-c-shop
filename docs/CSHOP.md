@@ -82,6 +82,12 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.4.2
+
+Main menu: "Home" always first (desktop bar and mobile drawer, in
+`modules/ps_mainmenu/ps_mainmenu.tpl`), items centred, label and chevron are
+one item with one hover background and one "current" underline.
+
 ## 1.4.1
 
 Search field: the clear button (×) sat over the magnifier on desktop. The

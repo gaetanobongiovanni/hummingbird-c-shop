@@ -99,6 +99,21 @@
 {function name="desktopFirstLevel" itemsFirstLevel=[]}
   {if $itemsFirstLevel|count}
     <ul class="ps-mainmenu__tree" id="top-menu" data-ps-ref="desktop-menu-tree">
+      {* C-Shop: Home always first, the menu config only holds categories *}
+      <li class="ps-mainmenu__tree-item ps-mainmenu__tree-item--home{if $page.page_name == 'index'} current{/if}" data-ps-ref="desktop-menu-item">
+        <div class="ps-mainmenu__tree-item-wrapper">
+          <a
+            class="ps-mainmenu__tree-link"
+            href="{$urls.pages.index}"
+            data-depth="1"
+            data-ps-ref="desktop-menu-link"
+            {if $page.page_name == 'index'}aria-current="page"{/if}
+          >
+            <i class="material-icons ps-mainmenu__home-icon" aria-hidden="true">&#xE88A;</i>
+            {l s='Home' d='Shop.Theme.Global'}
+          </a>
+        </div>
+      </li>
       {foreach from=$itemsFirstLevel item=menuItem}
         <li class="ps-mainmenu__tree-item type-{$menuItem.type} {if $menuItem.current} current{/if}" data-id="{$menuItem.page_identifier}" data-ps-ref="desktop-menu-item">
           <div class="ps-mainmenu__tree-item-wrapper">
@@ -150,6 +165,13 @@
       <ul class="menu__list">
         {if $depth >= 1}
           <li class="menu__title">{$parent.label}</li>
+        {else}
+          <li class="menu__home{if $page.page_name == 'index'} current{/if}">
+            <a class="menu__link" href="{$urls.pages.index}" data-depth="0"{if $page.page_name == 'index'} aria-current="page"{/if}>
+              <i class="material-icons" aria-hidden="true">&#xE88A;</i>
+              {l s='Home' d='Shop.Theme.Global'}
+            </a>
+          </li>
         {/if}
         {foreach from=$nodes item=node}
           <li
