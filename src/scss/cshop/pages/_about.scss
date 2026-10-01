@@ -1,0 +1,212 @@
+// -----------------------------------------------------------------------------
+// CMS "Chi siamo" (content in docs/content/chi-siamo.html, pasted in
+// Design > Pages) and homepage custom text "Il commercio collaborativo"
+// (docs/content/custom-text-commercio-collaborativo.html, ps_customtext).
+// Plain HTML with these classes: the editor keeps them, the theme styles them.
+// -----------------------------------------------------------------------------
+$cs-cc-red: #d4001c; // C-Commerce brand red, used only for the group's mark
+
+.cs-about {
+  &__intro {
+    padding: var(--cs-space-5);
+    margin-bottom: var(--cs-space-5);
+    color: $white;
+    background: linear-gradient(120deg, #{$cs-petrol-700} 0%, #{$cs-petrol-600} 100%);
+    border-radius: var(--cs-radius-lg);
+  }
+
+  &__eyebrow {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: var(--cs-space-3);
+    font-size: $cs-font-size-xs;
+    font-weight: $cs-font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: $cs-accent;
+    border-radius: var(--cs-radius-pill);
+  }
+
+  &__lead {
+    max-width: 44rem;
+    margin: 0;
+    font-size: $cs-font-size-lg;
+    line-height: 1.5;
+  }
+
+  &__section {
+    margin-bottom: var(--cs-space-5);
+
+    h2 {
+      margin-bottom: var(--cs-space-3);
+    }
+  }
+
+  &__figures {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--cs-space-3);
+    margin-bottom: var(--cs-space-5);
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  &__figure {
+    display: flex;
+    flex-direction: column;
+    gap: var(--cs-space-1);
+    padding: var(--cs-space-4);
+    background: var(--cs-surface-alt);
+    border-radius: var(--cs-radius);
+
+    strong {
+      font-size: $cs-font-size-xl;
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--cs-primary);
+    }
+
+    span {
+      font-size: $cs-font-size-sm;
+      color: var(--cs-text-muted);
+    }
+  }
+
+  &__values {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--cs-space-3);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: var(--cs-space-1);
+      padding: var(--cs-space-4);
+      border: 1px solid var(--cs-border);
+      border-top: 3px solid var(--cs-primary);
+      border-radius: var(--cs-radius);
+    }
+
+    li:nth-child(even) {
+      border-top-color: var(--cs-accent);
+    }
+
+    strong {
+      font-size: $cs-font-size-md;
+    }
+
+    span {
+      font-size: $cs-font-size-sm;
+      color: var(--cs-text-muted);
+    }
+  }
+
+  &__contact {
+    padding: var(--cs-space-5);
+    background: var(--cs-primary-softer);
+    border-radius: var(--cs-radius-lg);
+
+    .btn {
+      margin: var(--cs-space-1) var(--cs-space-2) var(--cs-space-1) 0;
+    }
+  }
+
+  &__address {
+    font-size: $cs-font-size-sm;
+    color: var(--cs-text-muted);
+  }
+}
+
+// "Chi siamo" uses the full sheet width (other CMS pages stay at reading width)
+body#cms:has(.cs-about) {
+  .page-content--cms,
+  .page-header,
+  .page-title-section {
+    max-width: none;
+  }
+}
+
+// Homepage block: text left, illustration right
+.cs-collab {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--cs-space-5);
+  align-items: center;
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  }
+
+  &__brand {
+    margin-bottom: var(--cs-space-3);
+
+    img {
+      width: auto;
+      max-width: 12rem;
+      height: auto;
+    }
+  }
+
+  h2 {
+    margin-bottom: var(--cs-space-2);
+  }
+
+  &__lead {
+    font-size: $cs-font-size-md;
+    color: var(--cs-text-muted);
+  }
+
+  &__points {
+    display: grid;
+    gap: var(--cs-space-2);
+    padding: 0;
+    margin: var(--cs-space-4) 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-inline-start: 1.75rem;
+
+      &::before {
+        position: absolute;
+        top: 0.15em;
+        left: 0;
+        font-family: "Material Icons", sans-serif;
+        font-size: 1.25rem;
+        line-height: 1;
+        color: $cs-cc-red;
+        content: "\e86c"; // check_circle
+      }
+    }
+  }
+
+  &__art {
+    aspect-ratio: 4 / 3;
+    background: url("../img/cshop/commercio-collaborativo.svg") center / contain no-repeat;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      max-width: 28rem;
+      margin-inline: auto;
+    }
+  }
+}
+
+// the module wraps the text in a .container inside the homepage panel
+.ps-customtext:has(.cs-collab) > .container {
+  max-width: none;
+  padding: 0;
+}

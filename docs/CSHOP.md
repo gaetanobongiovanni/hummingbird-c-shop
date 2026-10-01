@@ -82,6 +82,14 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.6.0 — "Chi siamo" and "Il commercio collaborativo"
+
+Styles for two Back Office contents kept in `docs/content/`: the CMS page
+"Chi siamo" (`.cs-about`, full sheet width) and the homepage custom text
+(`.cs-collab`, illustration `src/img/cshop/commercio-collaborativo.svg`,
+C-Commerce logo from c-commerce.it). Paste the HTML in Design > Pages and
+Modules > Custom text block (source code view).
+
 ## 1.5.3
 
 Mega menu: a category without sub-categories gets its own tab that shows 8

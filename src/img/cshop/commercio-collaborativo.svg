@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" fill="none" role="img" aria-labelledby="t">
+  <title id="t">Fornitori, distributori e clienti collegati in una rete collaborativa</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6f1f5"/>
+      <stop offset="1" stop-color="#fdf1ea"/>
+    </linearGradient>
+    <linearGradient id="hub" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e2122e"/>
+      <stop offset="1" stop-color="#a8001a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <!-- background network dots -->
+  <g fill="#0b4f6c" opacity=".12">
+    <circle cx="40" cy="60" r="4"/><circle cx="440" cy="48" r="5"/><circle cx="420" cy="312" r="4"/>
+    <circle cx="60" cy="300" r="5"/><circle cx="250" cy="30" r="3"/><circle cx="240" cy="335" r="3"/>
+    <circle cx="20" cy="180" r="3"/><circle cx="462" cy="180" r="3"/>
+  </g>
+
+  <!-- links (two-way arrows) -->
+  <g stroke-width="5" stroke-linecap="round">
+    <path d="M128 112 Q170 120 196 152" stroke="#0b4f6c"/>
+    <path d="M352 112 Q310 120 284 152" stroke="#c2410c"/>
+    <path d="M240 268 L240 232" stroke="#0b4f6c"/>
+    <path d="M128 112 Q240 40 352 112" stroke="#0b4f6c" stroke-dasharray="2 12" opacity=".5"/>
+    <path d="M110 150 Q120 260 196 280" stroke="#c2410c" stroke-dasharray="2 12" opacity=".5"/>
+    <path d="M370 150 Q360 260 284 280" stroke="#0b4f6c" stroke-dasharray="2 12" opacity=".5"/>
+  </g>
+
+  <!-- hub -->
+  <circle cx="240" cy="190" r="56" fill="url(#hub)"/>
+  <circle cx="240" cy="190" r="70" stroke="#d4001c" stroke-width="3" opacity=".25"/>
+  <circle cx="240" cy="190" r="86" stroke="#d4001c" stroke-width="2" opacity=".12"/>
+  <path d="M262 168a32 32 0 1 0 0 44" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- supplier: factory -->
+  <g transform="translate(70 62)">
+    <circle cx="48" cy="48" r="48" fill="#fff"/>
+    <path d="M22 70V44l14 9v-9l14 9v-9l14 9V26h10v44z" fill="#0b4f6c"/>
+    <rect x="30" y="58" width="7" height="7" rx="1" fill="#fff"/>
+    <rect x="44" y="58" width="7" height="7" rx="1" fill="#fff"/>
+    <rect x="58" y="58" width="7" height="7" rx="1" fill="#fff"/>
+  </g>
+
+  <!-- distributor: truck -->
+  <g transform="translate(314 62)">
+    <circle cx="48" cy="48" r="48" fill="#fff"/>
+    <rect x="18" y="34" width="38" height="28" rx="3" fill="#c2410c"/>
+    <path d="M56 42h12l10 11v9H56z" fill="#c2410c"/>
+    <rect x="61" y="45" width="8" height="7" rx="1" fill="#fff"/>
+    <circle cx="32" cy="66" r="7" fill="#1f2937"/><circle cx="32" cy="66" r="3" fill="#fff"/>
+    <circle cx="68" cy="66" r="7" fill="#1f2937"/><circle cx="68" cy="66" r="3" fill="#fff"/>
+  </g>
+
+  <!-- customers: shop + people -->
+  <g transform="translate(192 262)">
+    <rect x="0" y="0" width="96" height="74" rx="18" fill="#fff"/>
+    <path d="M20 26h56l-5-12H25z" fill="#0b4f6c"/>
+    <path d="M22 26h52v30H22z" fill="#0b4f6c" opacity=".15"/>
+    <circle cx="38" cy="40" r="6" fill="#0b4f6c"/><path d="M28 58a10 10 0 0 1 20 0z" fill="#0b4f6c"/>
+    <circle cx="58" cy="40" r="6" fill="#c2410c"/><path d="M48 58a10 10 0 0 1 20 0z" fill="#c2410c"/>
+  </g>
+
+  <!-- small labels -->
+  <g font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#0b4f6c" text-anchor="middle">
+    <text x="118" y="178">Fornitori</text>
+    <text x="362" y="178" fill="#c2410c">Distributori</text>
+    <text x="330" y="306">Clienti</text>
+  </g>
+</svg>
