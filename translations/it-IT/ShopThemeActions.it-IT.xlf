@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="themes/cshop" source-language="en-US" target-language="it-IT" datatype="plaintext">
+    <body>
+      <trans-unit id="300225ee958b6350abc51805dab83c24">
+        <source>Continue shopping</source>
+        <target>Continua gli acquisti</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

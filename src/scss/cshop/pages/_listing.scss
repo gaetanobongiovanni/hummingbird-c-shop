@@ -81,7 +81,12 @@
     background: var(--cs-surface);
   }
 
+  // Product photos are mostly landscape (blisters, scissors, packs):
+  // a 4:3 frame removes the empty band of the square one and shortens cards.
   &__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
     object-fit: contain;
   }
 
@@ -389,5 +394,59 @@
 
   .product-miniature__add {
     min-height: 2.5rem;
+  }
+}
+
+// Category tree: current path highlighted
+.category-tree__item--in-path > .category-tree__item-header > .category-tree__item-link {
+  font-weight: $cs-font-weight-bold;
+  color: var(--cs-primary);
+}
+
+.category-tree__item-link[aria-current="page"] {
+  color: var(--cs-accent-hover);
+}
+
+// ---------------------------------------------------------------------------
+// Denser catalogue grid: 4 columns next to the filters from 1200px
+.layout-left-column .cs-listing .products,
+.layout-right-column .cs-listing .products {
+  @include media-breakpoint-up(xl) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+// Other-VAT price on cards
+.product-miniature__vat {
+  flex-basis: 100%;
+  font-size: $cs-font-size-xs;
+  color: var(--cs-text-muted);
+}
+
+// "New" flag is on almost every freshly imported product: keep it, but
+// quiet, so promotions stand out.
+.product-flags .badge.new {
+  color: var(--cs-primary);
+  background: var(--cs-surface);
+  border: 1px solid var(--cs-primary-subtle);
+}
+
+// Price block order on cards: price + crossed regular price on one line,
+// then the other-VAT price and the unit price.
+.product-miniature__prices {
+  .product-miniature__price {
+    order: 0;
+  }
+
+  .product-miniature__discount-price {
+    order: 1;
+  }
+
+  .product-miniature__vat {
+    order: 2;
+  }
+
+  .product-miniature__unit-price {
+    order: 3;
   }
 }

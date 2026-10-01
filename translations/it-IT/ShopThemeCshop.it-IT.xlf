@@ -10,6 +10,14 @@
         <source>%label% of %qty% pcs</source>
         <target>%label% da %qty% pz</target>
       </trans-unit>
+      <trans-unit id="292ff604e20c42227ab906fcda2e1c0d">
+        <source>%price% + VAT</source>
+        <target>%price% + IVA</target>
+      </trans-unit>
+      <trans-unit id="9fb5bac86e175119c4ba8bed2ed86626">
+        <source>%price% incl. VAT</source>
+        <target>%price% IVA incl.</target>
+      </trans-unit>
       <trans-unit id="06df33001c1d7187fdd81ea1f5b277aa">
         <source>Actions</source>
         <target>Azioni</target>
@@ -149,6 +157,14 @@
       <trans-unit id="7ec9cceb94985909c6994e95c31c1aa8">
         <source>My wishlists</source>
         <target>Le mie liste dei desideri</target>
+      </trans-unit>
+      <trans-unit id="15c5cf1f18fb1ebf0a26cb7abc8c41af">
+        <source>Name, code or OEM…</source>
+        <target>Nome, codice o OEM…</target>
+      </trans-unit>
+      <trans-unit id="b2eb7eb5ea59e7426dd3c8ed7b1876ff">
+        <source>Need help choosing?</source>
+        <target>Serve aiuto?</target>
       </trans-unit>
       <trans-unit id="0dfa571878873577ef425b48520618c6">
         <source>New list</source>
@@ -302,13 +318,13 @@
         <source>Shop by category</source>
         <target>Acquista per categoria</target>
       </trans-unit>
+      <trans-unit id="92959c9dbc368487aa866afe0d4fcdde">
+        <source>Sign in to reorder from your order history and track your deliveries.</source>
+        <target>Accedi per riordinare dallo storico ordini e seguire le tue spedizioni.</target>
+      </trans-unit>
       <trans-unit id="9e7ac4ff9f3985eb28bf4da8c9f24850">
         <source>Sign in to reorder from your previous orders.</source>
         <target>Accedi per riordinare dai tuoi ordini precedenti.</target>
-      </trans-unit>
-      <trans-unit id="1909968861080cf879cf5553755f4717">
-        <source>Sign in to see your prices and reorder from your order history.</source>
-        <target>Accedi per vedere i tuoi prezzi e riordinare dallo storico ordini.</target>
       </trans-unit>
       <trans-unit id="75470516296873f1c00ceee1377bd10f">
         <source>Supplier code</source>
@@ -341,10 +357,6 @@
       <trans-unit id="013dbbcd220223c9b5b195aa2679bd84">
         <source>Your price list</source>
         <target>Il tuo listino</target>
-      </trans-unit>
-      <trans-unit id="15c5cf1f18fb1ebf0a26cb7abc8c41af">
-        <source>Name, code or OEM…</source>
-        <target>Nome, codice o OEM…</target>
       </trans-unit>
     </body>
   </file>

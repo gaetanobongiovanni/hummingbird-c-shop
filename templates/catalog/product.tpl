@@ -111,6 +111,29 @@
           </form>
         {/block}
 
+        {* C-Shop: reassurance (delivery, returns, payment) and help next to the CTA *}
+        {block name='cshop_buy_box_trust'}
+          {capture name='cshop_reassurance'}{hook h='displayReassurance'}{/capture}
+          {if !empty($smarty.capture.cshop_reassurance)}
+            <div class="cs-buy-box__trust">{$smarty.capture.cshop_reassurance nofilter}</div>
+          {/if}
+          {widget_block name='ps_contactinfo'}
+            {if !empty($contact_infos.phone) || (!empty($contact_infos.email) && $display_email)}
+              <p class="cs-buy-box__help">
+                <span class="material-icons" aria-hidden="true">&#xE0C6;</span>
+                <span>
+                  {l s='Need help choosing?' d='Shop.Theme.Cshop'}
+                  {if !empty($contact_infos.phone)}
+                    <a href="tel:{$contact_infos.phone|replace:' ':''}">{$contact_infos.phone}</a>
+                  {elseif !empty($contact_infos.email) && $display_email}
+                    <a href="mailto:{$contact_infos.email}">{$contact_infos.email}</a>
+                  {/if}
+                </span>
+              </p>
+            {/if}
+          {/widget_block}
+        {/block}
+
         {* C-Shop: optional quote-request module. Rendered OUTSIDE the add-to-cart
            form (nested forms are invalid HTML); the selected combination is
            copied on submit by src/js/cshop/quote-request.ts *}
@@ -228,11 +251,8 @@
       {/block}
     </div>
 
-    <div class="product__bottom-right">
-      {block name='hook_display_reassurance'}
-        {hook h='displayReassurance'}
-      {/block}
-    </div>
+    {* C-Shop: reassurance moved into the buy box (cshop_buy_box_trust) *}
+    {block name='hook_display_reassurance'}{/block}
   </div>
   {* END OF SECOND PART *}
 

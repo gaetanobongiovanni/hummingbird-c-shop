@@ -1,5 +1,6 @@
 // Homepage
 .page-content--home {
+  gap: 0; // upstream 2.5rem grid gap + section padding left big empty bands
   padding: 0;
 }
 

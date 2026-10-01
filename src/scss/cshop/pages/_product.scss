@@ -266,3 +266,92 @@ body#product.cs-has-sticky-buy {
     min-height: 2.75rem;
   }
 }
+
+// Other-VAT price (B2B)
+.product__vat {
+  display: block;
+  font-size: $cs-font-size-sm;
+  font-weight: $cs-font-weight-semibold;
+  color: var(--cs-text-muted);
+}
+
+// Trust & help inside the buy box
+.cs-buy-box__trust {
+  padding-top: var(--cs-space-3);
+  margin-top: var(--cs-space-3);
+  border-top: $cs-border-width solid var(--cs-border);
+
+  .blockreassurance {
+    display: grid;
+    gap: var(--cs-space-2);
+    padding: 0;
+    margin: 0;
+    background: transparent;
+  }
+
+  .reassurance {
+    display: flex;
+    gap: var(--cs-space-2);
+    align-items: center;
+    padding: 0;
+    font-size: $cs-font-size-sm;
+    color: var(--cs-text);
+    background: transparent;
+    border: 0;
+  }
+
+  .reassurance__image {
+    flex: 0 0 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    img,
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .reassurance__title {
+    font-weight: $cs-font-weight-semibold;
+  }
+
+  .reassurance__desc {
+    color: var(--cs-text-muted);
+  }
+
+  br {
+    display: none;
+  }
+
+  .reassurance__desc::before {
+    content: " · ";
+  }
+}
+
+.cs-buy-box__help {
+  display: flex;
+  gap: var(--cs-space-2);
+  align-items: center;
+  padding-top: var(--cs-space-3);
+  margin: var(--cs-space-3) 0 0;
+  font-size: $cs-font-size-sm;
+  border-top: $cs-border-width solid var(--cs-border);
+
+  .material-icons {
+    font-size: 1.25rem;
+    color: var(--cs-primary);
+  }
+
+  a {
+    font-weight: $cs-font-weight-semibold;
+  }
+}
+
+// Reassurance moved into the buy box: description/details take the full width
+.product__bottom {
+  grid-template-columns: minmax(
+    0,
+    1fr
+  ) !important; // stylelint-disable-line declaration-no-important -- upstream sets 55%/45% per breakpoint
+}

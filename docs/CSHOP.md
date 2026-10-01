@@ -145,7 +145,7 @@ to swap short/long description when the combination changes.
 6. **Featured products**: products in the configured category; the homepage
    "Available products" section lists only those in stock.
 7. **Products per page**: 36 (set by the theme; adjust in Product settings).
-8. Translations: every string added by C-Shop uses the `Shop.Theme.Cshop`
+8. Translations (rebuild with `python3 scripts/build-translations.py`): every string added by C-Shop uses the `Shop.Theme.Cshop`
    domain; the Italian catalogue ships in
    `translations/it-IT/ShopThemeCshop.it-IT.xlf` and can be overridden in
    International › Translations. Core strings come from the PrestaShop

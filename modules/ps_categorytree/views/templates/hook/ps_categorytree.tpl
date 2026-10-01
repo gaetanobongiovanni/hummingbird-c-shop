@@ -5,24 +5,28 @@
 
 {$componentName = 'category-tree'}
 
+{* C-Shop: only the branch of the current category is rendered (with 500+
+   categories the full tree was ~160KB of HTML on every listing page).
+   Other nodes are plain links; the current path is open. *}
 {function name="categories" nodes=[] depth=0}
   {strip}
     {if $nodes|count}
       <ul class="{$componentName}__list" data-depth="{$depth|escape:'htmlall':'UTF-8'}">
         {foreach from=$nodes item=node name="categories"}
-          <li class="{$componentName}__item {if $node.children}accordion-item{/if}">
-            <div class="{$componentName}__item-header nosplit {if $node.children} split parent{/if}">
-              <a class="{$componentName}__item-link" href="{$node.link|escape:'htmlall':'UTF-8'}">
+          {$csOpen = !empty($node.in_path) && !empty($node.children)}
+          <li class="{$componentName}__item{if $csOpen} accordion-item{/if}{if !empty($node.in_path)} {$componentName}__item--in-path{/if}">
+            <div class="{$componentName}__item-header nosplit{if $csOpen} split parent{/if}">
+              <a class="{$componentName}__item-link" href="{$node.link|escape:'htmlall':'UTF-8'}"{if !empty($node.in_path) && empty($node.children)} aria-current="page"{/if}>
                 {$node.name|escape:'htmlall':'UTF-8'}
               </a>
 
-              {if $node.children}
+              {if $csOpen}
                 <button
-                  class="accordion-button collapsed"
+                  class="accordion-button"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#category-tree-{$node.id|escape:'htmlall':'UTF-8'}"
-                  aria-expanded="false"
+                  aria-expanded="true"
                   aria-controls="category-tree-{$node.id|escape:'htmlall':'UTF-8'}"
                   aria-label="{l s='Subcategories for %s' sprintf=[$node.name] d='Shop.Theme.Catalog'}"
                 >
@@ -30,11 +34,8 @@
               {/if}
             </div>
 
-            {if $node.children}
-              <div
-                class="accordion-collapse collapse"
-                id="category-tree-{$node.id|escape:'htmlall':'UTF-8'}"
-              >
+            {if $csOpen}
+              <div class="accordion-collapse collapse show" id="category-tree-{$node.id|escape:'htmlall':'UTF-8'}">
                 <div class="accordion-body">
                   {categories nodes=$node.children depth=$depth+1}
                 </div>

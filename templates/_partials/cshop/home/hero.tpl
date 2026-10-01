@@ -28,7 +28,7 @@
         </div>
       {else}
         <p class="cs-card__title">{l s='Private customers and businesses' d='Shop.Theme.Cshop'}</p>
-        <p class="cs-card__text">{l s='Sign in to see your prices and reorder from your order history.' d='Shop.Theme.Cshop'}</p>
+        <p class="cs-card__text">{l s='Sign in to reorder from your order history and track your deliveries.' d='Shop.Theme.Cshop'}</p>
         <div class="cs-hero__actions">
           <a class="btn btn-primary" href="{$urls.pages.authentication}" rel="nofollow">{l s='Sign in' d='Shop.Theme.Actions'}</a>
           <a class="btn btn-outline-primary" href="{$urls.pages.register}" rel="nofollow">{l s='Create an account' d='Shop.Theme.Customeraccount'}</a>

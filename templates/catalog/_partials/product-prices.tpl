@@ -72,6 +72,9 @@
           {/if}
         {/block}
 
+        {* C-Shop: price with the other VAT treatment (business customers) *}
+        {include file='catalog/_partials/cshop/price-vat.tpl' product=$product cs_vat_class='product__vat'}
+
         {capture name='product_price_hooks'}{hook h='displayProductPriceBlock' product=$product type="price"}{hook h='displayProductPriceBlock' product=$product type="after_price"}{/capture}
         {if $configuration.display_taxes_label || $product.ecotax.amount > 0 || $smarty.capture.product_price_hooks|trim}
           <div class="product__tax-infos">

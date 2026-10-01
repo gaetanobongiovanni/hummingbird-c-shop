@@ -19,7 +19,7 @@
             {block name='page_content_top'}{/block}
 
             {block name='page_content'}
-              {* C-Shop homepage: catalogue and search first, few decorative images *}
+              {* C-Shop homepage: catalogue first — offers and best sellers right after the categories *}
               {block name='cshop_home_hero'}
                 {include file='_partials/cshop/home/hero.tpl'}
               {/block}
@@ -28,28 +28,28 @@
                 {include file='_partials/cshop/home/categories.tpl'}
               {/block}
 
-              {block name='cshop_home_available'}
-                {widget name='ps_featuredproducts'}
+              {block name='cshop_home_promotions'}
+                {widget name='ps_specials'}
               {/block}
 
               {block name='cshop_home_bestsellers'}
                 {widget name='ps_bestsellers'}
               {/block}
 
-              {block name='cshop_home_brands'}
-                {include file='_partials/cshop/home/brands.tpl'}
+              {block name='cshop_home_available'}
+                {widget name='ps_featuredproducts'}
               {/block}
 
               {block name='cshop_home_toner'}
                 {include file='_partials/cshop/home/toner.tpl'}
               {/block}
 
-              {block name='cshop_home_business'}
-                {include file='_partials/cshop/home/business.tpl'}
+              {block name='cshop_home_brands'}
+                {include file='_partials/cshop/home/brands.tpl'}
               {/block}
 
-              {block name='cshop_home_promotions'}
-                {widget name='ps_specials'}
+              {block name='cshop_home_business'}
+                {include file='_partials/cshop/home/business.tpl'}
               {/block}
 
               {block name='hook_home'}

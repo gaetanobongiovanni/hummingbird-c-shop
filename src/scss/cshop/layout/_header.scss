@@ -1,7 +1,16 @@
 // Main header — CSS grid so that ps_mainmenu (rendered once) can be the mobile
 // toggle on small screens and a full-width mega-menu row on desktop.
+:root {
+  --cs-info-bar-height: 2.25rem;
+}
+
 .header {
   box-shadow: var(--cs-shadow-sm);
+
+  // The information bar scrolls away; logo, search, cart and menu stay sticky.
+  @include media-breakpoint-up(md) {
+    top: calc(var(--cs-info-bar-height) * -1);
+  }
 }
 
 .cs-header {
@@ -9,15 +18,6 @@
 
   padding: 0;
   background: var(--cs-surface);
-
-  @include media-breakpoint-up(xl) {
-    background: linear-gradient(
-      to top,
-      var(--cs-primary) var(--cs-nav-height),
-      var(--cs-surface) var(--cs-nav-height)
-    );
-  }
-
   border-bottom: $cs-border-width solid var(--cs-border);
 
   &__grid {
@@ -142,5 +142,36 @@
     font-weight: $cs-font-weight-bold;
     color: $white;
     background: var(--cs-accent);
+  }
+}
+
+// Petrol band behind the menu row. Not on checkout, where the menu is hidden
+// (the band used to cover the logo there).
+@include media-breakpoint-up(xl) {
+  body:not(#checkout) .cs-header {
+    background: linear-gradient(
+      to top,
+      var(--cs-primary) var(--cs-nav-height),
+      var(--cs-surface) var(--cs-nav-height)
+    );
+  }
+}
+
+// Tablets / small laptops: icon-only actions and smaller logo, so the search
+// field keeps a usable width (it was ~190px at 800px).
+@include media-breakpoint-between(md, xl) {
+  .cs-header {
+    &__grid {
+      column-gap: var(--cs-space-3);
+    }
+
+    &__logo .logo {
+      max-width: 8rem;
+      max-height: 2.5rem;
+    }
+
+    .header-block__title {
+      display: none !important; // stylelint-disable-line declaration-no-important -- upstream uses d-*-inline utilities
+    }
   }
 }

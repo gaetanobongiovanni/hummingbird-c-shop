@@ -17,7 +17,9 @@ $cs-select-caret-light: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
     gap: var(--cs-space-4);
     align-items: center;
     justify-content: space-between;
-    min-height: 2.25rem;
+    height: var(--cs-info-bar-height);
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   &__left,
