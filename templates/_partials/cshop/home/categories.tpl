@@ -1,8 +1,8 @@
 {**
  * C-Shop homepage — department tiles with an icon (proposal A).
  * Data: ps_mainmenu widget variables (Back Office > Modules > Main menu).
- * The icon is picked from the department label; a category image, when the
- * category has one, wins. Nothing else is hard-coded.
+ * Each tile shows the category thumbnail; the icon (picked from the label)
+ * is the fallback when the category has no image. Nothing else is hard-coded.
  *}
 {widget_block name='ps_mainmenu'}
   {if !empty($children)}
@@ -22,11 +22,14 @@
             <li class="cs-departments__item">
               <a class="cs-departments__link" href="{$node.url}">
                 <span class="cs-departments__icon" aria-hidden="true">
-                  {if !empty($node.image_urls)}
-                    <img src="{$node.image_urls[0]}" alt="" width="40" height="40" loading="lazy" decoding="async">
-                  {else}
-                    <span class="material-icons">{$cshopIcon}</span>
+                  {* category thumbnail first (Catalog > Categories > Thumbnail), then the
+                     menu thumbnail; the icon shows when neither image exists *}
+                  {if $node.type == 'category'}
+                    <img src="{$urls.base_url}img/c/{$node.page_identifier|replace:'category-':''}_thumb-category_default.jpg" alt="" width="96" height="96" loading="lazy" decoding="async" onerror="this.remove()">
+                  {elseif !empty($node.image_urls)}
+                    <img src="{$node.image_urls[0]}" alt="" width="96" height="96" loading="lazy" decoding="async" onerror="this.remove()">
                   {/if}
+                  <span class="material-icons">{$cshopIcon}</span>
                 </span>
                 <span class="cs-departments__name">{$node.label}</span>
               </a>

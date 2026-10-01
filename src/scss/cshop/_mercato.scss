@@ -492,12 +492,6 @@ body:where(#index) {
       font-size: 2rem;
     }
 
-    img {
-      width: 2.5rem;
-      height: 2.5rem;
-      object-fit: contain;
-    }
-
     @include media-breakpoint-down(md) {
       width: 3.25rem;
       height: 3.25rem;
@@ -505,6 +499,33 @@ body:where(#index) {
       .material-icons {
         font-size: 1.5rem;
       }
+    }
+
+    // category photo: square tile instead of the round icon (the icon is
+    // only the fallback, shown when the image is missing and removes itself)
+    &:has(img) {
+      width: 6rem;
+      height: 6rem;
+      padding: var(--cs-space-2);
+      background: $white;
+      border-radius: var(--cs-radius);
+
+      .material-icons {
+        display: none;
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      mix-blend-mode: multiply; // stylelint-disable-line plugin/no-unsupported-browser-features
+      transition: transform var(--cs-transition);
     }
   }
 
@@ -521,6 +542,86 @@ body:where(#index) {
   &__link:hover &__icon {
     color: $white;
     background: var(--cs-primary);
+  }
+
+  &__link:hover &__icon:has(img) {
+    background: $white;
+
+    img {
+      transform: scale(1.06);
+    }
+  }
+
+  // photo tiles are white whatever the colour rotation
+  &__item:nth-child(n) &__icon:has(img) {
+    background: $white;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Mega menu: category thumbnails (ps_mainmenu.tpl, csCategoryThumb)
+// -----------------------------------------------------------------------------
+.cs-cat-thumb {
+  flex: 0 0 auto;
+  object-fit: contain;
+  background: $white;
+  border-radius: var(--cs-radius-sm);
+}
+
+.cs-header .submenu {
+  &__left-item {
+    display: flex;
+    gap: var(--cs-space-2);
+    align-items: center;
+
+    .cs-cat-thumb {
+      width: 2rem;
+      height: 2rem;
+      padding: 2px;
+      border: 1px solid var(--cs-border);
+    }
+  }
+
+  // with photos the groups read as tiles: more per row
+  &__right-items {
+    grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  }
+
+  // sub-sub-categories: photo above the name, as tiles
+  .menu-item__group-main-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--cs-space-2);
+    align-items: flex-start;
+    font-size: $cs-font-size-sm;
+    font-weight: $cs-font-weight-semibold;
+    color: var(--cs-text);
+
+    .cs-cat-thumb {
+      width: 3.5rem;
+      height: 3.5rem;
+      padding: var(--cs-space-1);
+      border: 1px solid var(--cs-border);
+      transition: border-color var(--cs-transition);
+    }
+
+    &:hover .cs-cat-thumb {
+      border-color: var(--cs-primary);
+    }
+  }
+}
+
+// mobile drawer: small photo before the label
+.ps-mainmenu--mobile .menu__link {
+  display: flex;
+  gap: var(--cs-space-3);
+  align-items: center;
+
+  .cs-cat-thumb {
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 2px;
+    border: 1px solid var(--cs-border);
   }
 }
 

@@ -2,6 +2,15 @@
  * For the full copyright and license information, please view the
  * LICENSE.md file that was distributed with this source code.
  *}
+{* C-Shop: category thumbnail (Catalog > Categories > Thumbnail), the file
+   PrestaShop generates as img/c/<id>_thumb-category_default.jpg. Categories
+   without a thumbnail: the img removes itself and the label stays alone. *}
+{function name="csCategoryThumb" node=[] size=40}
+  {if $node.type == 'category'}
+    <img class="cs-cat-thumb" src="{$urls.base_url}img/c/{$node.page_identifier|replace:'category-':''}_thumb-category_default.jpg" alt="" width="{$size}" height="{$size}" loading="lazy" decoding="async" onerror="this.remove()">
+  {/if}
+{/function}
+
 {function name="generateLinks" links=[] class="menu-item" parent=null}
 {* GENERATE LINKS *}
   {if $parent.depth === 1}
@@ -16,7 +25,8 @@
           data-depth="{$link.depth}"
           {if $link.open_in_new_window}target="_blank"{/if}
         >
-          {$link.label}
+          {if $link.depth === 3}{csCategoryThumb node=$link size=56}{/if}
+          <span class="menu-item__label">{$link.label}</span>
         </a>
       </li>
 
@@ -57,7 +67,8 @@
             {/if}
             {if $node.open_in_new_window}target="_blank" rel="noopener noreferrer"{/if}
           >
-            {$node.label}
+            {csCategoryThumb node=$node size=32}
+            <span class="submenu__left-label">{$node.label}</span>
           </a>
         {/foreach}
       </div>
@@ -184,7 +195,8 @@
               data-depth="{$depth}"
               {if $node.open_in_new_window}target="_blank"{/if}
             >
-            {$node.label}
+              {csCategoryThumb node=$node size=36}
+              <span class="menu__label">{$node.label}</span>
             </a>
             {if $node.children|count}
               {* Cannot use page identifier as we can have the same page several times *}

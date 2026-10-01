@@ -82,6 +82,14 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.5.1
+
+Category thumbnails (Catalog > Categories > Thumbnail, file
+`img/c/<id>_thumb-category_default.jpg`): in the mega menu (left column
+32px, sub-categories as photo tiles), in the mobile drawer and on the
+homepage "Shop by category" tiles. The icon stays as fallback: the img
+removes itself when a category has no thumbnail.
+
 ## 1.5.0 — B2B registration
 
 Works with the `cshopb2b` module (`extras/cshopb2b`, see its README):
