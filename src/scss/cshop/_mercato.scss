@@ -70,6 +70,7 @@ $cs-market-cta-hover: $cs-accent-hover;
   &__logo > a,
   &__logo h1 > a {
     display: inline-flex;
+    width: fit-content; // upstream d-block would stretch the badge on phones
     padding: 0.35rem 0.75rem;
     background: $white;
     border-radius: var(--cs-radius);
@@ -106,6 +107,11 @@ $cs-market-cta-hover: $cs-accent-hover;
     background: $cs-market-cta;
     box-shadow: 0 0 0 2px var(--cs-primary);
   }
+}
+
+.cs-header .header-block__icon,
+.cs-header .header-block--active .header-block__icon {
+  color: $white; // upstream paints the active cart icon petrol: invisible on the band
 }
 
 .cs-header :where(a, button):focus-visible {

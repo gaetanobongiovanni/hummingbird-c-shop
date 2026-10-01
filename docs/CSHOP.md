@@ -66,6 +66,14 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## "Mercato" on every page 1.3.0
+
+`src/scss/cshop/_mercato-pages.scss`: grey page and white rounded panels on
+listings (header, toolbar, sidebar blocks), product page (main panel, details,
+reviews), cart and checkout (content + one sidebar panel), account,
+authentication, CMS/contact/sitemap/404; product cards white on grey; header
+icons forced white on the petrol band.
+
 ## "Mercato" look 1.2.0 (October 2026)
 
 Proposal A chosen by the shop owner: dense and commercial. Styles in
