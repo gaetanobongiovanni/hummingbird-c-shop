@@ -9,7 +9,9 @@
 
   {* C-Shop: sections share the cs-section header (title + "see all" link) *}
   <section class="{block name='module_products_name'}{/block} cs-module-products">
-    <div class="module-products {if isset($need_container) && $need_container}container{/if}">
+    {* C-Shop: the container keeps the page gutters; the panel lives inside it *}
+    {if isset($need_container) && $need_container}<div class="container">{/if}
+    <div class="module-products">
       <div class="cs-section__header">
         {block name='module_products_title'}{/block}
         {block name='module_products_header_link'}{/block}
@@ -29,5 +31,6 @@
         </div>
       {/block}
     </div>
+    {if isset($need_container) && $need_container}</div>{/if}
   </section>
 {/block}

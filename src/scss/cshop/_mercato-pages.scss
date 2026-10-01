@@ -51,10 +51,6 @@ body {
   }
 }
 
-.cs-module-products > .module-products.container {
-  max-width: calc(var(--cs-container-max) - var(--cs-gutter) * 2);
-}
-
 // -----------------------------------------------------------------------------
 // Product cards everywhere: white card on grey, no border, lift on hover
 // -----------------------------------------------------------------------------
@@ -112,7 +108,8 @@ body#index .product-miniature__inner {
   > #search_filters_wrapper,
   > .ps-facetedsearch,
   > #search_filters_brands,
-  > .search-filters-modules {
+  > .search-filters-modules,
+  > .ps-contactinfo {
     @include cs-panel(var(--cs-space-4) var(--cs-space-5));
 
     margin: 0;
@@ -128,8 +125,32 @@ body#index .product-miniature__inner {
   --bs-pagination-bg: #{$white};
   --bs-pagination-border-color: transparent;
   --bs-pagination-border-radius: var(--cs-radius);
+  --bs-pagination-active-color: #{$white};
+  --bs-pagination-active-bg: var(--cs-primary);
+  --bs-pagination-active-border-color: var(--cs-primary);
 
   gap: var(--cs-space-1);
+
+  // the current page number was dark text on the petrol item: invisible
+  .page-item.active {
+    background: transparent;
+  }
+
+  .page-item.active .page-link,
+  .page-link[aria-current="page"] {
+    color: $white;
+    background: var(--cs-primary);
+    border-color: var(--cs-primary);
+  }
+
+  // 44px tap targets (were 26px wide on phones)
+  .page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+  }
 }
 
 // Empty / "no products" states inside listings
@@ -314,7 +335,6 @@ body#registration {
 // -----------------------------------------------------------------------------
 .page-content--cms,
 .page-content--general,
-body#contact .contact-form,
 body#contact #content,
 body#pagenotfound .page-content,
 body#sitemap .page-content {
@@ -369,4 +389,82 @@ body#cms .page-header,
 body#cms .page-title-section {
   max-width: 56rem;
   margin-inline: auto;
+}
+
+// -----------------------------------------------------------------------------
+// Subcategories: compact tiles, thumbnail left, name left-aligned
+// (the name was centred in the space left for the image, so it looked shifted)
+// -----------------------------------------------------------------------------
+// md+ only: phones keep the swipeable chip row from pages/_listing.scss
+@include media-breakpoint-up(md) {
+  .cs-category-header {
+    .subcategory__list,
+    .subcategory__list--with-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+      gap: var(--cs-space-2);
+      padding: 0;
+      margin: 0;
+    }
+
+    .subcategory__link,
+    .subcategory__link--with-image {
+      display: flex;
+      gap: var(--cs-space-3);
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 3.5rem;
+      padding: var(--cs-space-2) var(--cs-space-3);
+      font-size: $cs-font-size-sm;
+      font-weight: $cs-font-weight-semibold;
+      line-height: $cs-line-height-tight;
+      color: var(--cs-text);
+      text-align: start;
+      background: var(--cs-surface-alt);
+      border: 1px solid transparent;
+      border-radius: var(--cs-radius);
+
+      &:hover {
+        color: var(--cs-primary);
+        background: $white;
+        border-color: var(--cs-primary-subtle);
+      }
+    }
+
+    .subcategory__thumbnail {
+      flex: 0 0 auto;
+      width: 2.5rem;
+      height: 2.5rem;
+      object-fit: contain;
+      mix-blend-mode: multiply; // stylelint-disable-line plugin/no-unsupported-browser-features
+    }
+
+    .subcategory__name {
+      margin: 0;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Cart page: the featured-products hook listed 20 products under the cart and
+// pushed the summary out of sight on phones. Keep a short, useful row.
+// -----------------------------------------------------------------------------
+body#cart .cs-module-products .products > :nth-child(n + 5) {
+  display: none;
+}
+
+// Checkout: the step "Continue" buttons are the main CTA, same orange as the cart
+body#checkout .step .btn-primary {
+  --bs-btn-bg: #{$cs-market-cta};
+  --bs-btn-border-color: #{$cs-market-cta};
+  --bs-btn-hover-bg: #{$cs-market-cta-hover};
+  --bs-btn-hover-border-color: #{$cs-market-cta-hover};
+  --bs-btn-active-bg: #{$cs-market-cta-hover};
+}
+
+// Cart line "Remove" link: 20px tall, too small to hit on phones
+.cart-grid .js-remove-from-cart {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
 }

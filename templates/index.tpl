@@ -55,8 +55,10 @@
               {block name='hook_home'}
                 {* Merchant content: ps_customtext, ps_banner and any module on displayHome *}
                 {if !empty($HOOK_HOME)}
-                  <div class="cs-home-hook container">
-                    {$HOOK_HOME nofilter}
+                  <div class="container">
+                    <div class="cs-home-hook">
+                      {$HOOK_HOME nofilter}
+                    </div>
                   </div>
                 {/if}
               {/block}

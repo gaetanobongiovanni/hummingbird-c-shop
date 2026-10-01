@@ -20,6 +20,25 @@
   flex-wrap: wrap;
   gap: var(--cs-space-2);
   align-items: center;
+  min-width: 0;
+  max-width: 100%;
+
+  // long sort labels pushed the page wider than the phone screen
+  .products__sort-dropdown {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .products__sort-dropdown-button {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .dropdown-menu {
+    max-width: calc(100vw - var(--cs-gutter) * 2);
+  }
 }
 
 .cs-listing .products__filter-button {

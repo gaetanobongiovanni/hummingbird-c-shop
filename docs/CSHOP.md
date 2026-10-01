@@ -82,6 +82,27 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## Quality pass 1.4.0 (October 2026)
+
+Full visual audit (18 pages × 5 widths, headless Chromium + DOM checks for
+overflow, overlaps, clipped labels, tap targets, alignment, English strings).
+
+- Homepage: every block is a panel *inside* `.container` (toner, support,
+  reorder, brands, business, product shelves, `displayHome`): below 1400px
+  they used to run edge to edge. Templates: `components/module-products.tpl`
+  (container outside `.module-products`), `index.tpl`, `_partials/cshop/home/*`.
+- Header: no empty strip under the department bar; hero art only from xxl
+  (it touched the title); mobile hero pill on one line; hero links 44px tall.
+- Product cards: stepper and button on one row, wrapping below on narrow
+  cards; upstream `width: 100%` drew the button over the stepper. The label
+  shows only when it fits (container query on the form).
+- Listings: current page number visible (was dark on petrol), 44px page
+  links; compact subcategory tiles (md+); sort menu cannot widen the page.
+- Cart: title above both columns (`checkout/cart.tpl`), cross-selling shelf
+  limited to 4 products, no double container gutter, bigger "Remove" target.
+- Checkout: step buttons orange like the cart CTA. Contact: no nested panel,
+  shop info on a panel.
+
 ## "Mercato" on every page 1.3.0
 
 `src/scss/cshop/_mercato-pages.scss`: grey page and white rounded panels on
