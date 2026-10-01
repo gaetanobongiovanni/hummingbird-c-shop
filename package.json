@@ -22,7 +22,8 @@
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "zip": "bash scripts/build-theme-zip.sh",
-    "build:zip": "npm run build && npm run zip"
+    "build:zip": "npm run build && npm run zip",
+    "deploy": "bash scripts/deploy-theme.sh"
   },
   "author": "PrestaShop",
   "license": "AFL-3.0",

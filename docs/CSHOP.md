@@ -37,6 +37,22 @@ No core file and no module file is modified: everything is done through theme
 templates, theme module-template overrides (`modules/`), hooks and widgets.
 Production caching (Smarty cache, CCC) can stay enabled.
 
+## Updating the theme on the live shop
+
+The Back Office upload refuses a theme folder that already exists, so a ZIP
+can only be used for the first install. Afterwards update in place over SSH:
+
+```bash
+CSHOP_SSH=user@host CSHOP_ROOT=/path/to/prestashop npm run deploy
+# preview without copying: CSHOP_DRY_RUN=1 … npm run deploy
+```
+
+`scripts/deploy-theme.sh` builds, rsyncs the runtime folders into
+`themes/cshop` (keeping the shop's `assets/cache`), then clears PrestaShop's
+cache. Module positions and settings are untouched. Changes to hook
+assignments in `config/theme.yml` still need a theme reinstall (or the
+positions set by hand in Design › Positions).
+
 ## Where the C-Shop code lives
 
 Upstream files are touched only where there is no other way, always inside
