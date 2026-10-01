@@ -72,9 +72,6 @@
           {/if}
         {/block}
 
-        {* C-Shop: price with the other VAT treatment (business customers) *}
-        {include file='catalog/_partials/cshop/price-vat.tpl' product=$product cs_vat_class='product__vat'}
-
         {capture name='product_price_hooks'}{hook h='displayProductPriceBlock' product=$product type="price"}{hook h='displayProductPriceBlock' product=$product type="after_price"}{/capture}
         {if $configuration.display_taxes_label || $product.ecotax.amount > 0 || $smarty.capture.product_price_hooks|trim}
           <div class="product__tax-infos">
@@ -106,11 +103,13 @@
           </div>
         {/if}
 
-        {block name='product_without_taxes'}
-          {if $priceDisplay == 0 && $configuration.is_b2b}
-            <span class="product__taxless-price">{l s='%price% tax excluded' d='Shop.Theme.Catalog' sprintf=['%price%' => $product.price_tax_excluded]}</span>
-          {/if}
-        {/block}
+        {* C-Shop: "Tax included" right under the price, then the price with the
+           other VAT treatment (e.g. 201,98 € + VAT) *}
+        {include file='catalog/_partials/cshop/price-vat.tpl' product=$product cs_vat_class='product__vat'}
+
+        {* C-Shop: core "%price% tax excluded" line (B2B mode) removed: it repeated the
+           "+ VAT" price shown above, untranslated *}
+        {block name='product_without_taxes'}{/block}
       </div>
     {/block}
 

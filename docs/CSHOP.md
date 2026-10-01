@@ -82,6 +82,12 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.5.2
+
+Product price block: "Tax included" right under the price, then the "+ VAT"
+price; the core "%price% tax excluded" line (shown in B2B mode, a duplicate)
+is removed (`product-prices.tpl`, block `product_without_taxes` emptied).
+
 ## 1.5.1
 
 Category thumbnails (Catalog > Categories > Thumbnail, file
