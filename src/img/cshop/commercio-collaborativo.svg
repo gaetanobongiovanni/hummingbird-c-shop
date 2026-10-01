@@ -26,18 +26,15 @@
     <path d="M370 150 Q360 260 284 280" stroke="#0b4f6c" stroke-dasharray="2 12" opacity=".5"/>
   </g>
 
-  <!-- hub: C-Commerce mark (vector redraw of the c-commerce.it favicon) -->
+  <!-- hub: C-Commerce mark (c-commerce.it favicon: Harabara C + bar) -->
   <circle cx="240" cy="190" r="70" stroke="#d4001c" stroke-width="3" opacity=".25"/>
   <circle cx="240" cy="190" r="86" stroke="#d4001c" stroke-width="2" opacity=".12"/>
   <circle cx="240" cy="190" r="58" fill="#fff"/>
   <g transform="translate(198 148) scale(1.75)">
-    <mask id="cc-cut" maskUnits="userSpaceOnUse" x="-4" y="-12" width="70" height="70">
-      <rect x="-4" y="-12" width="70" height="70" fill="#fff"/>
-      <polygon points="22,13.5 44,-8.5 58,-2 32,24" fill="#000"/>
-    </mask>
-    <path mask="url(#cc-cut)" fill="#e31d24" fill-rule="evenodd"
-      d="M24 0a24 24 0 1 1 0 48a24 24 0 1 1 0-48zM24 10.5a13.5 13.5 0 1 0 0 27a13.5 13.5 0 1 0 0-27z"/>
-    <path d="M34.5 10 L26.6 20.8" stroke="#2a2928" stroke-width="7.6" stroke-linecap="round"/>
+    <!-- "C" of the Harabara typeface rotated -47deg (fitted on the favicon at 98%) -->
+    <path fill="#e31d24" transform="translate(23.4 24.7) rotate(-47) scale(0.131 -0.131) translate(-150.5 -173)"
+      d="M307 119Q302 59 262 25Q221 -8 154 -8Q76 -8 35 39Q-6 84 -6 172Q-6 262 36 307Q79 354 160 354Q226 354 265 321Q302 289 307 231H264Q240 231 230 252Q223 265 213 275Q193 290 160 290Q114 290 89 260Q65 230 65 172Q65 116 89 86Q112 55 158 55Q190 55 211 71Q230 86 238 119Z"/>
+    <path d="M35.5 11 L27 19.5" stroke="#2a2928" stroke-width="7.5" stroke-linecap="round"/>
   </g>
 
   <!-- supplier: factory -->

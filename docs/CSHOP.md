@@ -85,7 +85,8 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
 ## 1.6.1
 
 Collaborative commerce illustration: the centre is the C-Commerce mark
-(vector redraw of the c-commerce.it favicon) instead of a generic C.
+(the Harabara "C" rotated -47°, fitted on the c-commerce.it favicon at 98%,
+plus its dark bar) instead of a generic C.
 
 ## 1.6.0 — "Chi siamo" and "Il commercio collaborativo"
 
