@@ -38,6 +38,10 @@
         <source>All promotions</source>
         <target>Tutte le promozioni</target>
       </trans-unit>
+      <trans-unit id="5db707f74d87bd123c565cfe06c13522">
+        <source>All rights reserved</source>
+        <target>Tutti i diritti riservati</target>
+      </trans-unit>
       <trans-unit id="1741ec6ed69cf571adac9eeb641c4f87">
         <source>Assistance</source>
         <target>Assistenza</target>
@@ -341,6 +345,10 @@
       <trans-unit id="da8c3397b9a5601888618ea414d23bad">
         <source>Toner and cartridges</source>
         <target>Toner e cartucce</target>
+      </trans-unit>
+      <trans-unit id="e145afc66573099c36686c8c632d3363">
+        <source>VAT number %vat%</source>
+        <target>P.IVA %vat%</target>
       </trans-unit>
       <trans-unit id="ddb1475d1cc11a88be509ec5b95e951c">
         <source>Welcome back, %name%</source>

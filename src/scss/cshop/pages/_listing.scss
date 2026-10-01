@@ -108,7 +108,8 @@
   }
 
   &__title {
-    display: box;
+    // stylelint-disable-next-line value-no-vendor-prefix -- line clamp needs it
+    display: -webkit-box;
     overflow: hidden;
     font-size: $cs-font-size-sm;
     font-weight: $cs-font-weight-semibold;

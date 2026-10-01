@@ -66,6 +66,33 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## Refresh 1.1.0 (October 2026)
+
+Same palette, more modern finish. All in `src/scss/cshop/_refresh.scss`
+(last file of the `cshop` layer) plus a few token changes:
+
+- Tokens: radii 6/10/16px, two-layer soft shadows, container 1400px with
+  real side gutters (`--cs-gutter`: 16 / 24 / 40px).
+- Petrol gradient hero with white copy; account card floating on it.
+- Product cards: rounded, grey photo frame, 2-line titles of equal height,
+  larger price, lift on hover; pill flags.
+- Product page: elevated buy box, bigger price, one-row thumbnails.
+- Dark petrol footer; copyright uses the shop name and the registration
+  number from Shop parameters › Contact instead of the PrestaShop credit.
+
+CSS bugs fixed:
+
+| Bug | Cause / fix |
+|---|---|
+| Homepage scrolled sideways on phones (455px page in a 375px viewport) | hero grid column without `minmax(0, 1fr)` grew to the chip row |
+| Product names on 3-4 lines, prices not aligned | `display: box` (invalid) disabled the line clamp → `-webkit-box` |
+| Chips, badges and filter pills had square corners | `--cs-radius-pill` used 6 times but never defined |
+| "+" of the quantity stepper on a second line | Bootstrap `input-group` wraps by default → `nowrap` |
+| List view on phones: add-to-cart button cut off by the card | icon-only button below 768px |
+| Breadcrumb cut off at the edge on phones | one swipeable line with fade |
+| 5th product thumbnail alone on a second row | thumbnails in one scrollable row |
+| Text touching the window edge on laptops | container gutters |
+
 ## Product data contract
 
 `templates/catalog/_partials/cshop/product-data.tpl` builds `$cs` from native

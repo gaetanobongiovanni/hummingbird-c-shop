@@ -33,3 +33,6 @@
 
 // B2B components (UI only — logic lives in dedicated modules)
 @import "b2b/b2b";
+
+// October 2026 refresh: modern look + CSS bug fixes (loaded last)
+@import "refresh";
