@@ -30,7 +30,9 @@
       {foreach from=$displayedFacets item="facet" name="facets"}
         <section class="accordion-item" data-type="{$facet.type}" data-name="{$facet.label}">
           {assign var=_expand_id value=10|mt_rand:100000}
-          {assign var=_collapse value=true}
+          {* C-Shop: the first filters are open, so customers see the values
+             without clicking every title; the others open when one is in use *}
+          {assign var=_collapse value=($smarty.foreach.facets.iteration > 4)}
 
           {foreach from=$facet.filters item="filter"}
             {if $filter.active}{assign var=_collapse value=false}{/if}

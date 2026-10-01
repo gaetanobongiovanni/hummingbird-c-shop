@@ -263,6 +263,15 @@
   &__clear .btn {
     width: 100%;
   }
+
+  // Groups from the supplier feed can hold dozens of values: the list scrolls
+  // inside its box instead of stretching the column (no value is hidden)
+  .accordion-body {
+    max-height: 15rem;
+    padding-inline-end: var(--cs-space-2);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
 }
 
 .ps-facetedsearch--mobile {

@@ -82,6 +82,14 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.4.5
+
+Filters (ps_facetedsearch): first in the left column (they were under the
+full category tree), first 4 groups open (`facets.tpl`), long value lists
+scroll inside a 15rem box. Back Office: template "Combinazione" on all
+categories, all attribute groups, no value limit (the theme has no "show
+more", a limit hid values), default template for new categories.
+
 ## 1.4.4
 
 Quick view: one button per device. Mouse: "Preview" bar on hover only; touch:

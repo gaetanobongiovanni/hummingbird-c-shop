@@ -114,6 +114,12 @@ body#index .product-miniature__inner {
 
     margin: 0;
   }
+
+  // Filters first: under the full category tree they started ~1800px down
+  // the page and nobody saw them
+  > #search_filters_wrapper {
+    order: -1;
+  }
 }
 
 .left-block__title {
