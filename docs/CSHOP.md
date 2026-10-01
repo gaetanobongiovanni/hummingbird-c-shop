@@ -82,6 +82,12 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.4.4
+
+Quick view: one button per device. Mouse: "Preview" bar on hover only; touch:
+the eye icon only (the C-Shop `.btn` display rule kept the eye visible on
+desktop too).
+
 ## 1.4.3
 
 Icon arrows showed as "îŒ“" on the live shop: the minifier wrote Material

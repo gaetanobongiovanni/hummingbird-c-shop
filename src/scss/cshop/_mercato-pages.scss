@@ -468,3 +468,21 @@ body#checkout .step .btn-primary {
   align-items: center;
   min-height: 2.75rem;
 }
+
+// Quick view: ONE button per device type. The C-Shop `.btn:not(.btn-link,
+// .btn-close) { display: inline-flex }` rule (higher specificity) beat
+// upstream's `display: none`, so on desktop the touch eye stayed visible under
+// the "Preview" button shown on hover.
+.product-miniature .product-miniature__quickview-touch.btn {
+  display: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .product-miniature .product-miniature__quickview-button.btn {
+    display: none;
+  }
+
+  .product-miniature .product-miniature__quickview-touch.btn {
+    display: inline-flex;
+  }
+}
