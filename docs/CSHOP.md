@@ -82,6 +82,13 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.4.3
+
+Icon arrows showed as "îŒ“" on the live shop: the minifier wrote Material
+Icons glyphs as raw UTF-8 and CCC serves the combined CSS without a charset
+(read as Windows-1252). `webpack/css-ascii-plugin.js` re-escapes every
+non-ASCII character after minification, so the built CSS is pure ASCII.
+
 ## 1.4.2
 
 Main menu: "Home" always first (desktop bar and mobile drawer, in

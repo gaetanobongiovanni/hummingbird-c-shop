@@ -1,7 +1,7 @@
 name: cshop
 display_name: C-Shop
 # Based on Hummingbird 2.1.2 (PrestaShop/hummingbird, tag v2.1.2)
-version: 1.4.2
+version: 1.4.3
 author:
   name: "C-Teck (C-Commerce S.r.l.) — based on Hummingbird by PrestaShop Team and Contributors"
   email: "pub@prestashop.com"

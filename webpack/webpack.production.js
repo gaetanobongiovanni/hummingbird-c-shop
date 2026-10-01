@@ -7,6 +7,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { cleanDistFolders } = require('./webpack.parts');
 const { merge } = require('webpack-merge');
+const { CssAsciiPlugin } = require('./css-ascii-plugin');
 
 exports.productionConfig = () => (
   merge(
@@ -22,6 +23,7 @@ exports.productionConfig = () => (
           new CssMinimizerPlugin()
         ],
       },
+      plugins: [new CssAsciiPlugin()],
     },
     cleanDistFolders()
   )
