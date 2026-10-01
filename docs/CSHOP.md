@@ -82,6 +82,13 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.4.7
+
+Homepage brands: logos fixed (ps_brandlist gives `id_manufacturer`, not `id`:
+every logo URL was wrong) and 12 random brands on every visit
+(`src/js/cshop/brand-shuffle.ts`, full list as JSON in the template, first
+12 rendered as no-JS fallback; works behind page caches).
+
 ## 1.4.6
 
 Left column: "Categories" (`ps_categorytree.tpl`) and a new "Brands" block

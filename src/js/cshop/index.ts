@@ -2,6 +2,7 @@
  * C-Shop — entry point for theme-specific behaviours.
  * Called from src/js/theme.ts after the Hummingbird initialisers.
  */
+import initBrandShuffle from './brand-shuffle';
 import initWishlistLink from './header';
 import initListingView from './listing-view';
 import initQtyRules from './qty-rules';
@@ -10,6 +11,7 @@ import initQuoteRequest from './quote-request';
 import initStickyBuy from './sticky-buy';
 
 const initCshop = (): void => {
+  initBrandShuffle();
   initWishlistLink();
   initListingView();
   initQtyRules();

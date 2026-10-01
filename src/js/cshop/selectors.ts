@@ -4,6 +4,11 @@
  */
 const cshopSelectors = {
   wishlistLink: '[data-ps-component="cs-wishlist-link"]',
+  brandShuffle: {
+    container: '[data-ps-component="cs-brand-shuffle"]',
+    grid: '[data-ps-ref="cs-brand-grid"]',
+    data: 'script[data-ps-ref="cs-brand-data"]',
+  },
   listingView: {
     container: '[data-ps-component="cs-listing"]',
     toggle: '[data-ps-action="cs-listing-view"]',
