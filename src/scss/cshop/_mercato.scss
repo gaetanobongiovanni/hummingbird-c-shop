@@ -646,6 +646,16 @@ body:where(#index) {
   display: none;
 }
 
+// the module hook block is not a .cs-section: same gap as the sections above
+// (it was glued to the "For companies" panel)
+.cs-home-hook {
+  margin-top: var(--cs-space-5);
+
+  @include media-breakpoint-down(md) {
+    margin-top: var(--cs-space-4);
+  }
+}
+
 body#index {
   .cs-section,
   .cs-section--alt,
