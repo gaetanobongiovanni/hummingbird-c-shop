@@ -82,6 +82,11 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.6.1
+
+Collaborative commerce illustration: the centre is the C-Commerce mark
+(vector redraw of the c-commerce.it favicon) instead of a generic C.
+
 ## 1.6.0 — "Chi siamo" and "Il commercio collaborativo"
 
 Styles for two Back Office contents kept in `docs/content/`: the CMS page
