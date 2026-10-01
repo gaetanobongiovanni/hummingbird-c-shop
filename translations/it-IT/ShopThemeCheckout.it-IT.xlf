@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="themes/cshop" source-language="en-US" target-language="it-IT" datatype="plaintext">
+    <body>
+      <trans-unit id="09f2a4f30a36a31991bc2926e1e8d561">
+        <source>Next: %step_name%</source>
+        <target>Avanti: %step_name%</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

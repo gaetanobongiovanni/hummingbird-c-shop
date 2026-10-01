@@ -117,6 +117,10 @@ OVERRIDES = {
     "ShopThemeActions": {
         "Continue shopping": "Continua gli acquisti",
     },
+    # Hummingbird checkout navigation string missing from the Italian pack
+    "ShopThemeCheckout": {
+        "Next: %step_name%": "Avanti: %step_name%",
+    },
 }
 
 

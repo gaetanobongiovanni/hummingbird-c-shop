@@ -7,7 +7,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <p class="h2 modal-title visually-hidden" id="product-modal-images-title">{$product.name} {l s='images' d='Shop.Theme.Catalog'}</p>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="{l s='Close' d='Shop.Theme.Global'}"></button>
       </div>
       <div class="product-images-modal__body modal-body">
         <div
