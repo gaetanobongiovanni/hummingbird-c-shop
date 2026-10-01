@@ -13,6 +13,9 @@
             {hook h='displayLeftColumnProduct'}
           {else}
             {hook h='displayLeftColumn'}
+            {if in_array($page.page_name, ['category', 'manufacturer', 'supplier', 'search', 'new-products', 'prices-drop', 'best-sales'])}
+              {include file='_partials/cshop/left-brands.tpl'}
+            {/if}
           {/if}
         </div>
       {/block}

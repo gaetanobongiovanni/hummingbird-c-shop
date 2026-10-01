@@ -82,6 +82,14 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.4.6
+
+Left column: "Categories" (`ps_categorytree.tpl`) and a new "Brands" block
+(`_partials/cshop/left-brands.tpl`, included by the layouts on catalogue
+pages) are collapsible, closed by default (`.cs-collapsible`). Homepage
+brands: logo above, name below (`.cs-brand-grid`), initial badge when the
+brand has no logo.
+
 ## 1.4.5
 
 Filters (ps_facetedsearch): first in the left column (they were under the

@@ -49,22 +49,30 @@
 {/function}
 
 {if !empty($categories.children)}
-  <div class="ps-categorytree {$componentName} left-block">
-    <p class="left-block__title h3">
-      {* C-Shop: fixed label instead of the root category name (often "home") *}
-      <a class="left-block__title-link" href="{$categories.link nofilter}">
+  {* C-Shop: collapsible block (closed by default), same mechanism as the
+     brands block below it: the filters stay at the top of the column *}
+  <div class="ps-categorytree {$componentName} left-block cs-collapsible">
+    <h2 class="left-block__title h3">
+      <button
+        class="cs-collapsible__toggle collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#cs-left-categories"
+        aria-expanded="false"
+        aria-controls="cs-left-categories"
+      >
         {l s='Categories' d='Shop.Theme.Catalog'}
-      </a>
-    </p>
+      </button>
+    </h2>
 
-    <div class="accordion accordion-flush accordion--category">
-      <nav aria-label="{l s='Categories' d='Shop.Theme.Catalog'}">
-        {if !empty($categories.children)}
+    <div id="cs-left-categories" class="collapse cs-collapsible__body">
+      <div class="accordion accordion-flush accordion--category">
+        <nav aria-label="{l s='Categories' d='Shop.Theme.Catalog'}">
           <div class="{$componentName}__child">
             {categories nodes=$categories.children}
           </div>
-        {/if}
-      </nav>
+        </nav>
+      </div>
     </div>
   </div>
 {/if}

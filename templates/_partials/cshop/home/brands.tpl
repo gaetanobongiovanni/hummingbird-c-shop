@@ -11,13 +11,25 @@
             <a class="cs-section__link" href="{$page_link}">{l s='All brands' d='Shop.Theme.Cshop'}</a>
           </div>
 
-          <ul class="cs-brand-strip">
+          {* Logo above, name below, like the Brands page. The widget only gives
+             id/name/link, so the logo is the manufacturer image by id; a brand
+             without a logo keeps an initial badge (the img removes itself). *}
+          <ul class="cs-brand-grid">
             {foreach from=$brands item=brand name=cshopBrands}
               {if $smarty.foreach.cshopBrands.iteration <= 12}
-                <li class="cs-brand-strip__item">
-                  {* Names only: logos imported from the supplier feed are inconsistent (empty or placeholder images) *}
-                  <a class="cs-brand-strip__link" href="{$brand.link}">
-                    <span class="cs-brand-strip__name">{$brand.name}</span>
+                <li class="cs-brand-grid__item">
+                  <a class="cs-brand-grid__link" href="{$brand.link}">
+                    <span class="cs-brand-grid__logo" data-initial="{$brand.name|truncate:1:''|upper}">
+                      <img
+                        src="{$urls.img_manu_url}{$brand.id}-small_default.jpg"
+                        alt=""
+                        width="98"
+                        height="98"
+                        loading="lazy"
+                        onerror="this.remove()"
+                      >
+                    </span>
+                    <span class="cs-brand-grid__name">{$brand.name}</span>
                   </a>
                 </li>
               {/if}
