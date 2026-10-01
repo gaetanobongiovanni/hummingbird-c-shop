@@ -4,6 +4,12 @@
  */
 const cshopSelectors = {
   wishlistLink: '[data-ps-component="cs-wishlist-link"]',
+  b2b: {
+    container: '[data-ps-component="cs-b2b-registration"]',
+    business: '[data-ps-ref="cs-b2b-business"]',
+    field: '[data-ps-ref="cs-b2b-field"]',
+    taxCode: 'input[name="cs_tax_code"]',
+  },
   brandShuffle: {
     container: '[data-ps-component="cs-brand-shuffle"]',
     grid: '[data-ps-ref="cs-brand-grid"]',

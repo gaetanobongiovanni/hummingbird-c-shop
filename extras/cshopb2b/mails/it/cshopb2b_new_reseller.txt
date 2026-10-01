@@ -1,0 +1,9 @@
+{company} si è registrato come rivenditore e attende l'approvazione.
+
+Referente: {firstname} {lastname} - {email}
+Forma giuridica: {legal_form}
+Partita IVA: {vat}
+Codice fiscale: {tax_code}
+Visura: {visura}
+
+La visura è allegata. Per attivare i prezzi rivenditore: back office > Clienti > Richieste B2B.

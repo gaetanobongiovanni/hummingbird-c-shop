@@ -1,0 +1,6 @@
+Ciao {firstname},
+
+non abbiamo potuto attivare i prezzi rivenditore sul tuo account.
+Motivo: {note}
+
+Il tuo account resta attivo come cliente aziendale. Per chiarimenti rispondi a questa email.

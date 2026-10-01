@@ -99,3 +99,158 @@ body#history {
     font-weight: $cs-font-weight-semibold;
   }
 }
+
+// -----------------------------------------------------------------------------
+// Registration: customer type and business details (cshopb2b module fields)
+// -----------------------------------------------------------------------------
+.cs-b2b {
+  margin-bottom: var(--cs-space-5);
+
+  // type choice as four cards
+  &__type {
+    > .mb-3 > div {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--cs-space-2);
+
+      @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    .form-check-inline {
+      position: relative;
+      display: flex;
+      gap: var(--cs-space-2);
+      align-items: center;
+      min-height: 3.25rem;
+      padding: var(--cs-space-2) var(--cs-space-3);
+      margin: 0;
+      background: var(--cs-surface);
+      border: 1px solid var(--cs-border-strong);
+      border-radius: var(--cs-radius);
+      transition:
+        border-color 0.15s ease,
+        background-color 0.15s ease;
+
+      &:has(:checked) {
+        background: var(--cs-primary-softer);
+        border-color: var(--cs-primary);
+        box-shadow: inset 0 0 0 1px var(--cs-primary);
+      }
+
+      &:has(:focus-visible) {
+        outline: 2px solid var(--cs-primary);
+        outline-offset: 2px;
+      }
+    }
+
+    .form-check-input {
+      flex: 0 0 auto;
+      margin: 0;
+    }
+
+    .form-check-label {
+      font-size: $cs-font-size-sm;
+      font-weight: $cs-font-weight-semibold;
+      line-height: $cs-line-height-tight;
+      cursor: pointer;
+
+      // the whole card is clickable
+      &::after {
+        position: absolute;
+        inset: 0;
+        content: "";
+      }
+    }
+  }
+
+  &__business {
+    padding: var(--cs-space-4) var(--cs-space-4) var(--cs-space-2);
+    margin-top: var(--cs-space-3);
+    background: var(--cs-surface-alt);
+    border: 1px solid var(--cs-border);
+    border-radius: var(--cs-radius-lg);
+
+    &[hidden] {
+      display: none;
+    }
+
+    @include media-breakpoint-up(md) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: var(--cs-space-4);
+    }
+  }
+
+  &__legend {
+    grid-column: 1 / -1;
+
+    // floated: a normal grid item inside the panel instead of sitting on the border
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin-bottom: var(--cs-space-3);
+    font-size: $cs-font-size-md;
+    font-weight: $cs-font-weight-bold;
+  }
+
+  &__field {
+    min-width: 0;
+
+    &[hidden] {
+      display: none;
+    }
+
+    // full-width rows: legal form, company name, visura
+    &--cs_legal_form,
+    &--cs_company,
+    &--cs_visura {
+      grid-column: 1 / -1;
+    }
+
+    &--cs_visura .form-control {
+      padding: var(--cs-space-3);
+      background: var(--cs-surface);
+      border-style: dashed;
+    }
+
+    &--cs_tax_code input,
+    &--cs_vat input,
+    &--cs_sdi input,
+    &--cs_ipa input {
+      font-family: $font-family-monospace;
+      letter-spacing: 0.04em;
+    }
+  }
+}
+
+// "My account": business account status
+.cs-b2b-status {
+  display: flex;
+  grid-column: 1 / -1;
+  gap: var(--cs-space-3);
+  align-items: flex-start;
+  width: 100%;
+  padding: var(--cs-space-3) var(--cs-space-4);
+  margin-bottom: var(--cs-space-3);
+  font-size: $cs-font-size-sm;
+  background: var(--cs-primary-softer);
+  border-radius: var(--cs-radius);
+
+  .material-icons {
+    color: var(--cs-primary);
+  }
+
+  strong {
+    display: block;
+  }
+
+  &--pending {
+    background: rgba($cs-accent, 0.08);
+
+    .material-icons {
+      color: var(--cs-accent);
+    }
+  }
+}

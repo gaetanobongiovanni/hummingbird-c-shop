@@ -1,0 +1,6 @@
+Ciao {firstname},
+
+grazie per esserti registrato come rivenditore. Abbiamo ricevuto la visura camerale e la controlleremo al più presto.
+Ti scriveremo appena i prezzi rivenditore saranno attivi. Nel frattempo puoi già ordinare a prezzo di listino.
+
+{shop_url}

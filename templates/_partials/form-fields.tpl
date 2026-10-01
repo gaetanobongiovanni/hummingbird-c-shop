@@ -238,7 +238,8 @@
     {/block}
 
     {block name='form_field_comment'}
-      {if (!$field.required && !in_array($field.type, ['radio-buttons', 'checkbox']))}
+      {* C-Shop: B2B fields are required depending on the customer type (handled by the theme JS) *}
+      {if (!$field.required && !in_array($field.type, ['radio-buttons', 'checkbox']) && !isset($field.attr['data-ps-b2b-required']))}
         <div class="form-text">{l s='Optional' d='Shop.Forms.Labels'}</div>
       {/if}
     {/block}

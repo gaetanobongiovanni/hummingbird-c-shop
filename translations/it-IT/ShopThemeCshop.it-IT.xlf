@@ -62,6 +62,10 @@
         <source>Browse all: %category%</source>
         <target>Vedi tutto: %category%</target>
       </trans-unit>
+      <trans-unit id="5dc807ac3b38336c84e51958f4d33aa6">
+        <source>Business details</source>
+        <target>Dati aziendali</target>
+      </trans-unit>
       <trans-unit id="ca0dbad92a874b2f69b549293387925e">
         <source>Code</source>
         <target>Codice</target>

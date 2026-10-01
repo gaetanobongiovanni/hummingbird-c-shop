@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="modules/cshopb2b" source-language="en-US" target-language="it-IT" datatype="plaintext">
+    <body>
+      <trans-unit id="c7745d3af40d5930d2f80d77d90d2796">
+        <source>7 characters, for electronic invoices. Not available? Enter your PEC address.</source>
+        <target>7 caratteri, per la fattura elettronica. Non lo hai? Inserisci l'indirizzo PEC.</target>
+      </trans-unit>
+      <trans-unit id="387d3dbcba78b096974b8facde63673b">
+        <source>Business account.</source>
+        <target>Account aziendale.</target>
+      </trans-unit>
+      <trans-unit id="c406e862abab9c6a60969e5dba24d647">
+        <source>Chamber of commerce extract (visura camerale)</source>
+        <target>Visura camerale</target>
+      </trans-unit>
+      <trans-unit id="e79ce2fb217dd4b7126efd9e35c055a7">
+        <source>Choose how you are registering.</source>
+        <target>Scegli come ti stai registrando.</target>
+      </trans-unit>
+      <trans-unit id="f7b935d9a386897e4f3547c1a2c1a02d">
+        <source>Company (own use)</source>
+        <target>Azienda (acquisti per uso interno)</target>
+      </trans-unit>
+      <trans-unit id="698b77d1c3135f0d40f27a7d54739366">
+        <source>Company (srl, spa, snc, sas…)</source>
+        <target>Società (srl, spa, snc, sas…)</target>
+      </trans-unit>
+      <trans-unit id="c216dd87827cb0afade30b7a55b3126b">
+        <source>Company name / name of the body</source>
+        <target>Ragione sociale / denominazione ente</target>
+      </trans-unit>
+      <trans-unit id="c58e98f358127369bd7eac95017f62d8">
+        <source>Enter the 11-digit tax code.</source>
+        <target>Inserisci il codice fiscale di 11 cifre.</target>
+      </trans-unit>
+      <trans-unit id="204bc2d02a22dda06b56ea47b9947819">
+        <source>Enter the SDI recipient code or a PEC address for electronic invoices.</source>
+        <target>Inserisci il codice destinatario SDI oppure un indirizzo PEC per la fattura elettronica.</target>
+      </trans-unit>
+      <trans-unit id="5b03dfc0187dccef9ea29ab4c678b779">
+        <source>For a sole trader enter the owner's personal tax code (16 characters).</source>
+        <target>Per la ditta individuale inserisci il codice fiscale personale del titolare (16 caratteri).</target>
+      </trans-unit>
+      <trans-unit id="87b6b25585911f8aad73962d20901695">
+        <source>I am registering as</source>
+        <target>Ti registri come</target>
+      </trans-unit>
+      <trans-unit id="6f6be25ec83df8d81d809e992298e3e8">
+        <source>Legal form</source>
+        <target>Forma giuridica</target>
+      </trans-unit>
+      <trans-unit id="abf3a2c4d118e16106fc1ca97b980332">
+        <source>Office unique code (IPA)</source>
+        <target>Codice univoco ufficio (IPA)</target>
+      </trans-unit>
+      <trans-unit id="51bd9557f70c74e6c0838867e99ade88">
+        <source>PDF, JPG or PNG, max 5 MB, issued in the last 6 months. Reseller prices are activated after we check it.</source>
+        <target>PDF, JPG o PNG, max 5 MB, rilasciata negli ultimi 6 mesi. I prezzi rivenditore si attivano dopo la nostra verifica.</target>
+      </trans-unit>
+      <trans-unit id="ff6004534bfc8b04be58b83d417d6268">
+        <source>PEC address</source>
+        <target>Indirizzo PEC</target>
+      </trans-unit>
+      <trans-unit id="a30b57edf6aa6327fd25db344e87c2c2">
+        <source>Private customer</source>
+        <target>Privato</target>
+      </trans-unit>
+      <trans-unit id="ee6c30745906831056d06da611fb0f97">
+        <source>Public body</source>
+        <target>Ente pubblico</target>
+      </trans-unit>
+      <trans-unit id="73e9e67f47852c109237a9dfd734f113">
+        <source>Public body account.</source>
+        <target>Account ente pubblico.</target>
+      </trans-unit>
+      <trans-unit id="19f823c6453c2b1ffd09cb715214813d">
+        <source>Required field</source>
+        <target>Campo obbligatorio</target>
+      </trans-unit>
+      <trans-unit id="00f25dcdeb460788d45b488585efcd8e">
+        <source>Reseller</source>
+        <target>Rivenditore</target>
+      </trans-unit>
+      <trans-unit id="9c05ebdb05c746eb0307ee7138772f1d">
+        <source>Reseller account: reseller prices active.</source>
+        <target>Account rivenditore: prezzi rivenditore attivi.</target>
+      </trans-unit>
+      <trans-unit id="802ee4afe5f1b2ed64ff94cdc8220901">
+        <source>Reseller request under review: we will email you as soon as reseller prices are active. Meanwhile you can order at list price.</source>
+        <target>Richiesta rivenditore in verifica: ti scriviamo appena i prezzi rivenditore sono attivi. Nel frattempo puoi ordinare a prezzo di listino.</target>
+      </trans-unit>
+      <trans-unit id="6ee179fa84fa08b8a1ecedf73ed85601">
+        <source>Resellers must upload the chamber of commerce extract.</source>
+        <target>Per registrarti come rivenditore carica la visura camerale.</target>
+      </trans-unit>
+      <trans-unit id="ae44a430f81a194a94d43b4abf3bdb07">
+        <source>SDI recipient code</source>
+        <target>Codice destinatario SDI</target>
+      </trans-unit>
+      <trans-unit id="8fba17b1e1abfeb9ccc08c9248824add">
+        <source>Sole trader</source>
+        <target>Ditta individuale</target>
+      </trans-unit>
+      <trans-unit id="cd201c1c149341d5801502cc53535adf">
+        <source>Sole trader: the owner's personal tax code. Company or public body: the 11-digit tax code.</source>
+        <target>Ditta individuale: il codice fiscale personale del titolare. Società o ente: il codice fiscale di 11 cifre.</target>
+      </trans-unit>
+      <trans-unit id="14db617d9ae085eff161e57d2f1483f8">
+        <source>Tax code</source>
+        <target>Codice fiscale</target>
+      </trans-unit>
+      <trans-unit id="01437a7d8b5894374717244d32712589">
+        <source>The PEC address is not valid.</source>
+        <target>L'indirizzo PEC non è valido.</target>
+      </trans-unit>
+      <trans-unit id="010962847a1b5748c6483450d706c2e2">
+        <source>The SDI recipient code has 7 characters.</source>
+        <target>Il codice destinatario SDI ha 7 caratteri.</target>
+      </trans-unit>
+      <trans-unit id="414a4c90bc24cd2417e36739ae4838ac">
+        <source>The VAT number is not valid (11 digits).</source>
+        <target>La partita IVA non è valida (11 cifre).</target>
+      </trans-unit>
+      <trans-unit id="becc8891ed0653033c0726ebc67aeb89">
+        <source>The file could not be uploaded, please try again.</source>
+        <target>Non è stato possibile caricare il file, riprova.</target>
+      </trans-unit>
+      <trans-unit id="d0830f4235747885defd58a77cd26d42">
+        <source>The file is too large (max 5 MB).</source>
+        <target>Il file è troppo grande (max 5 MB).</target>
+      </trans-unit>
+      <trans-unit id="d3c01390de581253b3481cd146d6ca43">
+        <source>The office unique code has 6 characters.</source>
+        <target>Il codice univoco ufficio ha 6 caratteri.</target>
+      </trans-unit>
+      <trans-unit id="49be072eaa519ba768dc5601eb65f4ec">
+        <source>Upload a PDF, JPG or PNG file.</source>
+        <target>Carica un file PDF, JPG o PNG.</target>
+      </trans-unit>
+      <trans-unit id="7cb32e708d6b961d476baced73d362bb">
+        <source>VAT number</source>
+        <target>Partita IVA</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

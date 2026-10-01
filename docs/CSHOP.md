@@ -82,6 +82,14 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.5.0 — B2B registration
+
+Works with the `cshopb2b` module (`extras/cshopb2b`, see its README):
+`customer-form.tpl` renders the module fields first (type cards + business
+details panel, multipart for the visura upload), `form-fields.tpl` hides the
+"Optional" hint on them, `src/js/cshop/b2b-registration.ts` shows/requires
+fields per customer type, styles in `cshop/b2b/_b2b.scss`.
+
 ## 1.4.7
 
 Homepage brands: logos fixed (ps_brandlist gives `id_manufacturer`, not `id`:
