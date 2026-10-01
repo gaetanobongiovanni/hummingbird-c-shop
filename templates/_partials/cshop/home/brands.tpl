@@ -12,14 +12,11 @@
 
         <ul class="cs-brand-strip">
           {foreach from=$brands item=brand name=cshopBrands}
-            {if $smarty.foreach.cshopBrands.iteration <= 18}
+            {if $smarty.foreach.cshopBrands.iteration <= 12}
               <li class="cs-brand-strip__item">
+                {* Names only: logos imported from the supplier feed are inconsistent (empty or placeholder images) *}
                 <a class="cs-brand-strip__link" href="{$brand.link}">
-                  {if $brand.image == $brand.id_manufacturer}
-                    <img class="cs-brand-strip__logo" src="{$link->getManufacturerImageLink($brand.id_manufacturer, 'small_default')}" alt="{$brand.name}" width="98" height="98" loading="lazy" decoding="async">
-                  {else}
-                    <span class="cs-brand-strip__name">{$brand.name}</span>
-                  {/if}
+                  <span class="cs-brand-strip__name">{$brand.name}</span>
                 </a>
               </li>
             {/if}

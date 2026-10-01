@@ -94,6 +94,10 @@
         <source>EAN</source>
         <target>EAN</target>
       </trans-unit>
+      <trans-unit id="52c12e46bea505c86d560c914f3a1c2b">
+        <source>Electronic invoice for businesses and public bodies</source>
+        <target>Fattura elettronica per aziende ed enti</target>
+      </trans-unit>
       <trans-unit id="fea085b6ea6bb142f8a2f8ad8db4e3de">
         <source>Enter a product code, supplier code or OEM code and the quantity.</source>
         <target>Inserisci codice articolo, codice fornitore o codice OEM e la quantità.</target>
@@ -101,6 +105,10 @@
       <trans-unit id="dd6efd33a322bb4c3c5c1e3927e09175">
         <source>Enter your printer model or the original cartridge code (OEM) to find compatible products.</source>
         <target>Inserisci il modello della stampante o il codice originale della cartuccia (OEM) per trovare i prodotti compatibili.</target>
+      </trans-unit>
+      <trans-unit id="6e6f285712a87febd6e49b52b83880da">
+        <source>Everything for your desk, from scissors to toner</source>
+        <target>Tutto per la scrivania, dalle forbici al toner</target>
       </trans-unit>
       <trans-unit id="20bb56ceac48c569a5d350b8e87cfa22">
         <source>Fill the rows</source>
@@ -133,6 +141,10 @@
       <trans-unit id="f13001876be336c48ead8577c8d809fe">
         <source>List view</source>
         <target>Vista a elenco</target>
+      </trans-unit>
+      <trans-unit id="8a6935b48dcc413dd246264edd4525ab">
+        <source>Looking for toner?</source>
+        <target>Cerchi un toner?</target>
       </trans-unit>
       <trans-unit id="395d1ee1bc190e32ccb32832ea2e335b">
         <source>Main brands</source>
@@ -169,6 +181,10 @@
       <trans-unit id="b2eb7eb5ea59e7426dd3c8ed7b1876ff">
         <source>Need help choosing?</source>
         <target>Serve aiuto?</target>
+      </trans-unit>
+      <trans-unit id="7f1693e71d6a3999d2e3e15a05de6ae1">
+        <source>New customer? Create an account</source>
+        <target>Nuovo cliente? Registrati</target>
       </trans-unit>
       <trans-unit id="0dfa571878873577ef425b48520618c6">
         <source>New list</source>
@@ -230,17 +246,9 @@
         <source>Paste a list of codes</source>
         <target>Incolla un elenco di codici</target>
       </trans-unit>
-      <trans-unit id="195f0670f4e451e61e85cf228210465d">
-        <source>Price drops</source>
-        <target>Prezzi ribassati</target>
-      </trans-unit>
       <trans-unit id="bf5305f3a89a27edf60450b9034d307f">
         <source>Printer model or cartridge code</source>
         <target>Modello stampante o codice cartuccia</target>
-      </trans-unit>
-      <trans-unit id="0692e48febd7df5e682cda5edbe1d4be">
-        <source>Private customers and businesses</source>
-        <target>Privati e aziende</target>
       </trans-unit>
       <trans-unit id="ba18a23e463283cff65865724e1e9600">
         <source>Product code</source>
@@ -286,6 +294,10 @@
         <source>Reorder from previous orders</source>
         <target>Riordina dagli ordini precedenti</target>
       </trans-unit>
+      <trans-unit id="9d472762c6f468a957b6fd11da95dfb2">
+        <source>Reorder from your history, download invoices, save your addresses.</source>
+        <target>Riordina dallo storico, scarica le fatture, salva gli indirizzi.</target>
+      </trans-unit>
       <trans-unit id="119c4c2a8d23c33cff51938f557a60d2">
         <source>Reorder from your order history in one click.</source>
         <target>Riordina dallo storico ordini con un clic.</target>
@@ -314,6 +326,14 @@
         <source>Search the catalogue by product name, product code, supplier code, OEM code or brand.</source>
         <target>Cerca nel catalogo per nome prodotto, codice articolo, codice fornitore, codice OEM o marca.</target>
       </trans-unit>
+      <trans-unit id="90882b25ee7a8a13908647d038ea9420">
+        <source>Secure payments</source>
+        <target>Pagamenti sicuri</target>
+      </trans-unit>
+      <trans-unit id="a4f2a4df5079d2d24a31b43f459ee1f9">
+        <source>See the offers</source>
+        <target>Scopri le offerte</target>
+      </trans-unit>
       <trans-unit id="c7c7146cbe62021c0fa93b38f0124f20">
         <source>Send request</source>
         <target>Invia richiesta</target>
@@ -322,9 +342,9 @@
         <source>Shop by category</source>
         <target>Acquista per categoria</target>
       </trans-unit>
-      <trans-unit id="92959c9dbc368487aa866afe0d4fcdde">
-        <source>Sign in to reorder from your order history and track your deliveries.</source>
-        <target>Accedi per riordinare dallo storico ordini e seguire le tue spedizioni.</target>
+      <trans-unit id="64b7cfd4a71b275b2261ad9a6ea428be">
+        <source>Sign in for a better experience</source>
+        <target>Accedi per un'esperienza migliore</target>
       </trans-unit>
       <trans-unit id="9e7ac4ff9f3985eb28bf4da8c9f24850">
         <source>Sign in to reorder from your previous orders.</source>
@@ -345,6 +365,10 @@
       <trans-unit id="da8c3397b9a5601888618ea414d23bad">
         <source>Toner and cartridges</source>
         <target>Toner e cartucce</target>
+      </trans-unit>
+      <trans-unit id="f7bd3fdcdb0666d5d6ffd5014f9740e0">
+        <source>Type your printer model or the original code.</source>
+        <target>Scrivi il modello della stampante o il codice originale.</target>
       </trans-unit>
       <trans-unit id="e145afc66573099c36686c8c632d3363">
         <source>VAT number %vat%</source>

@@ -9,6 +9,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 IT = {
+    "Electronic invoice for businesses and public bodies": "Fattura elettronica per aziende ed enti",
+    "Secure payments": "Pagamenti sicuri",
+    "Everything for your desk, from scissors to toner": "Tutto per la scrivania, dalle forbici al toner",
+    "See the offers": "Scopri le offerte",
+    "Sign in for a better experience": "Accedi per un'esperienza migliore",
+    "Reorder from your history, download invoices, save your addresses.": "Riordina dallo storico, scarica le fatture, salva gli indirizzi.",
+    "New customer? Create an account": "Nuovo cliente? Registrati",
+    "Looking for toner?": "Cerchi un toner?",
+    "Type your printer model or the original code.": "Scrivi il modello della stampante o il codice originale.",
     "%count% products": "%count% prodotti",
     "%label% of %qty% pcs": "%label% da %qty% pz",
     "%price% + VAT": "%price% + IVA",

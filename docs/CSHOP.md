@@ -66,6 +66,20 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## "Mercato" look 1.2.0 (October 2026)
+
+Proposal A chosen by the shop owner: dense and commercial. Styles in
+`src/scss/cshop/_mercato.scss` (after `_refresh.scss`).
+
+- Information bar: e-invoicing, secure payments and the phone from
+  `ps_contactinfo` (no reassurance placeholders in the top bar any more).
+- Petrol header, logo on a white badge, large white search with orange button,
+  darker department bar.
+- Homepage on a light grey page: banner hero with CTA to price drops, sign-in
+  card and toner shortcut; round department icons (picked from the menu label,
+  category image wins); product shelves on white panels, 6 columns, one large
+  add-to-cart button; brand names instead of the feed's inconsistent logos.
+
 ## Refresh 1.1.0 (October 2026)
 
 Same palette, more modern finish. All in `src/scss/cshop/_refresh.scss`
