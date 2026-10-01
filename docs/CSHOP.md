@@ -82,6 +82,11 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.4.1
+
+Search field: the clear button (×) sat over the magnifier on desktop. The
+minifier moved `right: auto` after `inset-inline-end`; now one `right` value.
+
 ## Quality pass 1.4.0 (October 2026)
 
 Full visual audit (18 pages × 5 widths, headless Chromium + DOM checks for

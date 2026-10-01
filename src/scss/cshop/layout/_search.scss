@@ -34,12 +34,19 @@
     color: var(--cs-text-muted);
   }
 
+  // Clear button just left of the "Search" button. One physical property only:
+  // with "right: auto" + "inset-inline-end" the minifier put "right: auto"
+  // last, so the button fell back to the left edge, over the magnifier.
   .ps-searchbar__clear {
-    right: auto;
-    inset-inline-end: calc(var(--cs-space-2) + 6.5rem);
+    right: calc(var(--cs-space-2) + 6.5rem);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
 
     @include media-breakpoint-down(md) {
-      inset-inline-end: calc(var(--cs-space-2) + 3rem);
+      right: calc(var(--cs-space-2) + 4rem); // icon-only submit is ~4rem wide
     }
   }
 
