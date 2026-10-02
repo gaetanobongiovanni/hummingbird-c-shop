@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="modules/cshopcod" source-language="en-US" target-language="it-IT" datatype="plaintext">
+    <body>
+      <trans-unit id="22d2c7f90dc862df71ac7aff95183fb2">
+        <source>Cash on delivery</source>
+        <target>Contrassegno</target>
+      </trans-unit>
+      <trans-unit id="c2f728b7c2a3dc2b3b24a9751d092e4d">
+        <source>Cash on delivery surcharge: %fee% (%fixed% + %percent% of the order total), added to the order as its own line.</source>
+        <target>Supplemento contrassegno: %fee% (%fixed% + %percent% del totale dell'ordine), aggiunto all'ordine come voce separata.</target>
+      </trans-unit>
+      <trans-unit id="cd4b020777ffa4e8323e4d4d75239257">
+        <source>Pay on delivery (+ %fee%)</source>
+        <target>Pagamento in contrassegno (+ %fee%)</target>
+      </trans-unit>
+      <trans-unit id="9d2e2ef242e7ed33af8a6131cfe8faf8">
+        <source>Please have the exact amount ready: couriers may not carry change.</source>
+        <target>Tieni pronto l'importo esatto: il corriere potrebbe non avere il resto.</target>
+      </trans-unit>
+      <trans-unit id="e2b7dec8fa4b498156dfee6e4c84b156">
+        <source>This payment method is not available.</source>
+        <target>Questo metodo di pagamento non è disponibile.</target>
+      </trans-unit>
+      <trans-unit id="e1c7b43194127e54a4d98548b334ab24">
+        <source>Total to pay on delivery: %total%</source>
+        <target>Totale da pagare alla consegna: %total%</target>
+      </trans-unit>
+      <trans-unit id="f8c7e300af8259dee0e6fcad87175af1">
+        <source>You pay the courier when the parcel is delivered.</source>
+        <target>Paghi direttamente al corriere alla consegna del pacco.</target>
+      </trans-unit>
+      <trans-unit id="dd4540a721d282e14f90d5c52789f7e5">
+        <source>Your order is confirmed. You will pay %total% to the courier on delivery, cash on delivery surcharge included.</source>
+        <target>Il tuo ordine è confermato. Alla consegna pagherai al corriere %total%, supplemento contrassegno incluso.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -25,7 +25,9 @@
     "build:zip": "npm run build && npm run zip",
     "deploy": "bash scripts/deploy-theme.sh",
     "zip:b2b": "bash scripts/build-b2b-zip.sh",
-    "test:b2b": "php extras/cshopb2b/tests/ValidatorTest.php"
+    "test:b2b": "php extras/cshopb2b/tests/ValidatorTest.php",
+    "zip:cod": "bash scripts/build-cod-zip.sh",
+    "test:cod": "php extras/cshopcod/tests/FeeTest.php"
   },
   "author": "PrestaShop",
   "license": "AFL-3.0",
