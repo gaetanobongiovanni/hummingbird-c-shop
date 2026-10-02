@@ -65,12 +65,7 @@
               <span class="label">{l s='Subtotal:' d='Shop.Theme.Checkout'}</span>
               <span class="subtotals value">{$cart.subtotals.products.value}</span>
             </div>
-            {if $cart.subtotals.shipping.value}
-              <div class="blockcart-modal__total">
-                <span class="label">{l s='Shipping:' d='Shop.Theme.Checkout'}</span>
-                <span class="shipping value">{$cart.subtotals.shipping.value} {hook h='displayCheckoutSubtotalDetails' subtotal=$cart.subtotals.shipping}</span>
-              </div>
-            {/if}
+            {* C-Shop: no shipping line here, the cost is computed at checkout by the shipping module *}
             {if !$configuration.display_prices_tax_incl && $configuration.taxes_enabled}
               <div class="blockcart-modal__total blockcart-modal__total--bold">
                 <span class="label">{$cart.totals.total.label}{if $configuration.display_taxes_label}&nbsp;{$cart.labels.tax_short}{/if}</span>

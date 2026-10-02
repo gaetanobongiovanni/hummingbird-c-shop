@@ -6,7 +6,9 @@
   <div class="cart-summary__totals js-cart-detailed-totals">
     <div class="cart-summary__subtotals">
       {foreach from=$cart.subtotals item="subtotal"}
-        {if $subtotal && $subtotal.value|count_characters> 0 && $subtotal.type !== 'tax'}
+        {* C-Shop: shipping is computed by the shipping module at checkout; before
+           that PrestaShop would show "Gratis", so the line is hidden outside checkout. *}
+        {if $subtotal && $subtotal.value|count_characters> 0 && $subtotal.type !== 'tax' && ($subtotal.type !== 'shipping' || $page.page_name === 'checkout')}
           <div class="cart-summary__line" id="cart-subtotal-{$subtotal.type}">
             <span class="cart-summary__label{if $subtotal.type === 'products'} js-subtotal{/if}">
               {if $subtotal.type === 'products'}
