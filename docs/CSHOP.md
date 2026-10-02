@@ -82,6 +82,10 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.6.7
+
+- `config/theme.yml`: `ps_banner` removed from `displayHome` and listed in `to_disable`, so installing the theme no longer switches the homepage banner back on.
+
 ## 1.6.6
 
 - Consent checkboxes: the module message (`<p>`) stays on the checkbox line next to the required star.

@@ -1,7 +1,7 @@
 name: cshop
 display_name: C-Shop
 # Based on Hummingbird 2.1.2 (PrestaShop/hummingbird, tag v2.1.2)
-version: 1.6.6
+version: 1.6.7
 author:
   name: "C-Teck (C-Commerce S.r.l.) — based on Hummingbird by PrestaShop Team and Contributors"
   email: "pub@prestashop.com"
@@ -42,6 +42,8 @@ global_settings:
   modules:
     to_disable:
       - ps_supplierlist
+      # C-Shop: no promotional banner on the homepage (was re-enabled by every theme install)
+      - ps_banner
   hooks:
     modules_to_unhook:
       displayFooter:
@@ -83,7 +85,6 @@ global_settings:
         - ~
       displayHome:
         - ps_customtext
-        - ps_banner
         # Keep existing hooks and append them after
         - ~
       displayFooterBefore:
