@@ -36,6 +36,17 @@ IT = {
         'Permettono a noi e ai nostri partner di mostrarti offerte in linea con i tuoi interessi, su questo sito e altrove.',
     'Back': 'Indietro',
     'Save preferences': 'Salva preferenze',
+    'We use technical cookies to make the shop work. With your consent we would also use statistics cookies, to understand how the site is used.':
+        'Usiamo cookie tecnici per far funzionare il negozio. Con il tuo consenso useremmo anche cookie statistici, per capire come viene usato il sito.',
+    'We use technical cookies to make the shop work. With your consent we would also use marketing cookies, to show you relevant offers.':
+        'Usiamo cookie tecnici per far funzionare il negozio. Con il tuo consenso useremmo anche cookie di marketing, per mostrarti offerte in linea con i tuoi interessi.',
+    'This shop only uses technical cookies, needed for the cart, sign-in and payments. We do not use statistics or profiling cookies.':
+        'Questo negozio usa solo cookie tecnici, necessari per carrello, accesso e pagamenti. Non usiamo cookie statistici né di profilazione.',
+    'Got it': 'Ho capito',
+    'Close': 'Chiudi',
+    'Show the cookie banner': 'Mostra il banner cookie',
+    'The banner is shown while "Show the cookie banner" is on. Turn on only the categories the shop really uses: with none, the banner just says the shop uses technical cookies.':
+        'Il banner compare finché "Mostra il banner cookie" è attivo. Attiva solo le categorie che il negozio usa davvero: senza categorie, il banner informa che il negozio usa solo cookie tecnici.',
     # Admin
     'C-Shop cookie consent': 'C-Shop consenso cookie',
     'Cookie banner and preferences with Google Consent Mode v2, following the Italian Garante guidelines.':

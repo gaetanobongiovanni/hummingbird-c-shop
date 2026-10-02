@@ -22,6 +22,10 @@
         <source>Choose which optional cookies to allow. Technical cookies are needed for the shop and are always active.</source>
         <target>Scegli quali cookie facoltativi consentire. I cookie tecnici servono al negozio e sono sempre attivi.</target>
       </trans-unit>
+      <trans-unit id="d3d2e617335f08df83599665eef8a418">
+        <source>Close</source>
+        <target>Chiudi</target>
+      </trans-unit>
       <trans-unit id="4f85bfbe563f8c36ddfbbcd1296ae678">
         <source>Close and refuse optional cookies</source>
         <target>Chiudi e rifiuta i cookie facoltativi</target>
@@ -33,6 +37,10 @@
       <trans-unit id="07fce9628c3f8ef8de71a2bf4eee4b6c">
         <source>Customise</source>
         <target>Personalizza</target>
+      </trans-unit>
+      <trans-unit id="78e981599281c16fe016b55b136edf5f">
+        <source>Got it</source>
+        <target>Ho capito</target>
       </trans-unit>
       <trans-unit id="7cb15e416d62919b1b40298324fbe30b">
         <source>Marketing</source>
@@ -66,13 +74,25 @@
         <source>They tell us, in aggregate form, which pages are visited and how the site is used, so we can improve it.</source>
         <target>Ci dicono, in forma aggregata, quali pagine vengono visitate e come viene usato il sito, per migliorarlo.</target>
       </trans-unit>
+      <trans-unit id="2fa49f23888c5d398d999e78d1867f3d">
+        <source>This shop only uses technical cookies, needed for the cart, sign-in and payments. We do not use statistics or profiling cookies.</source>
+        <target>Questo negozio usa solo cookie tecnici, necessari per carrello, accesso e pagamenti. Non usiamo cookie statistici né di profilazione.</target>
+      </trans-unit>
       <trans-unit id="2f40eb07e024b3fbef5710eddf1ff173">
         <source>We respect your privacy</source>
         <target>Rispettiamo la tua privacy</target>
       </trans-unit>
+      <trans-unit id="6db8af10625f4494e4bc35188ee97927">
+        <source>We use technical cookies to make the shop work. With your consent we would also use marketing cookies, to show you relevant offers.</source>
+        <target>Usiamo cookie tecnici per far funzionare il negozio. Con il tuo consenso useremmo anche cookie di marketing, per mostrarti offerte in linea con i tuoi interessi.</target>
+      </trans-unit>
       <trans-unit id="9c2643d6fa0b56f53cce4097a6387305">
         <source>We use technical cookies to make the shop work. With your consent we would also use statistics cookies, to understand how the site is used, and marketing cookies, to show you relevant offers.</source>
         <target>Usiamo cookie tecnici per far funzionare il negozio. Con il tuo consenso useremmo anche cookie statistici, per capire come viene usato il sito, e cookie di marketing, per mostrarti offerte in linea con i tuoi interessi.</target>
+      </trans-unit>
+      <trans-unit id="513a7da9ba82fef1de5455e28c0d81b0">
+        <source>We use technical cookies to make the shop work. With your consent we would also use statistics cookies, to understand how the site is used.</source>
+        <target>Usiamo cookie tecnici per far funzionare il negozio. Con il tuo consenso useremmo anche cookie statistici, per capire come viene usato il sito.</target>
       </trans-unit>
       <trans-unit id="3945af6bbf7004da0ca17179a6445d18">
         <source>You can change your choice at any time from "Cookie preferences" at the bottom of the page.</source>

@@ -5,21 +5,35 @@
  *}
 <div class="cs-cookie" data-cs-cookie data-cs-version="{$cshopcookie.version|intval}">
   <section class="cs-cookie__banner" data-cs-cookie-banner role="region" aria-labelledby="cs-cookie-title" hidden>
-    <button type="button" class="cs-cookie__close" data-cs-action="reject" aria-label="{l s='Close and refuse optional cookies' d='Modules.Cshopcookie.Shop'}">
+    <button type="button" class="cs-cookie__close" data-cs-action="reject" aria-label="{if $cshopcookie.optional}{l s='Close and refuse optional cookies' d='Modules.Cshopcookie.Shop'}{else}{l s='Close' d='Modules.Cshopcookie.Shop'}{/if}">
       <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.3 5.71 12 12.01l-6.3-6.3-1.41 1.41 6.3 6.3-6.3 6.3 1.41 1.41 6.3-6.3 6.3 6.3 1.41-1.41-6.3-6.3 6.3-6.3z"/></svg>
     </button>
     <div class="cs-cookie__text">
       <p class="cs-cookie__title" id="cs-cookie-title">{l s='We respect your privacy' d='Modules.Cshopcookie.Shop'}</p>
       <p>
-        {l s='We use technical cookies to make the shop work. With your consent we would also use statistics cookies, to understand how the site is used, and marketing cookies, to show you relevant offers.' d='Modules.Cshopcookie.Shop'}
-        {l s='You can change your choice at any time from "Cookie preferences" at the bottom of the page.' d='Modules.Cshopcookie.Shop'}
+        {if $cshopcookie.analytics && $cshopcookie.marketing}
+          {l s='We use technical cookies to make the shop work. With your consent we would also use statistics cookies, to understand how the site is used, and marketing cookies, to show you relevant offers.' d='Modules.Cshopcookie.Shop'}
+        {elseif $cshopcookie.analytics}
+          {l s='We use technical cookies to make the shop work. With your consent we would also use statistics cookies, to understand how the site is used.' d='Modules.Cshopcookie.Shop'}
+        {elseif $cshopcookie.marketing}
+          {l s='We use technical cookies to make the shop work. With your consent we would also use marketing cookies, to show you relevant offers.' d='Modules.Cshopcookie.Shop'}
+        {else}
+          {l s='This shop only uses technical cookies, needed for the cart, sign-in and payments. We do not use statistics or profiling cookies.' d='Modules.Cshopcookie.Shop'}
+        {/if}
+        {if $cshopcookie.optional}
+          {l s='You can change your choice at any time from "Cookie preferences" at the bottom of the page.' d='Modules.Cshopcookie.Shop'}
+        {/if}
         {if $cshopcookie.policy_url}<a href="{$cshopcookie.policy_url}">{l s='Read the cookie policy' d='Modules.Cshopcookie.Shop'}</a>{/if}
       </p>
     </div>
     <div class="cs-cookie__actions">
-      <button type="button" class="btn btn-outline-primary" data-cs-action="customise">{l s='Customise' d='Modules.Cshopcookie.Shop'}</button>
-      <button type="button" class="btn btn-primary" data-cs-action="reject">{l s='Refuse' d='Modules.Cshopcookie.Shop'}</button>
-      <button type="button" class="btn btn-primary" data-cs-action="accept">{l s='Accept all' d='Modules.Cshopcookie.Shop'}</button>
+      {if $cshopcookie.optional}
+        <button type="button" class="btn btn-outline-primary" data-cs-action="customise">{l s='Customise' d='Modules.Cshopcookie.Shop'}</button>
+        <button type="button" class="btn btn-primary" data-cs-action="reject">{l s='Refuse' d='Modules.Cshopcookie.Shop'}</button>
+        <button type="button" class="btn btn-primary" data-cs-action="accept">{l s='Accept all' d='Modules.Cshopcookie.Shop'}</button>
+      {else}
+        <button type="button" class="btn btn-primary" data-cs-action="reject">{l s='Got it' d='Modules.Cshopcookie.Shop'}</button>
+      {/if}
     </div>
   </section>
 

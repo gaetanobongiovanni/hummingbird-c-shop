@@ -38,13 +38,17 @@
         <source>Settings saved.</source>
         <target>Impostazioni salvate.</target>
       </trans-unit>
+      <trans-unit id="c2b4ecbb8cb371700a090f987ed09679">
+        <source>Show the cookie banner</source>
+        <target>Mostra il banner cookie</target>
+      </trans-unit>
       <trans-unit id="cb7a10baea5e84c0a009ba64ca0b969e">
         <source>Statistics cookies (e.g. Google Analytics)</source>
         <target>Cookie statistici (es. Google Analytics)</target>
       </trans-unit>
-      <trans-unit id="0f2ecb7eb063fac5b7a9736bfcfc5b0c">
-        <source>Turn on only the categories the shop really uses. With both off the banner is hidden: technical cookies need no consent.</source>
-        <target>Attiva solo le categorie che il negozio usa davvero. Con entrambe spente il banner non compare: i cookie tecnici non richiedono consenso.</target>
+      <trans-unit id="f19ddd60da2fd3ac8b29e9993c2a1109">
+        <source>The banner is shown while "Show the cookie banner" is on. Turn on only the categories the shop really uses: with none, the banner just says the shop uses technical cookies.</source>
+        <target>Il banner compare finché "Mostra il banner cookie" è attivo. Attiva solo le categorie che il negozio usa davvero: senza categorie, il banner informa che il negozio usa solo cookie tecnici.</target>
       </trans-unit>
       <trans-unit id="185de79b95855c2d7efeba9c00ec2195">
         <source>Use it when you add a new service or change the cookie policy: the choices already given stop being valid (current version: %version%).</source>

@@ -22,7 +22,8 @@ JS: `CshopConsent.get()`, `CshopConsent.has('analytics')`, `CshopConsent.open()`
 PHP: `Cshopcookie::hasConsent('marketing')`.
 
 ## Configurazione
-- Attiva solo le categorie davvero usate: con entrambe spente il banner non compare.
+- "Mostra il banner cookie" accende o spegne il banner, indipendentemente dalle categorie.
+- Attiva solo le categorie davvero usate: senza categorie il banner dice solo che il negozio usa cookie tecnici ("Ho capito").
 - "Richiedi a tutti" incrementa la versione: chi aveva già scelto rivede il banner
   (da usare quando aggiungi un servizio o cambi la cookie policy).
 

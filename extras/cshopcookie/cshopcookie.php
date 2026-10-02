@@ -17,6 +17,7 @@ if (!defined('_PS_VERSION_')) {
 class Cshopcookie extends Module
 {
     public const COOKIE = 'cshop_consent';
+    public const CONFIG_ENABLED = 'CSHOPCOOKIE_ENABLED';
     public const CONFIG_VERSION = 'CSHOPCOOKIE_VERSION';
     public const CONFIG_ANALYTICS = 'CSHOPCOOKIE_ANALYTICS';
     public const CONFIG_MARKETING = 'CSHOPCOOKIE_MARKETING';
@@ -26,7 +27,7 @@ class Cshopcookie extends Module
     {
         $this->name = 'cshopcookie';
         $this->tab = 'front_office_features';
-        $this->version = '1.0.1';
+        $this->version = '1.0.2';
         $this->author = 'C-Teck';
         $this->need_instance = 0;
         $this->bootstrap = true;
@@ -50,6 +51,7 @@ class Cshopcookie extends Module
     public function install(): bool
     {
         return parent::install()
+            && Configuration::updateValue(self::CONFIG_ENABLED, 1)
             && Configuration::updateValue(self::CONFIG_VERSION, 1)
             && Configuration::updateValue(self::CONFIG_ANALYTICS, 1)
             && Configuration::updateValue(self::CONFIG_MARKETING, 1)
@@ -64,7 +66,7 @@ class Cshopcookie extends Module
 
     public function uninstall(): bool
     {
-        foreach ([self::CONFIG_VERSION, self::CONFIG_ANALYTICS, self::CONFIG_MARKETING, self::CONFIG_POLICY_CMS] as $key) {
+        foreach ([self::CONFIG_ENABLED, self::CONFIG_VERSION, self::CONFIG_ANALYTICS, self::CONFIG_MARKETING, self::CONFIG_POLICY_CMS] as $key) {
             Configuration::deleteByName($key);
         }
 
@@ -114,7 +116,9 @@ class Cshopcookie extends Module
 
     private function isActiveBanner(): bool
     {
-        return (bool) Configuration::get(self::CONFIG_ANALYTICS) || (bool) Configuration::get(self::CONFIG_MARKETING);
+        // Independent of the categories: with none active the banner only informs
+        // that the shop uses technical cookies ("Ho capito").
+        return (bool) Configuration::get(self::CONFIG_ENABLED);
     }
 
     private function assignVars(): void
@@ -124,6 +128,7 @@ class Cshopcookie extends Module
             'version' => (int) Configuration::get(self::CONFIG_VERSION),
             'analytics' => (bool) Configuration::get(self::CONFIG_ANALYTICS),
             'marketing' => (bool) Configuration::get(self::CONFIG_MARKETING),
+            'optional' => (bool) Configuration::get(self::CONFIG_ANALYTICS) || (bool) Configuration::get(self::CONFIG_MARKETING),
             'policy_url' => $cms ? $this->context->link->getCMSLink($cms) : '',
         ]);
     }
@@ -180,6 +185,7 @@ class Cshopcookie extends Module
     {
         $output = '';
         if (Tools::isSubmit('submitCshopcookie')) {
+            Configuration::updateValue(self::CONFIG_ENABLED, (int) (bool) Tools::getValue(self::CONFIG_ENABLED));
             Configuration::updateValue(self::CONFIG_ANALYTICS, (int) (bool) Tools::getValue(self::CONFIG_ANALYTICS));
             Configuration::updateValue(self::CONFIG_MARKETING, (int) (bool) Tools::getValue(self::CONFIG_MARKETING));
             Configuration::updateValue(self::CONFIG_POLICY_CMS, (int) Tools::getValue(self::CONFIG_POLICY_CMS));
@@ -210,6 +216,7 @@ class Cshopcookie extends Module
         $helper->currentIndex = AdminController::$currentIndex . '&configure=' . $this->name;
         $helper->default_form_language = (int) $this->context->language->id;
         $helper->fields_value = [
+            self::CONFIG_ENABLED => (int) Configuration::get(self::CONFIG_ENABLED),
             self::CONFIG_ANALYTICS => (int) Configuration::get(self::CONFIG_ANALYTICS),
             self::CONFIG_MARKETING => (int) Configuration::get(self::CONFIG_MARKETING),
             self::CONFIG_POLICY_CMS => (int) Configuration::get(self::CONFIG_POLICY_CMS),
@@ -219,11 +226,17 @@ class Cshopcookie extends Module
             'form' => [
                 'legend' => ['title' => $this->trans('Cookie banner', [], 'Modules.Cshopcookie.Admin'), 'icon' => 'icon-cogs'],
                 'description' => $this->trans(
-                    'Turn on only the categories the shop really uses. With both off the banner is hidden: technical cookies need no consent.',
+                    'The banner is shown while "Show the cookie banner" is on. Turn on only the categories the shop really uses: with none, the banner just says the shop uses technical cookies.',
                     [],
                     'Modules.Cshopcookie.Admin'
                 ),
                 'input' => [
+                    [
+                        'type' => 'switch',
+                        'name' => self::CONFIG_ENABLED,
+                        'label' => $this->trans('Show the cookie banner', [], 'Modules.Cshopcookie.Admin'),
+                        'values' => $yesNo,
+                    ],
                     [
                         'type' => 'switch',
                         'name' => self::CONFIG_ANALYTICS,
