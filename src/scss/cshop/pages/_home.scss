@@ -302,6 +302,13 @@
     align-items: start;
   }
 
+  // reassurance only (no assistance card): full width
+  &--full {
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
   &__list {
     display: grid;
     gap: var(--cs-space-2);

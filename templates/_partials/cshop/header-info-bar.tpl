@@ -17,13 +17,8 @@
         {l s='Secure payments' d='Shop.Theme.Cshop'}
       </li>
       {widget_block name='ps_contactinfo'}
-        {if !empty($contact_infos.phone)}
-          <li class="cs-info-bar__usp-item">
-            <span class="material-icons" aria-hidden="true">call</span>
-            {l s='Assistance' d='Shop.Theme.Cshop'}
-            <a href="tel:{$contact_infos.phone|replace:' ':''}">{$contact_infos.phone}</a>
-          </li>
-        {elseif !empty($contact_infos.email)}
+        {* C-Shop: the email (the phone is in the footer and on the contact page) *}
+        {if !empty($contact_infos.email)}
           <li class="cs-info-bar__usp-item">
             <span class="material-icons" aria-hidden="true">mail</span>
             <a href="mailto:{$contact_infos.email}">{$contact_infos.email}</a>
