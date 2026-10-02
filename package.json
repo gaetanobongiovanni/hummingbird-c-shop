@@ -27,7 +27,9 @@
     "zip:b2b": "bash scripts/build-b2b-zip.sh",
     "test:b2b": "php extras/cshopb2b/tests/ValidatorTest.php",
     "zip:cod": "bash scripts/build-cod-zip.sh",
-    "test:cod": "php extras/cshopcod/tests/FeeTest.php"
+    "test:cod": "php extras/cshopcod/tests/FeeTest.php",
+    "zip:cookie": "bash scripts/build-cookie-zip.sh",
+    "test:cookie": "jest extras/cshopcookie"
   },
   "author": "PrestaShop",
   "license": "AFL-3.0",

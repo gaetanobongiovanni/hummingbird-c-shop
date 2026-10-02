@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="modules/cshopcookie" source-language="en-US" target-language="it-IT" datatype="plaintext">
+    <body>
+      <trans-unit id="3d0238bf1643e39636b1f5040af3bf6f">
+        <source>Accept all</source>
+        <target>Accetta tutti</target>
+      </trans-unit>
+      <trans-unit id="de31291360fc7b4f832afcc772a889bd">
+        <source>Always active</source>
+        <target>Sempre attivi</target>
+      </trans-unit>
+      <trans-unit id="0557fa923dcee4d0f86b1409f5c2167f">
+        <source>Back</source>
+        <target>Indietro</target>
+      </trans-unit>
+      <trans-unit id="1943d94a981241bdaf7a0a95eefe643d">
+        <source>Cart, sign-in, security and payment. Without them the shop cannot work.</source>
+        <target>Carrello, accesso, sicurezza e pagamento. Senza questi il negozio non può funzionare.</target>
+      </trans-unit>
+      <trans-unit id="26dc6e82bac16eb6a9fc2a5ddd5ea87d">
+        <source>Choose which optional cookies to allow. Technical cookies are needed for the shop and are always active.</source>
+        <target>Scegli quali cookie facoltativi consentire. I cookie tecnici servono al negozio e sono sempre attivi.</target>
+      </trans-unit>
+      <trans-unit id="4f85bfbe563f8c36ddfbbcd1296ae678">
+        <source>Close and refuse optional cookies</source>
+        <target>Chiudi e rifiuta i cookie facoltativi</target>
+      </trans-unit>
+      <trans-unit id="4ce38cf74abed60ab71a57ce21ab464b">
+        <source>Cookie preferences</source>
+        <target>Preferenze cookie</target>
+      </trans-unit>
+      <trans-unit id="07fce9628c3f8ef8de71a2bf4eee4b6c">
+        <source>Customise</source>
+        <target>Personalizza</target>
+      </trans-unit>
+      <trans-unit id="7cb15e416d62919b1b40298324fbe30b">
+        <source>Marketing</source>
+        <target>Marketing</target>
+      </trans-unit>
+      <trans-unit id="5bd00e474b7ae27b8fa2e5cb77bb66f8">
+        <source>Necessary</source>
+        <target>Necessari</target>
+      </trans-unit>
+      <trans-unit id="91276ae6fd49e9eb8b7b6e9fdf9efe79">
+        <source>Read the cookie policy</source>
+        <target>Leggi la cookie policy</target>
+      </trans-unit>
+      <trans-unit id="dc7176d0b9ec5492c6a8f43f8a4b6d92">
+        <source>Refuse</source>
+        <target>Rifiuta</target>
+      </trans-unit>
+      <trans-unit id="b089ea54768077a7101b1667d141be6e">
+        <source>Save preferences</source>
+        <target>Salva preferenze</target>
+      </trans-unit>
+      <trans-unit id="c33e404a441c6ba9648f88af3c68a1ca">
+        <source>Statistics</source>
+        <target>Statistiche</target>
+      </trans-unit>
+      <trans-unit id="ff7879171b3f78591d769e5280891cde">
+        <source>They let us and our partners show you offers in line with your interests, on this site and elsewhere.</source>
+        <target>Permettono a noi e ai nostri partner di mostrarti offerte in linea con i tuoi interessi, su questo sito e altrove.</target>
+      </trans-unit>
+      <trans-unit id="ae2d764320fb85b30047f97437ced286">
+        <source>They tell us, in aggregate form, which pages are visited and how the site is used, so we can improve it.</source>
+        <target>Ci dicono, in forma aggregata, quali pagine vengono visitate e come viene usato il sito, per migliorarlo.</target>
+      </trans-unit>
+      <trans-unit id="2f40eb07e024b3fbef5710eddf1ff173">
+        <source>We respect your privacy</source>
+        <target>Rispettiamo la tua privacy</target>
+      </trans-unit>
+      <trans-unit id="9c2643d6fa0b56f53cce4097a6387305">
+        <source>We use technical cookies to make the shop work. With your consent we would also use statistics cookies, to understand how the site is used, and marketing cookies, to show you relevant offers.</source>
+        <target>Usiamo cookie tecnici per far funzionare il negozio. Con il tuo consenso useremmo anche cookie statistici, per capire come viene usato il sito, e cookie di marketing, per mostrarti offerte in linea con i tuoi interessi.</target>
+      </trans-unit>
+      <trans-unit id="3945af6bbf7004da0ca17179a6445d18">
+        <source>You can change your choice at any time from "Cookie preferences" at the bottom of the page.</source>
+        <target>Puoi cambiare scelta in qualsiasi momento da "Preferenze cookie" in fondo alla pagina.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

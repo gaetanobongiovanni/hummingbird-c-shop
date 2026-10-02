@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="modules/cshopcookie" source-language="en-US" target-language="it-IT" datatype="plaintext">
+    <body>
+      <trans-unit id="9f8afd0d148f997beda1ec72e6995cde">
+        <source>Ask everybody again</source>
+        <target>Richiedi a tutti</target>
+      </trans-unit>
+      <trans-unit id="08a63c2e74f83e67e90b23daf89ea2d6">
+        <source>Ask for consent again</source>
+        <target>Richiedi di nuovo il consenso</target>
+      </trans-unit>
+      <trans-unit id="57d2896c75c69cc8463388cfc98943bc">
+        <source>C-Shop cookie consent</source>
+        <target>C-Shop consenso cookie</target>
+      </trans-unit>
+      <trans-unit id="56f3f51845045b36392a7348f508c2cd">
+        <source>Consent renewed: every visitor will see the banner again.</source>
+        <target>Consenso rinnovato: tutti i visitatori rivedranno il banner.</target>
+      </trans-unit>
+      <trans-unit id="614c8dbe1514aaeb8f6c41fc49e0db32">
+        <source>Cookie banner</source>
+        <target>Banner cookie</target>
+      </trans-unit>
+      <trans-unit id="af01b469303a0b2362a25f81a90958f5">
+        <source>Cookie banner and preferences with Google Consent Mode v2, following the Italian Garante guidelines.</source>
+        <target>Banner e preferenze cookie con Google Consent Mode v2, secondo le linee guida del Garante privacy.</target>
+      </trans-unit>
+      <trans-unit id="9e3e3305fbabd72d2f4102d0e3528c85">
+        <source>Cookie policy page</source>
+        <target>Pagina della cookie policy</target>
+      </trans-unit>
+      <trans-unit id="c9f8461c79375b1a537b95a687bd4524">
+        <source>Marketing cookies (e.g. Meta Pixel, Google Ads)</source>
+        <target>Cookie di marketing (es. Meta Pixel, Google Ads)</target>
+      </trans-unit>
+      <trans-unit id="9a7e58ee13cb727cb7c4acc68f4cafe5">
+        <source>Settings saved.</source>
+        <target>Impostazioni salvate.</target>
+      </trans-unit>
+      <trans-unit id="cb7a10baea5e84c0a009ba64ca0b969e">
+        <source>Statistics cookies (e.g. Google Analytics)</source>
+        <target>Cookie statistici (es. Google Analytics)</target>
+      </trans-unit>
+      <trans-unit id="0f2ecb7eb063fac5b7a9736bfcfc5b0c">
+        <source>Turn on only the categories the shop really uses. With both off the banner is hidden: technical cookies need no consent.</source>
+        <target>Attiva solo le categorie che il negozio usa davvero. Con entrambe spente il banner non compare: i cookie tecnici non richiedono consenso.</target>
+      </trans-unit>
+      <trans-unit id="185de79b95855c2d7efeba9c00ec2195">
+        <source>Use it when you add a new service or change the cookie policy: the choices already given stop being valid (current version: %version%).</source>
+        <target>Usalo quando aggiungi un nuovo servizio o cambi la cookie policy: le scelte già espresse non valgono più (versione attuale: %version%).</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
