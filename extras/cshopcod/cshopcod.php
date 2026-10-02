@@ -40,7 +40,7 @@ class Cshopcod extends PaymentModule
     {
         $this->name = 'cshopcod';
         $this->tab = 'payments_gateways';
-        $this->version = '1.0.1';
+        $this->version = '1.0.2';
         $this->author = 'C-Teck';
         $this->need_instance = 0;
         $this->bootstrap = true;
@@ -323,11 +323,6 @@ class Cshopcod extends PaymentModule
         $this->context->smarty->assign([
             'cshopcod_fee' => $feeText,
             'cshopcod_total' => $totalText,
-            'cshopcod_fixed' => $this->context->getCurrentLocale()->formatPrice(
-                (float) Tools::convertPrice((float) Configuration::get(self::CONFIG_FIXED), $currency),
-                $currency->iso_code
-            ),
-            'cshopcod_percent' => str_replace('.', ',', (string) (float) Configuration::get(self::CONFIG_PERCENT)) . '%',
         ]);
 
         $option = new PaymentOption();

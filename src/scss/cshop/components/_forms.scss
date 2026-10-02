@@ -46,3 +46,17 @@
     color: var(--cs-danger);
   }
 }
+
+// Consent checkboxes (psgdpr, newsletter, partner offers): module messages are
+// wrapped in <p>, which pushed the text under the required star. Keep the first
+// paragraph on the checkbox line, like single-line labels.
+.form-check-label {
+  > p:first-child {
+    display: inline;
+    margin: 0;
+  }
+
+  > p + p {
+    margin: var(--cs-space-1) 0 0;
+  }
+}

@@ -82,6 +82,11 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.6.6
+
+- Consent checkboxes: the module message (`<p>`) stays on the checkbox line next to the required star.
+- Left column brands: current brand compared on `id_manufacturer` (PHP warning "Undefined array key id").
+
 ## 1.6.5
 
 Info bar: email instead of the phone. Homepage: "Assistance" card removed,

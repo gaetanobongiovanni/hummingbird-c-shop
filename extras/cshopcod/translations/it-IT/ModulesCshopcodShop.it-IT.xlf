@@ -6,9 +6,9 @@
         <source>Cash on delivery</source>
         <target>Contrassegno</target>
       </trans-unit>
-      <trans-unit id="c2f728b7c2a3dc2b3b24a9751d092e4d">
-        <source>Cash on delivery surcharge: %fee% (%fixed% + %percent% of the order total), added to the order as its own line.</source>
-        <target>Supplemento contrassegno: %fee% (%fixed% + %percent% del totale dell'ordine), aggiunto all'ordine come voce separata.</target>
+      <trans-unit id="4d9483997b8e175606693efab9751206">
+        <source>Cash on delivery surcharge: %fee%, added to the order as its own line.</source>
+        <target>Supplemento contrassegno: %fee%, aggiunto all'ordine come voce separata.</target>
       </trans-unit>
       <trans-unit id="cd4b020777ffa4e8323e4d4d75239257">
         <source>Pay on delivery (+ %fee%)</source>

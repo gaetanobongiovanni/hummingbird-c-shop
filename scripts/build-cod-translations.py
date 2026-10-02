@@ -13,8 +13,8 @@ IT = {
     # Shop
     'Pay on delivery (+ %fee%)': 'Pagamento in contrassegno (+ %fee%)',
     'You pay the courier when the parcel is delivered.': 'Paghi direttamente al corriere alla consegna del pacco.',
-    'Cash on delivery surcharge: %fee% (%fixed% + %percent% of the order total), added to the order as its own line.':
-        "Supplemento contrassegno: %fee% (%fixed% + %percent% del totale dell'ordine), aggiunto all'ordine come voce separata.",
+    'Cash on delivery surcharge: %fee%, added to the order as its own line.':
+        "Supplemento contrassegno: %fee%, aggiunto all'ordine come voce separata.",
     'Total to pay on delivery: %total%': 'Totale da pagare alla consegna: %total%',
     'Your order is confirmed. You will pay %total% to the courier on delivery, cash on delivery surcharge included.':
         'Il tuo ordine è confermato. Alla consegna pagherai al corriere %total%, supplemento contrassegno incluso.',
