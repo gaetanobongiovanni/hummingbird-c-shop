@@ -34,6 +34,13 @@
       </address>
     {/if}
 
+    {* C-Shop: VAT number from Shop parameters › Contact › Stores (registration number) *}
+    {if !empty($shop.registration_number)}
+      <p class="ps-contactinfo__vat">
+        {l s='VAT number %vat%' sprintf=['%vat%' => $shop.registration_number] d='Shop.Theme.Cshop'}
+      </p>
+    {/if}
+
     {if $contact_infos.phone}
       <div class="ps-contactinfo__phone">
         <i class="material-icons" aria-hidden="true">&#xE0CD;</i>

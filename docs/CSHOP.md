@@ -82,6 +82,11 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.6.4
+
+Footer "Store information": VAT number (Shop parameters › Contact › Stores,
+registration number) under the address.
+
 ## 1.6.3
 
 Homepage: gap above the module hook panel (custom text), it touched the
