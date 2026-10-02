@@ -189,6 +189,13 @@
   cursor: pointer;
 }
 
+/* Tablet: text on top, buttons below (side by side the text column got too narrow) */
+@media (max-width: 991.98px) {
+  .cs-cookie__banner {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 767.98px) {
   .cs-cookie__banner,
   .cs-cookie__dialog {

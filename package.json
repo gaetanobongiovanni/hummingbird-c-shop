@@ -29,7 +29,9 @@
     "zip:cod": "bash scripts/build-cod-zip.sh",
     "test:cod": "php extras/cshopcod/tests/FeeTest.php",
     "zip:cookie": "bash scripts/build-cookie-zip.sh",
-    "test:cookie": "jest extras/cshopcookie"
+    "test:cookie": "jest extras/cshopcookie",
+    "zip:offers": "bash scripts/build-offers-zip.sh",
+    "test:offers": "php extras/cshopoffers/tests/PickerTest.php"
   },
   "author": "PrestaShop",
   "license": "AFL-3.0",

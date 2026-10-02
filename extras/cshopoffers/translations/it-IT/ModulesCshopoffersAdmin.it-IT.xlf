@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="modules/cshopoffers" source-language="en-US" target-language="it-IT" datatype="plaintext">
+    <body>
+      <trans-unit id="a54001249a9363c6a6a8c9c1ea409039">
+        <source>C-Shop offers: discounted combination</source>
+        <target>C-Shop offerte: variante scontata</target>
+      </trans-unit>
+      <trans-unit id="4f79364e9371e402467107c5d1b17487">
+        <source>On the offers page, shows the discounted combination of each product instead of the default one.</source>
+        <target>Nella pagina Offerte mostra la variante scontata di ogni prodotto invece di quella predefinita.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
