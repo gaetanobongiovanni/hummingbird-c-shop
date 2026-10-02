@@ -24,7 +24,7 @@
           <ul class="cs-left-brands__list">
             {foreach from=$brands item=brand}
               <li>
-                <a class="cs-left-brands__link{if $page.page_name == 'manufacturer' && isset($manufacturer.id) && $manufacturer.id == $brand.id} is-current{/if}" href="{$brand.link}">{$brand.name}</a>
+                <a class="cs-left-brands__link{if $page.page_name == 'manufacturer' && isset($manufacturer.id) && $manufacturer.id == $brand.id_manufacturer} is-current{/if}" href="{$brand.link}">{$brand.name}</a>
               </li>
             {/foreach}
           </ul>

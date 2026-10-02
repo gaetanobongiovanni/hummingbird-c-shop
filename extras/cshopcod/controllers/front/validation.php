@@ -47,7 +47,7 @@ class CshopcodValidationModuleFrontController extends ModuleFrontController
             'id_module' => (int) $this->module->id,
             'key' => $customer->secure_key,
         ]);
-        if ($cart->orderExists()) {
+        if (Cshopcod::cartIsOrdered($cart)) {
             Tools::redirect($confirmation . '&id_order=' . (int) Order::getIdByCartId((int) $cart->id));
         }
         // Two requests at once for the same cart: only one creates the order
@@ -55,7 +55,7 @@ class CshopcodValidationModuleFrontController extends ModuleFrontController
         if (!(int) Db::getInstance()->getValue("SELECT GET_LOCK('" . pSQL($lock) . "', 10)")) {
             Tools::redirect($this->context->link->getPageLink('order', true, null, ['step' => 3]));
         }
-        if ($cart->orderExists()) {
+        if (Cshopcod::cartIsOrdered($cart)) {
             Db::getInstance()->getValue("SELECT RELEASE_LOCK('" . pSQL($lock) . "')");
             Tools::redirect($confirmation . '&id_order=' . (int) Order::getIdByCartId((int) $cart->id));
         }
@@ -83,7 +83,7 @@ class CshopcodValidationModuleFrontController extends ModuleFrontController
             );
         } catch (Throwable $e) {
             // Leave the cart as the customer had it, without the surcharge
-            if (!$cart->orderExists()) {
+            if (!Cshopcod::cartIsOrdered($cart)) {
                 $this->module->removeFeeFromCart($cart);
             }
             PrestaShopLogger::addLog('cshopcod: ' . $e->getMessage(), 3, null, 'Cart', (int) $cart->id, true);

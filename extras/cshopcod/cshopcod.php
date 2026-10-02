@@ -40,7 +40,7 @@ class Cshopcod extends PaymentModule
     {
         $this->name = 'cshopcod';
         $this->tab = 'payments_gateways';
-        $this->version = '1.0.0';
+        $this->version = '1.0.1';
         $this->author = 'C-Teck';
         $this->need_instance = 0;
         $this->bootstrap = true;
@@ -147,6 +147,26 @@ class Cshopcod extends PaymentModule
         if ((int) StockAvailable::getQuantityAvailableByProduct($idProduct) < 1000) {
             StockAvailable::setQuantity($idProduct, 0, self::FEE_STOCK);
         }
+    }
+
+    /** Cart::containsProduct() no longer exists in PrestaShop 9: query cart_product directly */
+    public function cartHasFee(Cart $cart): bool
+    {
+        $idProduct = $this->feeProductId();
+        if (!$idProduct || !$cart->id) {
+            return false;
+        }
+
+        return (bool) Db::getInstance()->getValue(
+            'SELECT 1 FROM `' . _DB_PREFIX_ . 'cart_product`
+             WHERE id_cart = ' . (int) $cart->id . ' AND id_product = ' . (int) $idProduct
+        );
+    }
+
+    /** Cart::orderExists() is not guaranteed in PrestaShop 9 either */
+    public static function cartIsOrdered(Cart $cart): bool
+    {
+        return $cart->id && (int) Order::getIdByCartId((int) $cart->id) > 0;
     }
 
     private function feeProductId(): int
@@ -257,7 +277,7 @@ class Cshopcod extends PaymentModule
         if (!$idProduct || !$cart->id) {
             return;
         }
-        if ($cart->containsProduct($idProduct)) {
+        if ($this->cartHasFee($cart)) {
             $cart->deleteProduct($idProduct);
         }
         Db::getInstance()->delete(
@@ -345,7 +365,7 @@ class Cshopcod extends PaymentModule
             return;
         }
         $cart = $params['cart'];
-        if ($cart instanceof Cart && $cart->id && !$cart->orderExists() && $cart->containsProduct($this->feeProductId())) {
+        if ($cart instanceof Cart && $cart->id && $this->cartHasFee($cart) && !self::cartIsOrdered($cart)) {
             self::$addingFee = true;
             try {
                 $this->removeFeeFromCart($cart);
