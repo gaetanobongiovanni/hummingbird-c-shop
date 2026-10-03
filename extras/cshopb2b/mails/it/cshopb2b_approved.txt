@@ -1,6 +1,0 @@
-Ciao {firstname},
-
-abbiamo verificato la visura: i prezzi rivenditore sono ora attivi sul tuo account.
-Accedi al negozio per vederli applicati al catalogo.
-
-{shop_url}

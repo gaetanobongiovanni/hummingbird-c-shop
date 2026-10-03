@@ -1,7 +1,7 @@
 name: Build C-Shop release
 
 # Push a tag vX.Y.Z (same version as config/theme.yml) to publish a GitHub
-# Release with the installable theme, the custom modules and their SHA-256.
+# Release with the installable theme and its SHA-256.
 #   git tag v1.6.12 && git push origin v1.6.12
 
 'on':
@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   release:
-    name: Test, build and publish theme and modules
+    name: Test, build and publish the theme
     runs-on: ubuntu-latest
     steps:
       - name: Checkout tagged source
@@ -26,16 +26,10 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
 
-      - name: Set up PHP (module tests)
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.3'
-          coverage: none
-
       - name: Install dependencies
         run: npm ci
 
-      - name: Build theme and modules
+      - name: Build theme
         run: bash scripts/build-release.sh "${GITHUB_REF_NAME#v}"
 
       - name: Publish GitHub Release

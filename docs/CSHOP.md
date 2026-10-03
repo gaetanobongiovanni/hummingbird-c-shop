@@ -51,10 +51,14 @@ Repository: `gaetanobongiovanni/cshop-theme`, branch `main`.
 
 `.github/workflows/release.yml` runs `scripts/build-release.sh`: it fails if the
 tag does not match `config/theme.yml`, runs lint and tests, builds the theme
-and the four modules (`extras/`) and publishes a GitHub Release with
-`cshop-<v>.zip`, `cshopb2b-…`, `cshopcod-…`, `cshopcookie-…`, `cshopoffers-…`
-and a `.sha256` for each. The same script works locally:
-`bash scripts/build-release.sh`.
+and publishes a GitHub Release with `cshop-<v>.zip` and its `.sha256`. The same
+script works locally: `bash scripts/build-release.sh`.
+
+The shop modules have their own repositories and releases (tag `vX.Y.Z`):
+C-Teck-B2B (`cteckb2b`), C-Teck-COD (`cteckcod`), C-Teck-Cookie (`cteckcookie`),
+C-Teck-Offers (`cteckoffers`), under github.com/gaetanobongiovanni. They replace
+the former `cshopb2b`, `cshopcod`, `cshopcookie`, `cshopoffers`: installing a
+new one imports the old data and disables the old module.
 
 ## Updating the theme on the live shop
 
@@ -185,7 +189,7 @@ removes itself when a category has no thumbnail.
 
 ## 1.5.0 — B2B registration
 
-Works with the `cshopb2b` module (`extras/cshopb2b`, see its README):
+Works with the B2B module (now `cteckb2b`, repo C-Teck-B2B, see its README):
 `customer-form.tpl` renders the module fields first (type cards + business
 details panel, multipart for the visura upload), `form-fields.tpl` hides the
 "Optional" hint on them, `src/js/cshop/b2b-registration.ts` shows/requires

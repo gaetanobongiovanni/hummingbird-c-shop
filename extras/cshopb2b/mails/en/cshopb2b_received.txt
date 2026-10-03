@@ -1,6 +1,0 @@
-Hello {firstname},
-
-thank you for registering as a reseller. We received your document and will check it soon.
-We will email you as soon as reseller prices are active. Meanwhile you can order at list price.
-
-{shop_url}

@@ -1,9 +1,0 @@
-{company} registered as a reseller and is waiting for approval.
-
-Contact: {firstname} {lastname} - {email}
-Legal form: {legal_form}
-VAT number: {vat}
-Tax code: {tax_code}
-Visura: {visura}
-
-To activate reseller prices: back office > Customers > B2B requests.

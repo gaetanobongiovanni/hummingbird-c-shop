@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
-# C-Shop — build the release packages: theme + custom modules, with SHA-256.
+# C-Shop — build the theme release package, with SHA-256.
 #
 #   scripts/build-release.sh [VERSION]
 #
 # VERSION (e.g. 1.6.12, usually the git tag without "v") must match
 # config/theme.yml: a tag that does not match the theme version fails the build.
-# Output in dist/: cshop-<v>.zip, cshopb2b-<v>.zip, cshopcod-<v>.zip,
-# cshopcookie-<v>.zip, cshopoffers-<v>.zip and a .sha256 file for each.
+# Output in dist/: cshop-<v>.zip and cshop-<v>.zip.sha256.
+# The C-Shop modules live in their own repos (C-Teck-B2B, C-Teck-COD,
+# C-Teck-Cookie, C-Teck-Offers), each with its own release.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -31,12 +32,6 @@ python3 scripts/build-translations.py
 python3 scripts/build-opc-translations.py
 npm run build
 bash scripts/build-theme-zip.sh
-
-echo "== Modules"
-bash scripts/build-b2b-zip.sh
-bash scripts/build-cod-zip.sh
-bash scripts/build-cookie-zip.sh
-bash scripts/build-offers-zip.sh
 
 echo "== Checksums"
 (

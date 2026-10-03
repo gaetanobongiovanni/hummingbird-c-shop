@@ -1,6 +1,0 @@
-Hello {firstname},
-
-we could not activate reseller prices on your account.
-Reason: {note}
-
-Your account stays active as a business customer.
