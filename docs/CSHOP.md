@@ -82,6 +82,10 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.6.12
+
+- Footer: removed "Prezzi IVA inclusa" (prices are shown both VAT included and + VAT).
+
 ## 1.6.11
 
 - Footer: legal block of C-COMMERCE S.R.L. (registered office, tax code/VAT/register number, share capital € 10.500,00 i.v., REA ME-208788), copyright 2008-current year, disclaimers and AI-images note. Text in `templates/_partials/copyright.tpl`.

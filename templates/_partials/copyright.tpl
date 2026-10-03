@@ -26,9 +26,7 @@
         <span class="cs-copyright__sep" aria-hidden="true">|</span>
         Tutti i diritti sono riservati
         <span class="cs-copyright__sep" aria-hidden="true">|</span>
-        Info e condizioni soggette a variazioni senza preavviso
-        <span class="cs-copyright__sep" aria-hidden="true">|</span>
-        Prezzi IVA inclusa.
+        Info e condizioni soggette a variazioni senza preavviso.
       </p>
       <p class="cs-copyright__text cs-copyright__note">
         Le ambientazioni dei prodotti hanno scopo puramente illustrativo e in alcuni casi possono essere state create o elaborate con l'ausilio dell'AI.
