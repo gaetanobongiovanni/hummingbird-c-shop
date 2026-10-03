@@ -37,6 +37,25 @@ No core file and no module file is modified: everything is done through theme
 templates, theme module-template overrides (`modules/`), hooks and widgets.
 Production caching (Smarty cache, CCC) can stay enabled.
 
+## Releases (GitHub Actions)
+
+Repository: `gaetanobongiovanni/cshop-theme`, branch `main`.
+
+1. Bump `version` in `config/theme.yml` and add the notes in this file.
+2. Commit, then tag with the same version and push the tag:
+
+   ```bash
+   git tag v1.6.12
+   git push origin main v1.6.12
+   ```
+
+`.github/workflows/release.yml` runs `scripts/build-release.sh`: it fails if the
+tag does not match `config/theme.yml`, runs lint and tests, builds the theme
+and the four modules (`extras/`) and publishes a GitHub Release with
+`cshop-<v>.zip`, `cshopb2b-…`, `cshopcod-…`, `cshopcookie-…`, `cshopoffers-…`
+and a `.sha256` for each. The same script works locally:
+`bash scripts/build-release.sh`.
+
 ## Updating the theme on the live shop
 
 The Back Office upload refuses a theme folder that already exists, so a ZIP

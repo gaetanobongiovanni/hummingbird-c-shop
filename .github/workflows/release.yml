@@ -1,29 +1,50 @@
-name: Upload Release Asset
+name: Build C-Shop release
 
-on:
-  release:
-    types: [published]
+# Push a tag vX.Y.Z (same version as config/theme.yml) to publish a GitHub
+# Release with the installable theme, the custom modules and their SHA-256.
+#   git tag v1.6.12 && git push origin v1.6.12
+
+'on':
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
 
 jobs:
-  build:
-    uses: ./.github/workflows/build.yml
-
-  upload:
-    name: Upload Release Asset
-    needs: build
+  release:
+    name: Test, build and publish theme and modules
     runs-on: ubuntu-latest
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v8
+      - name: Checkout tagged source
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          name: ${{ github.event.repository.name }}
+          node-version-file: .nvmrc
+          cache: npm
 
-      - name: Zip artifact
-        run: |
-          zip -r ${{ github.event.repository.name }}.zip . -x ${{ github.event.repository.name }}.zip
+      - name: Set up PHP (module tests)
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
 
-      - name: Publish to GitHub Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release upload ${{ github.event.release.tag_name }} ${{ github.event.repository.name }}.zip --repo ${{ github.repository }}
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build theme and modules
+        run: bash scripts/build-release.sh "${GITHUB_REF_NAME#v}"
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: C-Shop ${{ github.ref_name }}
+          generate_release_notes: true
+          fail_on_unmatched_files: true
+          files: |
+            dist/*.zip
+            dist/*.sha256
