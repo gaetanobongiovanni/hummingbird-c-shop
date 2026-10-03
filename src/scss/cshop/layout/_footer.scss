@@ -22,3 +22,29 @@
   font-size: $cs-font-size-sm;
   opacity: 0.85;
 }
+
+// Legal footer (company data, copyright, disclaimers)
+.cs-copyright {
+  padding-block: var(--cs-space-4);
+  text-align: center;
+
+  &__text {
+    max-width: 62rem;
+    margin: 0 auto var(--cs-space-2);
+    line-height: 1.6;
+    opacity: 0.85;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__note {
+    font-style: italic;
+  }
+
+  &__sep {
+    margin-inline: 0.35em;
+    opacity: 0.6;
+  }
+}
