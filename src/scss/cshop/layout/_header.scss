@@ -175,3 +175,33 @@
     }
   }
 }
+
+// Checkout header: reassurance line in place of the search field
+.cs-header__secure {
+  display: flex;
+  gap: var(--cs-space-2);
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  color: $white;
+  font-size: $font-size-sm;
+
+  .material-icons {
+    font-size: 1.25rem;
+    color: var(--cs-accent);
+  }
+
+  &-note {
+    opacity: 0.85;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
+
+body#checkout .cs-header__grid {
+  @include media-breakpoint-up(xl) {
+    padding-bottom: var(--cs-space-3);
+  }
+}

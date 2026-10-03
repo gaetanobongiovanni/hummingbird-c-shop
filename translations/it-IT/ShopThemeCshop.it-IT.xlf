@@ -54,6 +54,10 @@
         <source>Available products</source>
         <target>Prodotti disponibili</target>
       </trans-unit>
+      <trans-unit id="4e37eee382169d81a8613302503e7bc2">
+        <source>Back to cart</source>
+        <target>Torna al carrello</target>
+      </trans-unit>
       <trans-unit id="b3649fb0bc0eb3cce4f5b77e8285d286">
         <source>Browse all: %category%</source>
         <target>Vedi tutto: %category%</target>
@@ -97,6 +101,10 @@
       <trans-unit id="52c12e46bea505c86d560c914f3a1c2b">
         <source>Electronic invoice for businesses and public bodies</source>
         <target>Fattura elettronica per aziende ed enti</target>
+      </trans-unit>
+      <trans-unit id="14dfc7d2dcb893f7efc433d520e1db52">
+        <source>Encrypted connection, payments protected</source>
+        <target>Connessione cifrata, pagamenti protetti</target>
       </trans-unit>
       <trans-unit id="fea085b6ea6bb142f8a2f8ad8db4e3de">
         <source>Enter a product code, supplier code or OEM code and the quantity.</source>
@@ -180,6 +188,10 @@
       </trans-unit>
       <trans-unit id="b2eb7eb5ea59e7426dd3c8ed7b1876ff">
         <source>Need help choosing?</source>
+        <target>Serve aiuto?</target>
+      </trans-unit>
+      <trans-unit id="4bd9ef088a14b5f6fd9ef86e6f33037f">
+        <source>Need help?</source>
         <target>Serve aiuto?</target>
       </trans-unit>
       <trans-unit id="7f1693e71d6a3999d2e3e15a05de6ae1">
@@ -337,6 +349,10 @@
       <trans-unit id="f444db17c5057f68bfff33cdd515ad36">
         <source>Search the catalogue by product name, product code, supplier code, OEM code or brand.</source>
         <target>Cerca nel catalogo per nome prodotto, codice articolo, codice fornitore, codice OEM o marca.</target>
+      </trans-unit>
+      <trans-unit id="4d1d24dea66eb2961b93b1852dbd4bc2">
+        <source>Secure checkout</source>
+        <target>Checkout sicuro</target>
       </trans-unit>
       <trans-unit id="90882b25ee7a8a13908647d038ea9420">
         <source>Secure payments</source>

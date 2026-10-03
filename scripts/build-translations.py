@@ -10,6 +10,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 IT = {
     "Our services": "I nostri servizi",
+    "Secure checkout": "Checkout sicuro",
+    "Encrypted connection, payments protected": "Connessione cifrata, pagamenti protetti",
+    "Need help?": "Serve aiuto?",
+    "Back to cart": "Torna al carrello",
     "See all %count% products": "Vedi tutti i %count% prodotti",
     "No products available at the moment.": "Nessun prodotto disponibile al momento.",
     "Products could not be loaded.": "Non è stato possibile caricare i prodotti.",

@@ -82,6 +82,12 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.6.9
+
+- Checkout header: no search, menu or account/cart widgets; a "Checkout sicuro" line, "Serve aiuto?" (shop email) and "Torna al carrello".
+- One-page checkout (ps_onepagecheckout): sections in panels, space under the header.
+- Italian catalogues for ps_onepagecheckout (the module ships none): `translations/it-IT/ModulesOnepagecheckoutShop` and `ModulesPsonepagecheckoutShop`, built by `scripts/build-opc-translations.py` from `scripts/data/*.en-US.xlf`.
+
 ## 1.6.8
 
 - Cart page, cart summary and add-to-cart modal: no "Spedizione: Gratis" line before checkout. The shipping cost is shown only in the checkout, where the shipping module computes it.

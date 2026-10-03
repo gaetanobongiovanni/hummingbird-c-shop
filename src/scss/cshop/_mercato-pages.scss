@@ -270,6 +270,28 @@ body#index .product-miniature__inner {
 // Checkout (one page or multi-step)
 // -----------------------------------------------------------------------------
 body#checkout {
+  // Space between the header and the checkout (the one-page checkout has no steps bar)
+  #wrapper {
+    padding-top: var(--cs-space-5);
+  }
+
+  // One-page checkout (ps_onepagecheckout): each section in its own panel
+  .one-page-checkout__section {
+    @include cs-panel(var(--cs-space-5));
+
+    margin-bottom: var(--cs-space-4);
+  }
+
+  .one-page-checkout__title {
+    margin-bottom: var(--cs-space-3);
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
+
+  .one-page-checkout__footer {
+    @include cs-panel(var(--cs-space-5));
+  }
+
   .checkout-steps {
     padding-block: var(--cs-space-3);
     background: transparent;
