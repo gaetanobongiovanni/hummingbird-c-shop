@@ -292,6 +292,15 @@ body#checkout {
     @include cs-panel(var(--cs-space-5));
   }
 
+  // PrestaShop Checkout buttons (PayPal, card, MyBank): the PayPal SDK sizes
+  // them to the container, which here is the whole panel. Keep them at their
+  // natural button size instead of a full-width bar.
+  .js-payment-binary .ps_checkout-button,
+  [id^="ps_checkout-"][id$="-buttons-container"] {
+    max-width: 25rem;
+    margin-inline: auto;
+  }
+
   .checkout-steps {
     padding-block: var(--cs-space-3);
     background: transparent;

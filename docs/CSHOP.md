@@ -82,6 +82,10 @@ existing `{block}`s and marked with a `C-Shop` comment. New code is isolated:
   list (`cs-codes`). Focus is always visible; motion respects
   `prefers-reduced-motion`.
 
+## 1.6.10
+
+- Checkout: PrestaShop Checkout buttons (PayPal, card) no longer stretched to the full panel width (max 25rem, centred).
+
 ## 1.6.9
 
 - Checkout header: no search, menu or account/cart widgets; a "Checkout sicuro" line, "Serve aiuto?" (shop email) and "Torna al carrello".
